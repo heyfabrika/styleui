@@ -12,7 +12,7 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="relative flex flex-col gap-16 lg:flex-row items-center lg:justify-between w-full mx-auto px-6 py-12 md:p-16 xl:p-20 max-h-[92dvh] md:max-h-[98dvh] xl:min-h-[90dvh] overflow-hidden rounded-4xl"
+      className="relative flex flex-col gap-16 lg:flex-row items-center lg:justify-between w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 max-h-[92dvh] md:max-h-[98dvh] xl:min-h-[90dvh] overflow-hidden rounded-4xl"
     >
       <motion.div
         initial={{ opacity: 0, scale: 1.1 }}

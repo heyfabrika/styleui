@@ -1,10 +1,11 @@
 "use client";
 
+import { StaticImageType } from "@/types/components/image";
 import { motion, type Variants } from "motion/react";
 import Image from "next/image";
 
 export default function LogoCloud() {
-  const logos: { name: string; image: string }[] = [
+  const logos: StaticImageType[] = [
     {
       name: "Notion",
       image:
@@ -70,12 +71,13 @@ export default function LogoCloud() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col gap-2 items-center justify-center mt-4 max-w-6xl 2xl:max-w-full mx-auto"
+      className="flex flex-col gap-8 md:gap-2 items-center justify-center mt-4 max-w-6xl 2xl:max-w-full mx-auto"
     >
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
+        className="lg:text-xl text-center"
       >
         Your favorite companies are our partners
       </motion.p>

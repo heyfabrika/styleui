@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.brandfetch.io",
       },
+      {
+        protocol: "https",
+        hostname: "www.svgrepo.com",
+      },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+      },
     ],
   },
 };

@@ -3,6 +3,7 @@ import Hero from "@/components/call-to-action/hero";
 import Features from "@/components/features/features";
 import LogoCloud from "@/components/logo-cloud";
 import Navbar from "@/components/navbar";
+import Stats from "@/components/stats";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
       <Beam>
         <Features />
       </Beam>
+      <Stats />
     </div>
   );
 }

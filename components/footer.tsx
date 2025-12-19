@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const socialLinks: { label: string; href: string; icon: string }[] = [
     {
       label: "Twitter",
@@ -53,9 +53,9 @@ export default function Footer() {
             background: `
             radial-gradient(
               ellipse 100% 100% at 50% 10%,
-              ${theme === "dark" ? "#1A1A1A" : "#FFFFFF"} 40%,
-              ${theme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
-              ${theme !== "dark" ? "#C883FF 50%," : ""}
+              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 40%,
+              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
+              ${resolvedTheme !== "dark" ? "#C883FF 50%," : ""}
               #6A01D3 70%,
               #8F00FF 85%,
               #C883FF 100%
@@ -102,7 +102,7 @@ export default function Footer() {
         >
           <Image
             src={
-              theme === "dark"
+              resolvedTheme === "dark"
                 ? "/logo/notio-logo-white.svg"
                 : "/logo/notio-logo-black.svg"
             }

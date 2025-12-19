@@ -27,7 +27,7 @@ export default function Team() {
     },
   ];
 
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center p-4 mt-32">
@@ -80,7 +80,7 @@ export default function Team() {
       >
         <Image
           src={
-            theme === "dark"
+            resolvedTheme === "dark"
               ? "/logo/notio-logo-white.svg"
               : "/logo/notio-logo-black.svg"
           }

@@ -6,7 +6,7 @@ import Transcriber from "./transcriber";
 import { useTheme } from "next-themes";
 
 export default function Hero() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,9 +23,9 @@ export default function Hero() {
           background: `
             radial-gradient(
               ellipse 100% 100% at 50% 5%,
-              ${theme === "dark" ? "#1A1A1A" : "#FFFFFF"} 0%,
-              ${theme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
-              ${theme !== "dark" ? "#C883FF 50%," : ""}
+              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 0%,
+              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
+              ${resolvedTheme !== "dark" ? "#C883FF 50%," : ""}
               #6A01D3 70%,
               #8F00FF 85%,
               #C883FF 100%

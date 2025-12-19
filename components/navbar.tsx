@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
 
 export default function Navbar() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems: { label: string; href: string }[] = [
@@ -27,7 +27,7 @@ export default function Navbar() {
         >
           <Image
             src={
-              theme === "dark"
+              resolvedTheme === "dark"
                 ? "/logo/notio-logo-white.svg"
                 : "/logo/notio-logo-black.svg"
             }

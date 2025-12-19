@@ -67,7 +67,7 @@ export default function Navbar() {
               delay: 0.1 + navItems.length * 0.1,
             }}
           >
-            <Button variant="ghost">Log In</Button>
+            <Button variant="ghost"><Link href="/auth/login">Log In</Link></Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -78,7 +78,7 @@ export default function Navbar() {
               delay: 0.2 + navItems.length * 0.1,
             }}
           >
-            <Button variant="default">Start for free</Button>
+            <Button variant="default"><Link href="/auth/login">Start for free</Link></Button>
           </motion.div>
           <ModeToggle/>
         </div>
@@ -171,10 +171,10 @@ export default function Navbar() {
                 className="flex flex-col gap-2 pt-2"
               >
                 <Button variant="ghost" className="w-full">
-                  Log In
+                  <Link href="/auth/login">Log In</Link>
                 </Button>
                 <Button variant="default" className="w-full">
-                  Start for free
+                  <Link href="/auth/login">Start for free</Link>
                 </Button>
               </motion.div>
             </motion.div>

@@ -35,19 +35,20 @@ export default function Footer() {
       icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1728452988041",
     },
   ];
+
   return (
-    <div>
+    <footer className="flex flex-col">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 max-h-[92dvh] md:max-h-[98dvh] xl:min-h-[90dvh] overflow-hidden rounded-4xl"
+        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[60dvh] md:min-h-[70dvh] xl:min-h-[80dvh] rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="absolute inset-0 -z-10 rotate-180"
+          className="absolute inset-0 -z-10 rotate-180 rounded-4xl overflow-hidden"
           style={{
             background: `
             radial-gradient(
@@ -62,7 +63,7 @@ export default function Footer() {
           `,
           }}
         />
-        <section className="flex flex-col gap-4 z-10 text-center text-center items-center xl:mb-40">
+        <section className="flex flex-col gap-4 z-10 text-center items-center xl:mb-40">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,40 +92,66 @@ export default function Footer() {
           </motion.div>
         </section>
       </motion.div>
-      <section className="flex flex-col gap-12 items-center justify-center">
-        <Image
-          src={
-            theme === "dark"
-              ? "/logo/notio-logo-white.svg"
-              : "/logo/notio-logo-black.svg"
-          }
-          alt="Logo"
-          width={100}
-          height={100}
-        />
-        <ul className="flex gap-8 text-muted-foreground">
+
+      <section className="flex flex-col gap-12 items-center justify-center py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <Image
+            src={
+              theme === "dark"
+                ? "/logo/notio-logo-white.svg"
+                : "/logo/notio-logo-black.svg"
+            }
+            alt="Logo"
+            width={100}
+            height={100}
+          />
+        </motion.div>
+        <motion.ul
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="flex gap-8 text-muted-foreground"
+        >
           <li>Product</li>
           <li>Company</li>
           <li>About</li>
           <li>Careers</li>
-        </ul>
-        <div className="flex gap-4 items-center justify-center">
+        </motion.ul>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+          className="flex gap-4 items-center justify-center"
+        >
           {socialLinks.map((link) => (
             <Link key={link.label} href={link.href}>
               <Image
                 src={link.icon}
                 alt={link.label}
-                width={32}
-                height={32}
-                className="grayscale dark:invert-0"
+                width={24}
+                height={24}
+                className="grayscale dark:invert"
               />
             </Link>
           ))}
-        </div>
-        <p className="text-muted-foreground text-sm">
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+          className="text-muted-foreground text-sm"
+        >
           &copy; {new Date().getFullYear()} Notio. All rights reserved.
-        </p>
+        </motion.p>
       </section>
-    </div>
+    </footer>
   );
 }

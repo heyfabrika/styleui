@@ -121,7 +121,7 @@ export default function Transcriber() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.5, ease: "easeOut" }}
-        className="relative shadow-xl rounded-2xl md:rounded-3xl bg-background flex flex-col gap-3 md:gap-4 p-3 md:p-4 min-h-60 md:min-h-90 overflow-hidden"
+        className="relative shadow-xl rounded-2xl md:rounded-3xl bg-background flex flex-col gap-3 md:gap-4 p-3 md:p-4 min-h-64 md:min-h-90 overflow-hidden"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

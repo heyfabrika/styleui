@@ -1,5 +1,8 @@
+"use client";
+
 import { FeatureCardProps } from "@/types/components/feature";
 import { AudioLines, NotebookPen, Sparkle } from "lucide-react";
+import { motion } from "motion/react";
 import FeatureCard from "./feature-card";
 import ToolFeature from "./tool-feature";
 import TranscriptionFeature from "./transcription-feature";
@@ -27,16 +30,40 @@ export default function Features() {
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center p-4">
-      <h1 className="text-3xl md:text-4xl lg:text-6xl font-aleo text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-3xl md:text-4xl lg:text-6xl font-aleo text-center"
+      >
         One app for all your conversations
-      </h1>
-      <p className="text-sm md:text-base lg:text-lg text-center max-w-2xl">
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className="text-sm md:text-base lg:text-lg text-center max-w-2xl"
+      >
         Whether it&apos;s client meetings, interviews, or team calls—capture,
         organize, and review every conversation in one place.
-      </p>
+      </motion.p>
       <section className="flex flex-wrap gap-4 items-center justify-center">
-        {features.map((feature) => (
-          <FeatureCard key={feature.title} feature={feature} />
+        {features.map((feature, index) => (
+          <motion.div
+            key={feature.title}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2 + index * 0.15,
+              ease: "easeOut",
+            }}
+          >
+            <FeatureCard feature={feature} />
+          </motion.div>
         ))}
       </section>
       <ToolFeature />

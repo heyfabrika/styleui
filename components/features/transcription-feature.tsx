@@ -2,6 +2,7 @@
 import { AnimatedList } from "../animated-list";
 import { Card } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
+import { motion } from "motion/react";
 
 const transcriptions = [
   {
@@ -37,9 +38,21 @@ function TranscriptionItem({ time, text }: { time: string; text: string }) {
 
 export default function TranscriptionFeature() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60dvh] w-full mx-auto px-4 bg-gradient-to-br from-background via-background to-primary/20 dark:to-primary/60 rounded-4xl">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex flex-col items-center justify-center min-h-[60dvh] w-full mx-auto px-4 bg-gradient-to-br from-background via-background to-primary/20 dark:to-primary/60 rounded-4xl"
+    >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 max-w-5xl">
-        <section className="flex-1 space-y-6 text-center lg:text-left z-10">
+        <motion.section
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="flex-1 space-y-6 text-center lg:text-left z-10"
+        >
           <h2 className="text-4xl font-aleo tracking-tight text-foreground">
             Transcription captures words. <br />
             Notio captures context.
@@ -49,9 +62,15 @@ export default function TranscriptionFeature() {
             meant. Flag concerns, mark excitement, note hesitations—capture the
             full story of every call.
           </p>
-        </section>
+        </motion.section>
 
-        <section className="relative flex-1 w-full flex justify-center lg:justify-end isolate">
+        <motion.section
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="relative flex-1 w-full flex justify-center lg:justify-end isolate"
+        >
           <Card className="w-full max-w-md min-h-96 dark:bg-background backdrop-blur-sm shadow-xl border-0 overflow-hidden relative rounded-3xl">
             <div className="p-8 pb-32">
               <div className="mb-8">
@@ -100,8 +119,8 @@ export default function TranscriptionFeature() {
 
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent z-10 pointer-events-none" />
           </Card>
-        </section>
+        </motion.section>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -24,7 +24,7 @@ export default function PricingCard({
       className={cn(
         "min-w-xs",
         !isFree &&
-          "bg-gradient-to-tl from-transparent to-primary/10 border border-primary/20 min-w-xl min-h-86 flex flex-row items-start justify-between",
+          "bg-gradient-to-tl from-transparent to-primary/10 border border-primary/20 lg:min-w-xl min-h-86 flex lg:flex-row items-start justify-between",
         className
       )}
     >

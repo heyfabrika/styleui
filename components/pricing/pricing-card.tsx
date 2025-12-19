@@ -37,10 +37,7 @@ export default function PricingCard({
           {!isFree && (
             <Button
               variant={isFree ? "outline" : "default"}
-              className={cn(
-                "w-full",
-                !isFree ? "bg-foreground hover:bg-foreground/90" : "w-full"
-              )}
+              className="min-w-64 bg-foreground hover:bg-foreground/90"
             >
               {buttonText ?? (isFree ? "Start for free" : "Get started")}
             </Button>

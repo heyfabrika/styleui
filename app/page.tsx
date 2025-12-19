@@ -1,9 +1,13 @@
 import Beam from "@/components/beam";
 import Hero from "@/components/call-to-action/hero";
 import Features from "@/components/features/features";
+import Footer from "@/components/footer";
 import LogoCloud from "@/components/logo-cloud";
 import Navbar from "@/components/navbar";
+import Pricing from "@/components/pricing/pricing";
 import Stats from "@/components/stats";
+import Team from "@/components/team-member/team";
+import Testimonial from "@/components/testimonial/testimonial";
 
 export default function Page() {
   return (
@@ -15,6 +19,10 @@ export default function Page() {
         <Features />
       </Beam>
       <Stats />
+      <Team/>
+      <Testimonial />
+      <Pricing/>
+      <Footer/>
     </div>
   );
 }

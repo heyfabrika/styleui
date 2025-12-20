@@ -30,7 +30,7 @@ export default function Team() {
   const { resolvedTheme } = useTheme();
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center p-4 mt-32">
+    <div className="flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-32">
       <section className="relative flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ export default function Team() {
           <BlurredOrb className="w-64 h-64" />
         </motion.div>
 
-        <div className="relative h-52 w-72">
+        <div className="relative h-44 w-70">
           <div className="absolute top-0 left-1/2 -translate-x-1/2">
             <TeamMemberAvatar member={{ ...team[0], index: 0 }} index={0} />
           </div>
@@ -94,7 +94,7 @@ export default function Team() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.9 }}
-        className="text-4xl font-aleo text-center max-w-2xl"
+        className="text-2xl md:text-4xl font-aleo text-center max-w-2xl"
       >
         Built by a nimble team of entrepreneurs
       </motion.p>

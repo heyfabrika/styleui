@@ -1,8 +1,10 @@
 "use client";
+import Image from "next/image";
 import { AnimatedList } from "../animated-list";
 import { Card } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
 
 const transcriptions = [
   {
@@ -37,13 +39,15 @@ function TranscriptionItem({ time, text }: { time: string; text: string }) {
 }
 
 export default function TranscriptionFeature() {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center min-h-[60dvh] w-full mx-auto px-4 bg-gradient-to-br from-background via-background to-primary/20 dark:to-primary/60 rounded-4xl"
+      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background max-lg:via-primary/20 to-primary/70 lg:to-primary/20 dark:to-primary/60 rounded-4xl mt-20"
     >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 max-w-5xl">
         <motion.section
@@ -53,7 +57,7 @@ export default function TranscriptionFeature() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="flex-1 space-y-6 text-center lg:text-left z-10"
         >
-          <h2 className="text-4xl font-aleo tracking-tight text-foreground">
+          <h2 className="text-2xl lg:text-4xl font-aleo tracking-tight text-foreground">
             Transcription captures words. <br />
             Notio captures context.
           </h2>
@@ -69,10 +73,10 @@ export default function TranscriptionFeature() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="relative flex-1 w-full flex justify-center lg:justify-end isolate"
+          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl"
         >
-          <Card className="w-full max-w-md min-h-96 dark:bg-background backdrop-blur-sm shadow-xl border-0 overflow-hidden relative rounded-3xl">
-            <div className="p-8 pb-32">
+          <Card className="w-full max-w-md min-h-64 lg:min-h-96 dark:bg-background backdrop-blur-sm overflow-hidden relative rounded-3xl border border-primary/10">
+            <div className="p-4 lg:p-8 pb-24 lg:pb-32">
               <div className="mb-8">
                 <p className="text-base text-foreground leading-relaxed">
                   Joanne sounds upset on the phone. Should ask her how things
@@ -81,7 +85,7 @@ export default function TranscriptionFeature() {
               </div>
 
               <div className="flex flex-col">
-                <AnimatedList delay={1000} reverse={false} className="gap-4">
+                <AnimatedList delay={1000} reverse={false} className="lg:gap-4">
                   {transcriptions.map((item) => (
                     <TranscriptionItem
                       key={item.time}
@@ -91,7 +95,7 @@ export default function TranscriptionFeature() {
                   ))}
                 </AnimatedList>
 
-                <div className="flex gap-4 items-start text-sm mt-2">
+                <div className="flex gap-4 items-start text-sm mt-2 z-50">
                   <Skeleton className="w-10 h-4 shrink-0" />
                   <div className="border-l border-border/40 pl-6 w-full space-y-2">
                     <Skeleton className="h-2.5 rounded-full w-3/4" />
@@ -101,23 +105,28 @@ export default function TranscriptionFeature() {
               </div>
             </div>
 
-            <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
+            <div className="absolute bottom-12 lg:bottom-8 left-0 right-0 flex justify-center z-20">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
-                <div className="relative flex items-center gap-3 dark:bg-background bg-white px-5 py-2.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-primary">
-                  <span className="font-serif font-black text-lg">N</span>
+                <div className="relative flex items-center gap-3 dark:bg-background bg-white px-5 py-2.5 rounded-full border border-primary shadow-[0_0_41.9px_0_rgba(157,79,255,0.4)]">
+                  <Image
+                    src={
+                      isDark
+                        ? "logo/notio-icon-white.svg"
+                        : "logo/notio-icon-black.svg"
+                    }
+                    alt="Notio"
+                    width={20}
+                    height={20}
+                  />
                   <span className="text-sm font-medium text-foreground/90">
                     Transcribing call audio
                   </span>
-                  <div className="relative flex h-2.5 w-2.5 ml-1">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
-                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-background via-background/80 to-transparent z-10 pointer-events-none" />
           </Card>
         </motion.section>
       </div>

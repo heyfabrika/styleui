@@ -11,7 +11,7 @@ export default function Stats() {
   ];
 
   return (
-    <div className="flex flex-col gap-24 items-center justify-center py-12 px-4">
+    <div className="flex flex-col gap-4 lg:gap-24 items-center justify-center py-6 lg:py-12 px-4">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,10 +19,10 @@ export default function Stats() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="space-y-4 text-center max-w-2xl"
       >
-        <h2 className="text-3xl md:text-5xl font-aleo tracking-tight">
+        <h2 className="text-2xl md:text-5xl font-aleo tracking-tight">
           Words + Context = Better Notes
         </h2>
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+        <p className="text-muted-foreground text-base leading-relaxed">
           Our users save an average of 2.5 hours every week—time better spent on
           what actually moves the needle.
         </p>
@@ -42,10 +42,10 @@ export default function Stats() {
             }}
             className="flex flex-col items-center justify-center px-8 md:px-12 py-6 md:py-0 w-full md:w-auto"
           >
-            <p className="text-4xl md:text-5xl tracking-tight mb-2 font-aleo min-w-xs text-center">
+            <p className="text-4xl md:text-5xl tracking-tight mb-2 min-w-xs text-center font-semibold">
               <Counter value={stat.value} suffix={stat.suffix} />
             </p>
-            <p className="text-sm text-muted-foreground font-medium text-center">
+            <p className="text-sm font-medium text-center">
               {stat.description}
             </p>
           </motion.div>

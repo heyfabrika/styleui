@@ -18,7 +18,7 @@ export default function TestimonialCard({
   className,
 }: TestimonialProps) {
   return (
-    <Card className={cn("flex flex-col h-full", className)}>
+    <Card className={cn("flex flex-col h-full border border-border ring-0 shadow-none", className)}>
       {logo && (
         <CardHeader className="pb-4">
           <Image
@@ -26,12 +26,12 @@ export default function TestimonialCard({
             alt={logo}
             width={100}
             height={100}
-            className="grayscale dark:invert-0"
+            className="invert dark:invert-0"
           />
         </CardHeader>
       )}
       <CardContent className="flex-1">
-        <p className="text-muted-foreground leading-relaxed">{quote}</p>
+        <p className="text-lg leading-relaxed font-medium">{quote}</p>
       </CardContent>
       <CardFooter className="pt-4 border-t-0">
         <div className="flex items-center gap-3">

@@ -68,7 +68,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl md:text-5xl xl:text-6xl font-aleo text-white"
+            className="text-4xl md:text-5xl xl:text-6xl font-aleo lg:text-white"
           >
             Never miss another <br /> important detail
           </motion.h1>
@@ -93,7 +93,7 @@ export default function Footer() {
         </section>
       </motion.div>
 
-      <section className="flex flex-col gap-12 items-center justify-center py-16">
+      <section className="flex flex-col gap-8 lg:gap-12 items-center justify-center py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

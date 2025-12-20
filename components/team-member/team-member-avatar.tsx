@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { TeamMember } from "@/types/components/team-member";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -11,6 +12,7 @@ export default function TeamMemberAvatar({
   index: number;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <motion.div
@@ -28,7 +30,7 @@ export default function TeamMemberAvatar({
       onHoverEnd={() => setIsHovered(false)}
     >
       <AnimatePresence>
-        {isHovered && (
+        {(isHovered || (index === 0 && isMobile)) && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,7 +46,7 @@ export default function TeamMemberAvatar({
       <motion.div
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 300 }}
-        className="size-24 rounded-full bg-white border border-zinc-200 shadow-sm flex items-center justify-center overflow-hidden cursor-pointer"
+        className="size-24 rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
       >
         <Image
           src={member.image}

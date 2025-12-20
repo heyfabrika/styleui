@@ -44,7 +44,7 @@ export default function Features() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="text-sm md:text-base lg:text-lg text-center max-w-2xl"
+        className="text-lg text-center max-w-2xl text-muted-foreground"
       >
         Whether it&apos;s client meetings, interviews, or team calls—capture,
         organize, and review every conversation in one place.

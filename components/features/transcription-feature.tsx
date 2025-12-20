@@ -27,12 +27,12 @@ const transcriptions = [
 
 function TranscriptionItem({ time, text }: { time: string; text: string }) {
   return (
-    <div className="flex gap-4 items-start text-sm group">
+    <div className="flex items-start">
       <span className="text-muted-foreground/60 font-mono text-xs shrink-0 pt-1 w-10 text-right">
         {time}
       </span>
       <div className="relative border-l border-border/40 pl-6 pb-6 last:pb-0">
-        <p className="text-foreground/80 leading-relaxed">{text}</p>
+        <p className="text-foreground/80 leading-relaxed text-xs lg:text-base">{text}</p>
       </div>
     </div>
   );

@@ -30,8 +30,8 @@ export default function Team() {
   const { resolvedTheme } = useTheme();
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-32">
-      <section className="relative flex flex-col items-center justify-center">
+    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-40 lg:mb-20">
+      <section className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -39,8 +39,8 @@ export default function Team() {
           className="absolute inset-0"
         >
           <GridPattern
-            width={30}
-            height={30}
+            width={40}
+            height={40}
             x={-1}
             y={-1}
             className={cn(
@@ -56,6 +56,7 @@ export default function Team() {
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
         >
           <BlurredOrb className="w-64 h-64" />
+          <BlurredOrb className="w-64 h-64 from-primary via-pink-500 to-pink-400" />
         </motion.div>
 
         <div className="relative h-44 w-70">

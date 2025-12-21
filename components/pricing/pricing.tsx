@@ -38,7 +38,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center p-4">
+    <div className="flex flex-col gap-8 items-center justify-center p-4 lg:mb-20">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

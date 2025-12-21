@@ -52,10 +52,10 @@ export default function Footer() {
           style={{
             background: `
             radial-gradient(
-              ellipse 100% 100% at 50% 10%,
-              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 40%,
+              ellipse 100% 100% at 50% 0%,
+              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 50%,
               ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
-              ${resolvedTheme !== "dark" ? "#C883FF 50%," : ""}
+              ${resolvedTheme !== "dark" ? "#C883FF 57%," : ""}
               #6A01D3 70%,
               #8F00FF 85%,
               #C883FF 100%

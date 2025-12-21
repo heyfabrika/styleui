@@ -39,9 +39,9 @@ export default function ToolFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full"
+      className="w-full lg:py-20"
     >
-      <Card className="w-full min-h-96 lg:gap-16 flex flex-col items-center justify-center dark:bg-background max-md:ring-0 shadow-none">
+      <Card className="w-full min-h-96 lg:gap-16 flex flex-col items-center justify-center dark:bg-background max-md:ring-0 shadow-none lg:py-18">
         <CardHeader className="relative flex md:flex-wrap md:gap-12 items-center justify-center w-full justify-center">
           {tools.map((tool, index) => (
             <motion.div

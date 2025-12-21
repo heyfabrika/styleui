@@ -47,7 +47,7 @@ export default function TranscriptionFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background max-lg:via-primary/20 to-primary/70 lg:to-primary/20 dark:to-primary/60 rounded-4xl mt-20"
+      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background max-lg:via-primary/20 to-primary/70 lg:to-primary/15 dark:to-primary/60 rounded-4xl mt-20"
     >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 max-w-5xl">
         <motion.section
@@ -105,7 +105,7 @@ export default function TranscriptionFeature() {
               </div>
             </div>
 
-            <div className="absolute bottom-12 lg:bottom-8 left-0 right-0 flex justify-center z-20">
+            <div className="absolute bottom-12 lg:bottom-14 left-0 right-0 flex justify-center z-20">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
                 <div className="relative flex items-center gap-3 dark:bg-background bg-white px-5 py-2.5 rounded-full border border-primary shadow-[0_0_41.9px_0_rgba(157,79,255,0.4)]">

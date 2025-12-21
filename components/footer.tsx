@@ -5,9 +5,11 @@ import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function Footer() {
   const { resolvedTheme } = useTheme();
+  const is4xl = useMediaQuery("(min-width: 2560px)");
   const socialLinks: { label: string; href: string; icon: string }[] = [
     {
       label: "Twitter",
@@ -42,7 +44,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[60dvh] md:min-h-[70dvh] xl:min-h-[80dvh] rounded-4xl"
+        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[60dvh] md:min-h-[70dvh] xl:min-h-[80dvh] 4xl:min-h-[60dvh] rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
@@ -52,7 +54,7 @@ export default function Footer() {
           style={{
             background: `
             radial-gradient(
-              ellipse 100% 100% at 50% 0%,
+              ellipse 100% 100% at 50% ${is4xl ? "-5%" : "0%"},
               ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 50%,
               ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
               ${resolvedTheme !== "dark" ? "#C883FF 57%," : ""}
@@ -63,12 +65,12 @@ export default function Footer() {
           `,
           }}
         />
-        <section className="flex flex-col gap-4 z-10 text-center items-center xl:mb-40">
+        <section className="flex flex-col gap-4 4xl:gap-16 z-10 text-center items-center xl:mb-40">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl md:text-5xl xl:text-6xl font-aleo lg:text-white"
+            className="text-4xl md:text-5xl xl:text-6xl 4xl:text-7xl font-aleo lg:text-white"
           >
             Never miss another <br /> important detail
           </motion.h1>
@@ -76,7 +78,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="text-sm md:text-base xl:text-lg max-w-md lg:max-w-2xl"
+            className="text-sm md:text-base xl:text-lg 4xl:text-3xl max-w-md lg:max-w-2xl 4xl:max-w-4xl"
           >
             Join thousands of professionals who've stopped scrambling for notes.
             Start your free account in seconds.
@@ -86,7 +88,7 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
           >
-            <Button className="w-fit" size="lg">
+            <Button className="w-fit 4xl:text-2xl 4xl:px-12 4xl:h-18" size="lg">
               Start for free
             </Button>
           </motion.div>
@@ -109,6 +111,7 @@ export default function Footer() {
             alt="Logo"
             width={100}
             height={100}
+            className="4xl:w-60 4xl:h-20"
           />
         </motion.div>
         <motion.ul
@@ -116,7 +119,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="flex gap-8 text-muted-foreground"
+          className="flex gap-8 text-muted-foreground 4xl:text-2xl"
         >
           <li>Product</li>
           <li>Company</li>
@@ -128,7 +131,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="flex gap-4 items-center justify-center"
+          className="flex gap-4 4xl:gap-8 items-center justify-center"
         >
           {socialLinks.map((link) => (
             <Link key={link.label} href={link.href}>
@@ -137,7 +140,7 @@ export default function Footer() {
                 alt={link.label}
                 width={24}
                 height={24}
-                className="grayscale dark:invert"
+                className="grayscale dark:invert 4xl:w-10 4xl:h-10"
               />
             </Link>
           ))}
@@ -147,7 +150,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-          className="text-muted-foreground text-sm"
+          className="text-muted-foreground text-sm 4xl:text-2xl"
         >
           &copy; {new Date().getFullYear()} Notio. All rights reserved.
         </motion.p>

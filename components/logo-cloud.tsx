@@ -81,7 +81,7 @@ export default function LogoCloud() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="lg:text-lg text-center font-light"
+        className="lg:text-lg text-center font-light 4xl:text-3xl"
       >
         Your favorite companies are our partners
       </motion.p>
@@ -101,7 +101,7 @@ export default function LogoCloud() {
             <Image
               src={logo.image}
               alt={logo.name}
-              className="invert dark:invert-0"
+              className="invert dark:invert-0 4xl:w-64"
               width={logo.size?.width || 100}
               height={logo.size?.height || 100}
             />

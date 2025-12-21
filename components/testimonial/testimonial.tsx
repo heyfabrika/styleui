@@ -7,7 +7,7 @@ export default function Testimonial() {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
   return (
-    <div className="pt-30 pb-12 lg:pt-40 lg:px-4 max-w-6xl mx-auto flex flex-col gap-12">
+    <div className="pt-30 pb-12 lg:pt-40 lg:px-4 max-w-6xl 4xl:min-w-[70dvw] mx-auto flex flex-col gap-12">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +15,7 @@ export default function Testimonial() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="space-y-4 text-center"
       >
-        <h2 className="text-2xl md:text-4xl font-aleo tracking-tight text-foreground">
+        <h2 className="text-2xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
           Loved by thousands who work smarter,{" "}
           <br className="hidden md:block" />
           connect better, and never miss a beat

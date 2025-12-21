@@ -35,7 +35,7 @@ export default function Features() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-3xl md:text-4xl lg:text-6xl font-aleo text-center"
+        className="text-3xl md:text-4xl lg:text-6xl 4xl:text-7xl font-aleo text-center"
       >
         One app for all your conversations
       </motion.h1>
@@ -44,7 +44,7 @@ export default function Features() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="text-lg text-center max-w-2xl text-muted-foreground"
+        className="text-lg text-center max-w-2xl text-muted-foreground 4xl:text-3xl 4xl:max-w-6xl"
       >
         Whether it&apos;s client meetings, interviews, or team calls—capture,
         organize, and review every conversation in one place.

@@ -26,22 +26,22 @@ export default function TestimonialCard({
             alt={logo}
             width={100}
             height={100}
-            className="invert dark:invert-0"
+            className="invert dark:invert-0 4xl:w-48"
           />
         </CardHeader>
       )}
       <CardContent className="flex-1">
-        <p className="text-lg leading-relaxed font-medium">{quote}</p>
+        <p className="text-lg leading-relaxed font-medium 4xl:text-2xl">{quote}</p>
       </CardContent>
       <CardFooter className="pt-4 border-t-0">
         <div className="flex items-center gap-3">
-          <Avatar>
-            <AvatarImage src={avatarSrc} alt={author} />
-            <AvatarFallback>{author[0]}</AvatarFallback>
+          <Avatar className="4xl:size-20">
+            <AvatarImage src={avatarSrc} alt={author} className="4xl:w-20 4xl:h-20" />
+            <AvatarFallback className="4xl:text-2xl">{author[0]}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
-            <p className="text-sm font-semibold text-foreground">{author}</p>
-            <p className="text-xs text-muted-foreground">{role}</p>
+            <p className="text-sm font-semibold text-foreground 4xl:text-2xl">{author}</p>
+            <p className="text-xs text-muted-foreground 4xl:text-2xl">{role}</p>
           </div>
         </div>
       </CardFooter>

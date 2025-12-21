@@ -39,9 +39,9 @@ export default function ToolFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full lg:py-20"
+      className="w-full lg:py-20 4xl:py-32"
     >
-      <Card className="w-full min-h-96 lg:gap-16 flex flex-col items-center justify-center dark:bg-background max-md:ring-0 shadow-none lg:py-18">
+      <Card className="w-full min-h-96 lg:gap-16 flex flex-col items-center justify-center dark:bg-background max-md:ring-0 shadow-none lg:py-18 4xl:gap-24">
         <CardHeader className="relative flex md:flex-wrap md:gap-12 items-center justify-center w-full justify-center">
           {tools.map((tool, index) => (
             <motion.div
@@ -54,7 +54,7 @@ export default function ToolFeature() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 lg:w-24 lg:h-24 -mr-4"
+              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 lg:w-24 lg:h-24 -mr-4 4xl:w-40 4xl:h-40"
             >
               <Image
                 src={tool.image}
@@ -63,7 +63,7 @@ export default function ToolFeature() {
                 height={100}
                 className="w-full h-full object-contain lg:p-2 dark:invert-0"
               />
-              <BlurredOrb className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-2xl lg:h-14 lg:w-14 w-8 h-8" />
+              <BlurredOrb className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-2xl lg:h-14 lg:w-14 w-8 h-8 4xl:h-18 4xl:w-18" />
             </motion.div>
           ))}
         </CardHeader>
@@ -77,7 +77,7 @@ export default function ToolFeature() {
               delay: 0.3,
               ease: "easeOut",
             }}
-            className="text-center text-3xl md:text-4xl font-aleo"
+            className="text-center text-3xl md:text-4xl font-aleo 4xl:text-5xl"
           >
             Integrate with your favorite tools
           </motion.p>
@@ -90,7 +90,7 @@ export default function ToolFeature() {
               delay: 0.4,
               ease: "easeOut",
             }}
-            className="text-center text-muted-foreground text-lg md:text-base"
+            className="text-center text-muted-foreground text-lg md:text-base 4xl:text-3xl 4xl:max-w-4xl"
           >
             Connect seamlessly with popular platforms and services to enhance
             your workflow.

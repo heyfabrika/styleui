@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex flex-row justify-between items-center pb-4">
+      <div className="flex flex-row justify-between items-center pb-4 4xl:pb-0">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -31,13 +31,14 @@ export default function Navbar() {
                 ? "/logo/notio-logo-white.svg"
                 : "/logo/notio-logo-black.svg"
             }
+            className="4xl:w-40 4xl:h-40"
             alt="Logo"
             width={100}
             height={100}
           />
         </motion.div>
 
-        <div className="hidden md:flex flex-row items-center gap-4">
+        <div className="hidden md:flex flex-row items-center gap-4 4xl:gap-8">
           {navItems.map((item, index) => (
             <motion.div
               key={item.label}
@@ -53,7 +54,7 @@ export default function Navbar() {
                 href={item.href}
                 className="flex flex-row items-center gap-1"
               >
-                <p className="text-sm font-medium">{item.label}</p>
+                <p className="text-sm font-medium 4xl:text-2xl">{item.label}</p>
                 <ChevronDownIcon className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -67,7 +68,7 @@ export default function Navbar() {
               delay: 0.1 + navItems.length * 0.1,
             }}
           >
-            <Button variant="ghost"><Link href="/auth/login">Log In</Link></Button>
+            <Button variant="ghost" className="4xl:text-2xl"><Link href="/auth/login">Log In</Link></Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -78,7 +79,7 @@ export default function Navbar() {
               delay: 0.2 + navItems.length * 0.1,
             }}
           >
-            <Button variant="default"><Link href="/auth/login">Start for free</Link></Button>
+            <Button variant="default" className="4xl:text-2xl h-16 px-8"><Link href="/auth/login">Start for free</Link></Button>
           </motion.div>
           <ModeToggle/>
         </div>

@@ -38,18 +38,18 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center p-4 lg:mb-20">
+    <div className="flex flex-col gap-8 4xl:gap-16 items-center justify-center p-4 lg:mb-20">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="space-y-4 text-center"
+        className="space-y-4 4xl:space-y-8 text-center"
       >
-        <h2 className="text-3xl md:text-5xl font-aleo tracking-tight text-foreground">
+        <h2 className="text-3xl md:text-5xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
           Simple, Transparent pricing
         </h2>
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+        <p className="text-muted-foreground text-sm md:text-base leading-relaxed 4xl:text-3xl">
           Start free. Upgrade when you're ready. Cancel anytime.
         </p>
       </motion.section>

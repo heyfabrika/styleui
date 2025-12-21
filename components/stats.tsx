@@ -17,12 +17,12 @@ export default function Stats() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="space-y-4 text-center max-w-2xl"
+        className="space-y-4 text-center max-w-2xl 4xl:max-w-4xl"
       >
-        <h2 className="text-2xl md:text-5xl font-aleo tracking-tight">
+        <h2 className="text-2xl md:text-5xl 4xl:text-6xl font-aleo tracking-tight">
           Words + Context = Better Notes
         </h2>
-        <p className="text-muted-foreground text-base leading-relaxed">
+        <p className="text-muted-foreground text-base leading-relaxed 4xl:text-3xl">
           Our users save an average of 2.5 hours every week—time better spent on
           what actually moves the needle.
         </p>
@@ -45,10 +45,10 @@ export default function Stats() {
                 index < stats.length - 1 ? "lg:border-r border-muted-foreground/20" : ""
               }`}
             >
-              <p className="text-4xl md:text-5xl tracking-tight mb-2 min-w-xs text-center font-semibold">
+              <p className="text-4xl md:text-5xl 4xl:text-6xl tracking-tight mb-2 min-w-xs text-center font-semibold">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="text-sm font-medium text-center">
+              <p className="text-sm font-medium text-center 4xl:text-2xl">
                 {stat.description}
               </p>
             </motion.div>

@@ -36,7 +36,7 @@ export default function TeamMemberAvatar({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
-            className="absolute -top-16 left-1/2 -translate-x-1/2 bg-zinc-900 text-white px-4 py-2 rounded-lg whitespace-nowrap z-10"
+            className="absolute -top-16 left-1/2 -translate-x-1/2 bg-zinc-900 text-white px-4 py-2 rounded-lg whitespace-nowrap z-10 4xl:text-2xl"
           >
             <p className="font-medium text-sm">{member.name}</p>
             <p className="text-xs text-zinc-400">{member.role}</p>
@@ -46,14 +46,14 @@ export default function TeamMemberAvatar({
       <motion.div
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 300 }}
-        className="size-24 rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
+        className="size-24 4xl:size-40 rounded-full flex items-center justify-center overflow-hidden cursor-pointer"
       >
         <Image
           src={member.image}
           alt={member.name}
           width={80}
           height={80}
-          className="object-contain"
+          className="object-contain 4xl:size-40"
         />
       </motion.div>
     </motion.div>

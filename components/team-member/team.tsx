@@ -59,7 +59,7 @@ export default function Team() {
           <BlurredOrb className="w-64 h-64 from-primary via-pink-500 to-pink-400" />
         </motion.div>
 
-        <div className="relative h-44 w-70">
+        <div className="relative h-44 w-70 4xl:h-80 4xl:w-120">
           <div className="absolute top-0 left-1/2 -translate-x-1/2">
             <TeamMemberAvatar member={{ ...team[0], index: 0 }} index={0} />
           </div>
@@ -88,6 +88,7 @@ export default function Team() {
           alt="Team"
           width={120}
           height={120}
+          className="4xl:w-64 4xl:h-40"
         />
       </motion.div>
 
@@ -95,7 +96,7 @@ export default function Team() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.9 }}
-        className="text-2xl md:text-4xl font-aleo text-center max-w-2xl"
+        className="text-2xl md:text-4xl 4xl:text-6xl font-aleo text-center max-w-2xl 4xl:max-w-7xl"
       >
         Built by a nimble team of entrepreneurs
       </motion.p>

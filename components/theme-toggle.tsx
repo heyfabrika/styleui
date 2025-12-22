@@ -3,37 +3,25 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
-export function ModeToggle() {
-  const { setTheme } = useTheme();
+export function ThemeToggle() {
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        <Button variant="outline" size="icon" className="4xl:size-18">
-          <Sun className="h-[1.2rem] w-[1.2rem] 4xl:size-8 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] 4xl:size-8 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem className="4xl:text-2xl" onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem className="4xl:text-2xl" onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem className="4xl:text-2xl" onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <ToggleGroup
+      value={resolvedTheme ? [resolvedTheme] : []}
+      onValueChange={(value) => {
+        if (value[0]) setTheme(value[0]);
+      }}
+      className="border border-border"
+    >
+      <ToggleGroupItem value="dark" aria-label="Dark theme" className={resolvedTheme === "dark" ? "opacity-100" : "opacity-20"}>
+        <Moon className="h-4 w-4 4xl:size-8" />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="light" aria-label="Light theme" className={resolvedTheme === "light" ? "opacity-100" : "opacity-50"}>
+        <Sun className="h-4 w-4 4xl:size-8" />
+      </ToggleGroupItem>
+    </ToggleGroup>
   );
 }

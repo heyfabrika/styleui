@@ -18,7 +18,7 @@ export default function Beam({
             "h-0 w-0",
             "border-l-[1000px] border-l-transparent",
             "border-r-[1000px] border-r-transparent",
-            "border-t-[700px] border-t-[rgba(123,67,200,0.15)] dark:border-t-[rgba(123,67,200,0.3)]"
+            "border-t-[700px] border-t-[rgba(199,104,41,0.15)] dark:border-t-[rgba(199,104,41,0.2)]"
           )}
         />
 
@@ -29,7 +29,7 @@ export default function Beam({
             "h-0 w-0",
             "border-l-[35rem] border-l-transparent",
             "border-r-[35.75rem] border-r-transparent",
-            "border-t-[3.125rem] border-t-white/80 dark:border-t-[rgba(156,120,213,0.5)]"
+            "border-t-[3.125rem] border-t-white/80 dark:border-t-[rgba(255,255,255,0.2)]"
           )}
         />
 

@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { ModeToggle } from "./theme-toggle";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   const { resolvedTheme } = useTheme();
@@ -68,8 +68,11 @@ export default function Navbar() {
               delay: 0.1 + navItems.length * 0.1,
             }}
           >
-            <Button variant="ghost" className="4xl:text-2xl"><Link href="/auth/login">Log In</Link></Button>
+            <Button variant="ghost" className="4xl:text-2xl" size={"sm"}>
+              <Link href="/auth/login">Log In</Link>
+            </Button>
           </motion.div>
+          <ThemeToggle />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -79,9 +82,13 @@ export default function Navbar() {
               delay: 0.2 + navItems.length * 0.1,
             }}
           >
-            <Button variant="default" className="4xl:text-2xl 4xl:h-16 4xl:px-8"><Link href="/auth/login">Start for free</Link></Button>
+            <Button
+              variant="default"
+              className="4xl:text-2xl 4xl:h-16 4xl:px-8"
+            >
+              <Link href="/auth/login">Start for free</Link>
+            </Button>
           </motion.div>
-          <ModeToggle/>
         </div>
 
         <motion.div
@@ -90,36 +97,39 @@ export default function Navbar() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="md:hidden"
         >
-          <Button
-            variant="ghost"
-            className="p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            <AnimatePresence mode="wait">
-              {isOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ opacity: 0, rotate: -90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 90 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <XIcon className="w-6 h-6" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ opacity: 0, rotate: 90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: -90 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <MenuIcon className="w-6 h-6" />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </Button>
+          <div className="flex flex-row items-center gap-2">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              className="p-2"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <AnimatePresence mode="wait">
+                {isOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ opacity: 0, rotate: -90 }}
+                    animate={{ opacity: 1, rotate: 0 }}
+                    exit={{ opacity: 0, rotate: 90 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <XIcon className="w-6 h-6" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ opacity: 0, rotate: 90 }}
+                    animate={{ opacity: 1, rotate: 0 }}
+                    exit={{ opacity: 0, rotate: -90 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <MenuIcon className="w-6 h-6" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </Button>
+          </div>
         </motion.div>
       </div>
 

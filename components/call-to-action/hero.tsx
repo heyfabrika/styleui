@@ -1,20 +1,21 @@
 "use client";
 
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { motion } from "motion/react";
+import { useTheme } from "next-themes";
 import { Button } from "../ui/button";
 import Transcriber from "./transcriber";
-import { useTheme } from "next-themes";
-import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function Hero() {
   const { resolvedTheme } = useTheme();
+  console.log("resolvedTheme", resolvedTheme);
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto p-6 md:p-12 lg:pt-10 lg:pl-8 xl:p-10 2xl:p-20 3xl:p-64 4xl:p-80 max-h-[89dvh] sm:max-h-[90dvh] md:max-h-[98dvh] lg:min-h-[83dvh] 2xl:min-h-[90dvh] 3xl:min-h-[90dvh] 4xl:min-h-[70dvh] overflow-hidden rounded-4xl"
+      className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto p-6 md:p-12 lg:pt-10 lg:pl-8 xl:p-10 2xl:p-20 3xl:p-64 4xl:p-80 max-h-[92dvh] sm:max-h-[90dvh] md:max-h-[98dvh] lg:min-h-[83dvh] 2xl:min-h-[90dvh] 3xl:min-h-[90dvh] 4xl:min-h-[70dvh] overflow-hidden rounded-4xl"
     >
       <motion.div
         initial={{ opacity: 0, scale: 1.1 }}
@@ -25,12 +26,12 @@ export default function Hero() {
           background: `
             radial-gradient(
               ellipse 100% 100% at 50% ${isMobile ? "-5%" : "5%"},
-              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 0%,
-              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} ${isMobile ? "50%" : "40%"},
-              ${resolvedTheme !== "dark" ? `#C883FF ${isMobile ? '63%' : '50%'},` : ""}
-              #6A01D3 70%,
-              #8F00FF 85%,
-              #C883FF 100%
+              ${resolvedTheme === "dark" ? "#000000" : "#FFFFFF"} 0%,
+              ${resolvedTheme === "dark" ? "#000000" : "#FFFFFF"} ${isMobile ? "50%" : "40%"},
+              ${resolvedTheme !== "dark" ? `#DC8E43 ${isMobile ? '63%' : '70%'},` : "#C76829 85%,"}
+              #DC8E43 70%,
+              #C76829 85%,              
+            ${resolvedTheme === "dark" ? "#DC8E43 100%" : "#9C3A21 100%"} 
             )
           `,
         }}

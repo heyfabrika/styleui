@@ -55,12 +55,12 @@ export default function Footer() {
             background: `
             radial-gradient(
               ellipse 100% 100% at 50% ${is4xl ? "-5%" : "0%"},
-              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 50%,
-              ${resolvedTheme === "dark" ? "#1A1A1A" : "#FFFFFF"} 30%,
-              ${resolvedTheme !== "dark" ? "#C883FF 57%," : ""}
-              #6A01D3 70%,
-              #8F00FF 85%,
-              #C883FF 100%
+              ${resolvedTheme === "dark" ? "#000000" : "#FFFFFF"} 50%,
+              ${resolvedTheme === "dark" ? "#9C3A21 70%" : "#FFFFFF 30%"},
+              ${resolvedTheme !== "dark" ? "#DC8E43 76%," : "#C76829 85%,"}
+              #DC8E43 70%,
+              #C76829 85%,
+              ${resolvedTheme === "dark" ? "#DC8E43 100%" : "#9C3A21 100%"} 
             )
           `,
           }}
@@ -70,7 +70,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl md:text-5xl xl:text-6xl 4xl:text-7xl font-aleo lg:text-white"
+            className="text-4xl md:text-5xl xl:text-6xl 4xl:text-7xl font-aleo"
           >
             Never miss another <br /> important detail
           </motion.h1>

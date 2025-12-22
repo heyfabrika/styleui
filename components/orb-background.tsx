@@ -15,8 +15,8 @@ export default function OrbBackground({
       )}
       style={{
         background: isDark
-          ? "radial-gradient(circle at center, rgba(168, 85, 247, 0.35) 0%, rgba(162, 33, 179, 0.15) 60%, transparent 100%)"
-          : "radial-gradient(circle at center, rgba(220, 85, 247, 0.25) 0%, rgba(192, 132, 252, 0.1) 60%, transparent 100%)",
+          ? "radial-gradient(circle at center, rgba(199, 104, 41, 0.35) 0%, rgba(199, 104, 41, 0.15) 60%, transparent 100%)"
+          : "radial-gradient(circle at center, rgba(233, 184, 138, 0.35) 0%, rgba(233, 184, 138, 0.35) 60%, transparent 100%)",
         filter: "blur(60px)",
         zIndex: 0,
       }}

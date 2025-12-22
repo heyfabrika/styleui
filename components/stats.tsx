@@ -30,9 +30,11 @@ export default function Stats() {
 
       <section className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
         {stats.map((stat, index) => (
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
+          <div
+            className="flex flex-col lg:flex-row items-center justify-center gap-4"
+            key={stat.description}
+          >
             <motion.div
-              key={stat.description}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -42,7 +44,9 @@ export default function Stats() {
                 ease: "easeOut",
               }}
               className={`flex flex-col items-center justify-center px-8 md:px-12 py-6 md:py-0 w-full md:w-auto ${
-                index < stats.length - 1 ? "lg:border-r border-muted-foreground/20" : ""
+                index < stats.length - 1
+                  ? "lg:border-r border-muted-foreground/20"
+                  : ""
               }`}
             >
               <p className="text-4xl md:text-5xl 4xl:text-6xl tracking-tight mb-2 min-w-xs text-center font-semibold">

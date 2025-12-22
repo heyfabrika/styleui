@@ -1,49 +1,75 @@
 "use client";
 
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { StaticImageType } from "@/types/components/image";
 import { motion, type Variants } from "motion/react";
 import Image from "next/image";
 
 export default function LogoCloud() {
+  const is4xl = useMediaQuery("(min-width: 2560px)");
   const logos: StaticImageType[] = [
     {
       name: "Notion",
       image:
         "/logo/notion.svg",
+      size: {
+        width: is4xl ? 250 : 100,
+        height: is4xl ? 250 : 100,
+      },
     },
     {
       name: "Framer",
       image:
         "/logo/framer.svg",
+      size: {
+        width: is4xl ? 250 : 100,
+        height: is4xl ? 250 : 100,
+      },
     },
     {
       name: "Webflow",
       image:
         "/logo/webflow.svg",
+      size: {
+        width: is4xl ? 250 : 100,
+        height: is4xl ? 250 : 100,
+      },
     },
     {
       name: "Slack",
       image:
         "/logo/slack.svg",
+      size: {
+        width: is4xl ? 250 : 100,
+        height: is4xl ? 250 : 100,
+      },
     },
     {
       name: "Coinbase",
       image:
         "/logo/coinbase.svg",
+      size: {
+        width: is4xl ? 250 : 100,
+        height: is4xl ? 250 : 100,
+      },
     },
     {
       name: "Uber",
       image:
         "/logo/uber.svg",
       size: {
-        width: 60,
-        height: 60,
+        width: is4xl ? 150 : 70,
+        height: is4xl ? 150 : 70,
       },
     },
     {
       name: "Loom",
       image:
         "/logo/loom.svg",
+      size: {
+        width: is4xl ? 250 : 100,
+        height: is4xl ? 250 : 100,
+      },
     },
   ];
 
@@ -101,9 +127,9 @@ export default function LogoCloud() {
             <Image
               src={logo.image}
               alt={logo.name}
-              className="invert dark:invert-0 4xl:w-64"
-              width={logo.size?.width || 100}
-              height={logo.size?.height || 100}
+              className="invert dark:invert-0"
+              width={logo.size?.width}
+              height={logo.size?.height}
             />
           </motion.div>
         ))}

@@ -48,7 +48,7 @@ export default function TranscriptionFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background max-lg:via-secondary/30 to-primary/70 lg:to-primary/30 dark:to-secondary/60 rounded-4xl mt-20 4xl:mt-0 4xl:min-h-[80dvh]"
+      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background dark:via-secondary/5 max-lg:via-secondary/30 to-primary/70 lg:to-primary/30 dark:to-secondary/40 rounded-4xl mt-20 4xl:mt-0 4xl:min-h-[80dvh]"
     >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 max-w-5xl 4xl:min-w-[80dvw]">
         <motion.section

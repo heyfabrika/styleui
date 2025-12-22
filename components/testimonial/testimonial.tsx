@@ -1,13 +1,10 @@
 "use client";
 import { motion } from "motion/react";
 import TestimonialCard from "./testimonial-card";
-import { useTheme } from "next-themes";
 
 export default function Testimonial() {
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
   return (
-    <div className="pt-30 pb-12 lg:pt-40 lg:px-4 max-w-6xl 4xl:min-w-[70dvw] mx-auto flex flex-col gap-12">
+    <div className="pt-30 pb-12 lg:pt-40 px-4 max-w-6xl 4xl:min-w-[70dvw] mx-auto flex flex-col gap-12">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +28,7 @@ export default function Testimonial() {
           className="md:col-span-3 h-full"
         >
           <TestimonialCard
-            logo={isDark ? "https://cdn.brandfetch.io/id6B0ZV-R2/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1733967977554" : "https://cdn.brandfetch.io/id6B0ZV-R2/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1733967977437"}
+            logo="https://cdn.brandfetch.io/id6B0ZV-R2/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1733967977437"
             quote="We tested Notio with over 2,000 freelancers on our platform, and the feedback was overwhelming. Consultants, designers, and developers all said the same thing—they finally felt confident taking client calls without the stress of frantic note-taking. One freelancer now she just reviews the transcript, adds a few annotations, and moves on with her day. That's time she can bill to another client."
             author="Mary Chen"
             role="VP of Product"

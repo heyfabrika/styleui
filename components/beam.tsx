@@ -27,9 +27,9 @@ export default function Beam({
             "absolute left-1/2 -translate-x-1/2 blur-[0.625rem]",
             "top-0 md:top-[3%]",
             "h-0 w-0",
-            "border-l-[35rem] border-l-transparent",
-            "border-r-[35.75rem] border-r-transparent",
-            "border-t-[3.125rem] border-t-white/80 dark:border-t-[rgba(255,255,255,0.2)]"
+            "border-l-[20rem] md:border-l-[35rem] border-l-transparent",
+            "border-r-[20.75rem] md:border-r-[35.75rem] border-r-transparent",
+            "border-t-[2.125rem] md:border-t-[3.125rem] border-t-white/80 dark:border-t-[rgba(255,255,255,0.2)]"
           )}
         />
 

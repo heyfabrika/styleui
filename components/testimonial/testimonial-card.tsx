@@ -31,7 +31,7 @@ export default function TestimonialCard({
         </CardHeader>
       )}
       <CardContent className="flex-1">
-        <p className="text-lg leading-relaxed font-medium 4xl:text-2xl">{quote}</p>
+        <p className="text-lg leading-relaxed 4xl:text-2xl">{quote}</p>
       </CardContent>
       <CardFooter className="pt-4 border-t-0">
         <div className="flex items-center gap-3">
@@ -40,8 +40,8 @@ export default function TestimonialCard({
             <AvatarFallback className="4xl:text-2xl">{author[0]}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
-            <p className="text-sm font-semibold text-foreground 4xl:text-2xl">{author}</p>
-            <p className="text-xs text-muted-foreground 4xl:text-2xl">{role}</p>
+            <p className="text-base font-medium text-foreground 4xl:text-2xl">{author}</p>
+            <p className="text-sm text-muted-foreground 4xl:text-2xl">{role}</p>
           </div>
         </div>
       </CardFooter>

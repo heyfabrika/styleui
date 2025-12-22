@@ -11,7 +11,7 @@ import Testimonial from "@/components/testimonial/testimonial";
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-8 overflow-hidden">
+    <div className="flex flex-col gap-8 overflow-hidden p-2">
       <Navbar />
       <Hero />
       <LogoCloud />

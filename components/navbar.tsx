@@ -1,7 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronDownIcon, MenuIcon, XIcon } from "lucide-react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,7 +8,6 @@ import { Button } from "./ui/button";
 import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
-  const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems: { label: string; href: string }[] = [
@@ -26,12 +24,15 @@ export default function Navbar() {
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Image
-            src={
-              resolvedTheme === "dark"
-                ? "/logo/notio-logo-white.svg"
-                : "/logo/notio-logo-black.svg"
-            }
-            className="4xl:w-40 4xl:h-40"
+            src="/logo/notio-logo-black.svg"
+            className="4xl:w-40 4xl:h-40 dark:hidden"
+            alt="Logo"
+            width={100}
+            height={100}
+          />
+          <Image
+            src="/logo/notio-logo-white.svg"
+            className="4xl:w-40 4xl:h-40 hidden dark:block"
             alt="Logo"
             width={100}
             height={100}
@@ -97,39 +98,36 @@ export default function Navbar() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="md:hidden"
         >
-          <div className="flex flex-row items-center gap-2">
-            <ThemeToggle />
-            <Button
-              variant="ghost"
-              className="p-2"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              <AnimatePresence mode="wait">
-                {isOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ opacity: 0, rotate: -90 }}
-                    animate={{ opacity: 1, rotate: 0 }}
-                    exit={{ opacity: 0, rotate: 90 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <XIcon className="w-6 h-6" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ opacity: 0, rotate: 90 }}
-                    animate={{ opacity: 1, rotate: 0 }}
-                    exit={{ opacity: 0, rotate: -90 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <MenuIcon className="w-6 h-6" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </Button>
-          </div>
+          <Button
+            variant="ghost"
+            className="p-2"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            <AnimatePresence mode="wait">
+              {isOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ opacity: 0, rotate: -90 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: 90 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <XIcon className="w-6 h-6" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ opacity: 0, rotate: 90 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: -90 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <MenuIcon className="w-6 h-6" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </Button>
         </motion.div>
       </div>
 
@@ -181,6 +179,7 @@ export default function Navbar() {
                 transition={{ duration: 0.2, delay: navItems.length * 0.1 }}
                 className="flex flex-col gap-2 pt-2"
               >
+                <ThemeToggle />
                 <Button variant="ghost" className="w-full">
                   <Link href="/auth/login">Log In</Link>
                 </Button>

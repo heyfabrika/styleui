@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { TeamMember } from "@/types/components/team-member";
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import BlurredOrb from "../blurred-orb";
 import { GridPattern } from "../ui/grid-pattern";
@@ -11,14 +10,14 @@ import TeamMemberAvatar from "./team-member-avatar";
 export default function Team() {
   const team: Omit<TeamMember, "index">[] = [
     {
-      name: "John Doe",
-      role: "CEO",
-      image: "/illustrations/avatar-1.svg",
+      name: "Olivia Martin",
+      role: "Co-Founder",
+      image: "/illustrations/avatar-2.svg",
     },
     {
-      name: "Jane Doe",
+      name: "John Doe",
       role: "CTO",
-      image: "/illustrations/avatar-2.svg",
+      image: "/illustrations/avatar-1.svg",
     },
     {
       name: "Jim Beam",
@@ -27,24 +26,22 @@ export default function Team() {
     },
   ];
 
-  const { resolvedTheme } = useTheme();
-
   return (
-    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-40 lg:mb-20">
+    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-40 lg:mb-16">
       <section className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0"
+          className="absolute inset-0 -top-32"
         >
           <GridPattern
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             x={-1}
             y={-1}
             className={cn(
-              "[mask-image:radial-gradient(250px_circle_at_center,white,transparent)] -z-10"
+              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] -z-10"
             )}
           />
         </motion.div>
@@ -53,10 +50,10 @@ export default function Team() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.4, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-md:space-y-4"
         >
-          <BlurredOrb className="w-64 h-64" />
-          <BlurredOrb className="w-64 h-64 from-primary via-orange-200 to-orange-100" />
+          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 -rotate-45" />
+          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-orange-200 to-orange-100 -rotate-45" />
         </motion.div>
 
         <div className="relative h-44 w-70 4xl:h-80 4xl:w-120">
@@ -80,15 +77,18 @@ export default function Team() {
         transition={{ duration: 0.5, delay: 0.7 }}
       >
         <Image
-          src={
-            resolvedTheme === "dark"
-              ? "/logo/notio-logo-white.svg"
-              : "/logo/notio-logo-black.svg"
-          }
+          src="/logo/notio-logo-black.svg"
           alt="Team"
           width={120}
           height={120}
-          className="4xl:w-64 4xl:h-40"
+          className="4xl:w-64 4xl:h-40 dark:hidden"
+        />
+        <Image
+          src="/logo/notio-logo-white.svg"
+          alt="Team"
+          width={120}
+          height={120}
+          className="4xl:w-64 4xl:h-40 hidden dark:block"
         />
       </motion.div>
 

@@ -29,7 +29,7 @@ export default function Pricing() {
         "AI-powered summaries",
         "Custom tags & categories",
       ],
-      slug: "pro",
+      slug: "Paid",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Pricing() {
         <h2 className="text-3xl md:text-5xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
           Simple, Transparent pricing
         </h2>
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed 4xl:text-3xl">
+        <p className="text-muted-foreground text-base leading-relaxed 4xl:text-3xl">
           Start free. Upgrade when you're ready. Cancel anytime.
         </p>
       </motion.section>

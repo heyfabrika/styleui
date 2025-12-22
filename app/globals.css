@@ -47,6 +47,38 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --breakpoint-4xl: 160rem; /* 2560px */
+  --background-image-hero-radial-light: radial-gradient(
+    ellipse 100% 100% at 50% var(--bg-pos, 5%),
+    var(--gradient-start) 0%,
+    var(--gradient-start) var(--bg-mid, 40%),
+    var(--gradient-mid-light) var(--bg-mid-alt, 70%),
+    var(--gradient-mid-light) 70%,
+    var(--gradient-mid-dark) 85%,
+    var(--gradient-end-light) 100%
+  );
+  --background-image-hero-radial-dark: radial-gradient(
+    ellipse 100% 100% at 50% var(--bg-pos, 5%),
+    var(--gradient-start) 0%,
+    var(--gradient-start) var(--bg-mid, 40%),
+    var(--gradient-mid-dark) 85%,
+    var(--gradient-end-dark) 100%
+  );
+  --background-image-footer-radial-light: radial-gradient(
+    ellipse 100% 100% at 50% var(--bg-pos-footer, 0%),
+    var(--gradient-start) 50%,
+    var(--gradient-start) 30%,
+    var(--gradient-mid-light) 76%,
+    var(--gradient-mid-light) 70%,
+    var(--gradient-mid-dark) 85%,
+    var(--gradient-end-light) 100%
+  );
+  --background-image-footer-radial-dark: radial-gradient(
+    ellipse 150% 100% at 50% var(--bg-pos-footer, 0%),
+    var(--gradient-start) 50%,
+    var(--gradient-mid-light) 70%,
+    var(--gradient-mid-dark) 85%,
+    var(--gradient-end-dark) 100%
+  );
 }
 
 :root {
@@ -82,6 +114,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  /* Gradient colors for hero and footer backgrounds */
+  --gradient-start: #FFFFFF;
+  --gradient-mid-light: #DC8E43;
+  --gradient-mid-dark: #C76829;
+  --gradient-end-light: #9C3A21;
+  --gradient-end-dark: #DC8E43;
+  /* Orb background colors */
+  --orb-color-light: rgba(233, 184, 138, 0.35);
+  --orb-color-dark: rgba(199, 104, 41, 0.35);
+  --orb-color-dark-fade: rgba(199, 104, 41, 0.15);
 }
 
 .dark {
@@ -116,6 +158,14 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --gradient-start: #000000;
+  --gradient-mid-light: #9C3A21;
+  --gradient-mid-dark: #C76829;
+  --gradient-end-light: #DC8E43;
+  --gradient-end-dark: #DC8E43;
+  --orb-color-light: rgba(199, 104, 41, 0.35);
+  --orb-color-dark: rgba(199, 104, 41, 0.35);
+  --orb-color-dark-fade: rgba(199, 104, 41, 0.15);
 }
 
 @layer base {

@@ -3,29 +3,28 @@
 import OrbBackground from "@/components/orb-background";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AuthPage() {
-  const { resolvedTheme } = useTheme();
-
-  const isDark = resolvedTheme === "dark";
-
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4">
-      <OrbBackground isDark={isDark} />
+      <OrbBackground />
       <div className="relative z-10 w-full max-w-sm bg-card border border-primary/70 rounded-2xl p-8 shadow-xl">
         <div className="flex flex-col gap-6">
           <Image
-            src={
-              isDark
-                ? "/logo/notio-icon-white.svg"
-                : "/logo/notio-icon-black.svg"
-            }
+            src="/logo/notio-icon-black.svg"
             alt="Notio"
             width={32}
             height={32}
+            className="dark:hidden"
+          />
+          <Image
+            src="/logo/notio-icon-white.svg"
+            alt="Notio"
+            width={32}
+            height={32}
+            className="hidden dark:block"
           />
 
           <div className="flex flex-col gap-2">

@@ -1,14 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function Footer() {
-  const { resolvedTheme } = useTheme();
   const is4xl = useMediaQuery("(min-width: 2560px)");
   const socialLinks: { label: string; href: string; icon: string }[] = [
     {
@@ -39,38 +37,25 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="flex flex-col">
+    <footer className="max-md:relative flex flex-col max-md:px-4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[60dvh] md:min-h-[70dvh] xl:min-h-[80dvh] 4xl:min-h-[60dvh] rounded-4xl"
+        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[90dvh] md:min-h-[70dvh] xl:min-h-[80dvh] 4xl:min-h-[60dvh] rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="absolute inset-0 -z-10 rotate-180 rounded-4xl overflow-hidden"
-          style={{
-            background: `
-            radial-gradient(
-              ellipse 100% 100% at 50% ${is4xl ? "-5%" : "0%"},
-              ${resolvedTheme === "dark" ? "#000000" : "#FFFFFF"} 50%,
-              ${resolvedTheme === "dark" ? "#9C3A21 70%" : "#FFFFFF 30%"},
-              ${resolvedTheme !== "dark" ? "#DC8E43 76%," : "#C76829 85%,"}
-              #DC8E43 70%,
-              #C76829 85%,
-              ${resolvedTheme === "dark" ? "#DC8E43 100%" : "#9C3A21 100%"} 
-            )
-          `,
-          }}
+          className="absolute inset-0 -z-10 rotate-180 rounded-4xl overflow-hidden bg-footer-radial-light dark:bg-footer-radial-dark [--bg-pos-footer:20%] lg:[--bg-pos-footer:-5%] 4xl:[--bg-pos-footer:-5%]"
         />
-        <section className="flex flex-col gap-4 4xl:gap-16 z-10 text-center items-center xl:mb-40">
+        <section className="max-md:absolute max-md:bottom-50 max-md:-translate-y-1/2 flex flex-col gap-6 md:gap-4 4xl:gap-16 z-10 text-center items-center xl:mb-40">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl md:text-5xl xl:text-6xl 4xl:text-7xl font-aleo"
+            className="text-3xl md:text-5xl xl:text-6xl 4xl:text-7xl font-aleo"
           >
             Never miss another <br /> important detail
           </motion.h1>
@@ -78,7 +63,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="text-sm md:text-base xl:text-lg 4xl:text-3xl max-w-md lg:max-w-2xl 4xl:max-w-4xl"
+            className="text-base xl:text-lg 4xl:text-3xl max-w-xs lg:max-w-2xl 4xl:max-w-4xl"
           >
             Join thousands of professionals who've stopped scrambling for notes.
             Start your free account in seconds.
@@ -95,7 +80,7 @@ export default function Footer() {
         </section>
       </motion.div>
 
-      <section className="flex flex-col gap-8 lg:gap-12 items-center justify-center py-16">
+      <section className="max-md:absolute max-md:bottom-10 max-md:left-1/2 max-md:-translate-x-1/2 flex flex-col gap-8 lg:gap-12 items-center justify-center lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,15 +88,18 @@ export default function Footer() {
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Image
-            src={
-              resolvedTheme === "dark"
-                ? "/logo/notio-logo-white.svg"
-                : "/logo/notio-logo-black.svg"
-            }
+            src="/logo/notio-logo-black.svg"
             alt="Logo"
             width={100}
             height={100}
-            className="4xl:w-60 4xl:h-20"
+            className="4xl:w-60 4xl:h-20 dark:hidden"
+          />
+          <Image
+            src="/logo/notio-logo-white.svg"
+            alt="Logo"
+            width={100}
+            height={100}
+            className="4xl:w-60 4xl:h-20 hidden dark:block"
           />
         </motion.div>
         <motion.ul

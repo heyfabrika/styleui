@@ -23,7 +23,7 @@ export default function FeatureCard({
         <CardTitle className="text-xl mx-auto 4xl:text-4xl">{feature.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-center text-lg md:text-base 4xl:text-2xl">
+        <CardDescription className="text-center opacity-80 4xl:text-2xl">
           {feature.description}
         </CardDescription>
       </CardContent>

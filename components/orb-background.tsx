@@ -2,10 +2,8 @@ import { cn } from "@/lib/utils";
 
 export default function OrbBackground({
   className,
-  isDark,
 }: {
   className?: string;
-  isDark?: boolean;
 }) {
   return (
     <div
@@ -14,9 +12,7 @@ export default function OrbBackground({
         className
       )}
       style={{
-        background: isDark
-          ? "radial-gradient(circle at center, rgba(199, 104, 41, 0.35) 0%, rgba(199, 104, 41, 0.15) 60%, transparent 100%)"
-          : "radial-gradient(circle at center, rgba(233, 184, 138, 0.35) 0%, rgba(233, 184, 138, 0.35) 60%, transparent 100%)",
+        background: "radial-gradient(circle at center, var(--orb-color-light) 0%, var(--orb-color-dark-fade) 60%, transparent 100%)",
         filter: "blur(60px)",
         zIndex: 0,
       }}

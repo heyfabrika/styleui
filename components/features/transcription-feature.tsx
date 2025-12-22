@@ -4,8 +4,8 @@ import { AnimatedList } from "../animated-list";
 import { Card } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
 import BlurredOrb from "../blurred-orb";
+import { Separator } from "../ui/separator";
 
 const transcriptions = [
   {
@@ -21,7 +21,7 @@ const transcriptions = [
     text: "That's awesome. Any issues come up?",
   },
   {
-    time: "00:48",
+    time: "00:46",
     text: "Just one small thing—the contact form wasn't sending emails properly. But we fixed it yesterday.",
   },
 ];
@@ -33,22 +33,22 @@ function TranscriptionItem({ time, text }: { time: string; text: string }) {
         {time}
       </span>
       <div className="relative border-l border-border/40 pl-6 pb-6 last:pb-0">
-        <p className="text-foreground/80 leading-relaxed text-xs lg:text-base 4xl:text-2xl">{text}</p>
+        <p className="text-foreground/80 leading-relaxed text-xs lg:text-base 4xl:text-2xl">
+          {text}
+        </p>
       </div>
     </div>
   );
 }
 
 export default function TranscriptionFeature() {
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background max-lg:via-primary/20 to-primary/70 lg:to-primary/30 dark:to-primary/60 rounded-4xl mt-20 4xl:mt-0 4xl:min-h-[80dvh]"
+      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background max-lg:via-secondary/30 to-primary/70 lg:to-primary/30 dark:to-secondary/60 rounded-4xl mt-20 4xl:mt-0 4xl:min-h-[80dvh]"
     >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 max-w-5xl 4xl:min-w-[80dvw]">
         <motion.section
@@ -74,19 +74,24 @@ export default function TranscriptionFeature() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl"
+          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl max-lg:px-4"
         >
           <Card className="w-full max-w-md 4xl:max-w-2xl min-h-64 lg:min-h-96 4xl:min-h-[60dvh] dark:bg-background backdrop-blur-sm overflow-hidden relative rounded-3xl border border-primary/10">
-            <div className="p-4 lg:p-8 pb-24 lg:pb-32">
+            <div className="p-4 lg:px-8 lg:py-6 pb-24 lg:pb-32">
               <div className="mb-8">
-                <p className="text-base text-foreground leading-relaxed 4xl:text-2xl">
+                <p className="text-sm md:text-base text-foreground leading-relaxed 4xl:text-2xl">
                   Joanne sounds upset on the phone. Should ask her how things
                   are going.
                 </p>
+                <Separator className="mt-4 opacity-50"/>
               </div>
 
               <div className="flex flex-col">
-                <AnimatedList delay={1000} reverse={false} className="lg:gap-4 4xl:gap-12">
+                <AnimatedList
+                  delay={1000}
+                  reverse={false}
+                  className="lg:gap-4 4xl:gap-12"
+                >
                   {transcriptions.map((item) => (
                     <TranscriptionItem
                       key={item.time}
@@ -112,15 +117,18 @@ export default function TranscriptionFeature() {
                 <div className="relative flex items-center gap-3 dark:bg-background bg-white px-5 py-2.5 rounded-full border border-primary shadow-[0_0_41.9px_0_rgba(199,104,41,0.4)] 4xl:px-10 4xl:py-5">
                   <BlurredOrb className="absolute inset-0 blur-xl rounded-full w-full h-full opacity-20" />
                   <Image
-                    src={
-                      isDark
-                        ? "logo/notio-icon-white.svg"
-                        : "logo/notio-icon-black.svg"
-                    }
+                    src="logo/notio-icon-black.svg"
                     alt="Notio"
                     width={20}
                     height={20}
-                    className="4xl:size-10"
+                    className="4xl:size-10 dark:hidden"
+                  />
+                  <Image
+                    src="logo/notio-icon-white.svg"
+                    alt="Notio"
+                    width={20}
+                    height={20}
+                    className="4xl:size-10 hidden dark:block"
                   />
                   <span className="text-sm font-medium text-foreground/90 4xl:text-2xl">
                     Transcribing call audio

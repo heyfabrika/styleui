@@ -11,7 +11,7 @@ export default function Stats() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 lg:gap-24 items-center justify-center py-6 lg:py-20 px-4">
+    <div className="flex flex-col gap-4 lg:gap-24 items-center justify-center py-6 lg:py-24 px-4">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

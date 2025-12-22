@@ -35,7 +35,7 @@ export default function Transcriber() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col gap-2 md:gap-8 w-full max-w-xs md:max-w-sm xl:max-w-md 4xl:max-w-2xl bg-gradient-to-b from-background to-zinc-100 dark:to-muted rounded-4xl border border-primary/40 pb-6 md:pb-"
+      className="flex flex-col gap-2 md:gap-8 w-full max-w-xs md:max-w-sm xl:max-w-md 4xl:max-w-2xl bg-gradient-to-b from-background to-zinc-100 dark:to-muted rounded-4xl border border-primary/40 pb-6 md:pb-8"
     >
       <motion.section
         initial={{ opacity: 0 }}
@@ -123,7 +123,7 @@ export default function Transcriber() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5, ease: "easeOut" }}
-            className="relative shadow-2xl rounded-2xl md:rounded-4xl bg-background flex flex-col gap-3 md:gap-4 4xl:gap-20 p-3 md:p-4 min-h-64 md:min-h-90 4xl:min-h-140 overflow-hidden"
+            className="relative shadow-2xl rounded-2xl md:rounded-4xl bg-background flex flex-col gap-3 md:gap-4 4xl:gap-20 p-3 md:p-4 min-h-64 md:min-h-80 lg:min-h-85 xl:min-h-90 4xl:min-h-140 overflow-hidden"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -198,35 +198,10 @@ export default function Transcriber() {
               <motion.button
                 onClick={toggle}
                 whileTap={{ scale: 0.9 }}
-                className="relative w-10 h-10 lg:w-12 lg:h-12 4xl:w-16 4xl:h-16 bg-foreground flex items-center justify-center"
+                className="relative w-8 h-8 lg:w-12 lg:h-12 4xl:w-16 4xl:h-16 bg-foreground flex items-center justify-center"
                 animate={{ borderRadius: isRunning ? "4px" : "50%" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                <AnimatePresence mode="wait">
-                  {isRunning ? (
-                    <motion.div
-                      key="pause"
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.5 }}
-                      transition={{ duration: 0.2 }}
-                      className="flex gap-1"
-                    >
-                      <div className="w-1 h-3 lg:h-4 4xl:h-6 bg-background rounded-sm" />
-                      <div className="w-1 h-3 lg:h-4 4xl:h-6 bg-background rounded-sm" />
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key="play"
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.5 }}
-                      transition={{ duration: 0.2 }}
-                      className="w-0 h-0 border-t-[6px] md:border-t-[8px] border-t-transparent border-b-[6px] md:border-b-[8px] border-b-transparent border-l-[10px] md:border-l-[12px] border-l-background ml-1"
-                    />
-                  )}
-                </AnimatePresence>
-              </motion.button>
+              />
             </motion.div>
 
             <motion.div

@@ -79,7 +79,7 @@ export default function Navbar() {
               delay: 0.2 + navItems.length * 0.1,
             }}
           >
-            <Button variant="default" className="4xl:text-2xl h-16 px-8"><Link href="/auth/login">Start for free</Link></Button>
+            <Button variant="default" className="4xl:text-2xl 4xl:h-16 4xl:px-8"><Link href="/auth/login">Start for free</Link></Button>
           </motion.div>
           <ModeToggle/>
         </div>

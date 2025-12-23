@@ -48,9 +48,9 @@ export default function TranscriptionFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center lg:min-h-[90dvh] w-full mx-auto px-4 lg:px-20 xl:px-16 2xl:px-20 4xl:px-40 pb-6 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background dark:via-secondary/30 lg:dark:via-secondary/5 max-lg:via-secondary/10 to-primary/40 lg:to-primary/30 dark:to-secondary/60 lg:dark:to-secondary/50 rounded-4xl mt-20 lg:mt-0 4xl:min-h-[80dvh]"
+      className="flex flex-col items-center justify-center w-full mx-auto px-4 lg:px-20 xl:px-16 2xl:px-20 4xl:px-20 pb-6 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background dark:via-secondary/30 lg:dark:via-secondary/5 max-lg:via-secondary/10 to-primary/40 lg:to-primary/30 dark:to-secondary/60 lg:dark:to-secondary/50 rounded-4xl mt-20 lg:mt-0"
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 xl:gap-24 4xl:gap-12 max-w-7xl 4xl:min-w-[70dvw]">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 xl:gap-24 max-w-7xl">
         <motion.section
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export default function TranscriptionFeature() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="flex-1 space-y-6 text-center lg:text-left z-10"
         >
-          <h2 className="text-2xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
+          <h2 className="text-2xl md:text-4xl 4xl:text-5xl font-aleo tracking-tight text-foreground">
             Transcription captures words. <br />
             Notio captures context.
           </h2>
@@ -74,7 +74,7 @@ export default function TranscriptionFeature() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl max-lg:px-4"
+          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl max-lg:px-4 lg:mb-8"
         >
           <Card className="w-full max-w-100 4xl:max-w-2xl min-h-64 lg:min-h-96 4xl:min-h-[60dvh] dark:bg-background backdrop-blur-sm overflow-hidden relative rounded-3xl border border-primary/10">
             <div className="p-4 lg:px-8 lg:py-6 pb-24 lg:pb-32">

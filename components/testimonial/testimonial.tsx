@@ -4,7 +4,7 @@ import TestimonialCard from "./testimonial-card";
 
 export default function Testimonial() {
   return (
-    <div className="pt-30 pb-12 lg:pt-40 4xl:pt-64 px-4 max-w-6xl 4xl:min-w-[70dvw] mx-auto flex flex-col gap-12">
+    <div className="pt-30 pb-12 lg:pt-40 4xl:pt-64 px-4 max-w-6xl 4xl:max-w-[90rem] mx-auto flex flex-col gap-12">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

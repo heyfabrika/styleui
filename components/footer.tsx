@@ -42,7 +42,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[90dvh] md:min-h-[70dvh] xl:min-h-[80dvh] 4xl:min-h-[60dvh] rounded-4xl"
+        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 2xl:p-64 min-h-[90dvh] md:min-h-[70dvh] 4xl:min-h-[60dvh] rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}

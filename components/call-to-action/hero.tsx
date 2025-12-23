@@ -6,12 +6,12 @@ import Transcriber from "./transcriber";
 
 export default function Hero() {
   return (
-    <div className="md:mx-4 lg:mx-8">
+    <div className="md:mx-4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto pt-12 md:px-12 lg:pl-12 xl:pl-20 h-210 sm:h-195 md:h-215 lg:h-220 4xl:h-300 lg:min-h-full overflow-hidden rounded-4xl"
+        className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto pt-12 md:px-12 lg:pl-12 xl:pl-20 h-210 sm:h-195 md:h-215 lg:h-220 4xl:h-300 4xl:w-[80%] lg:min-h-full overflow-hidden rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
@@ -22,7 +22,7 @@ export default function Hero() {
              [--bg-mid:50%] lg:[--bg-mid:40%] 
              [--bg-mid-alt:63%] lg:[--bg-mid-alt:70%]"
         />
-        <section className="flex flex-col gap-4 4xl:gap-10 z-10 text-center lg:text-left items-center lg:items-start 2xl:mb-40">
+        <section className="flex flex-col gap-4 z-10 text-center lg:text-left items-center lg:items-start 2xl:mb-40">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

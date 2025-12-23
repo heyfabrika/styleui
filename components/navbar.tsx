@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex flex-row justify-between items-center pb-4 4xl:pb-0">
+      <div className="flex flex-row justify-between items-center pb-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -25,14 +25,14 @@ export default function Navbar() {
         >
           <Image
             src="/logo/notio-logo-black.svg"
-            className="4xl:w-40 4xl:h-40 dark:hidden"
+            className="dark:hidden"
             alt="Logo"
             width={100}
             height={100}
           />
           <Image
             src="/logo/notio-logo-white.svg"
-            className="4xl:w-40 4xl:h-40 hidden dark:block"
+            className="hidden dark:block"
             alt="Logo"
             width={100}
             height={100}

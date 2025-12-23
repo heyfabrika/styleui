@@ -174,5 +174,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 }

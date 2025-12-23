@@ -14,7 +14,6 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    // Return placeholder with same dimensions to avoid layout shift
     return <div className="border border-border h-9 w-[72px] rounded-md" />;
   }
 
@@ -27,10 +26,10 @@ export function ThemeToggle() {
       className="border border-border"
     >
       <ToggleGroupItem value="dark" aria-label="Dark theme">
-        <Moon className="h-4 w-4 4xl:size-8" />
+        <Moon className="h-4 w-4 4xl:size-5" />
       </ToggleGroupItem>
       <ToggleGroupItem value="light" aria-label="Light theme">
-        <Sun className="h-4 w-4 4xl:size-8" />
+        <Sun className="h-4 w-4 4xl:size-5" />
       </ToggleGroupItem>
     </ToggleGroup>
   );

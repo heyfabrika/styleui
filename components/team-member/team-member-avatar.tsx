@@ -36,10 +36,10 @@ export default function TeamMemberAvatar({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
-            className="absolute -top-16 left-1/2 -translate-x-1/2 bg-foreground text-background px-4 py-2 rounded-lg whitespace-nowrap z-10 4xl:text-2xl"
+            className="absolute -top-16 4xl:-top-24 left-1/2 -translate-x-1/2 bg-foreground text-background px-4 py-2 rounded-lg whitespace-nowrap z-10 4xl:text-2xl"
           >
-            <p className="font-medium text-sm">{member.name}</p>
-            <p className="text-xs text-zinc-400">{member.role}</p>
+            <p className="font-medium text-sm 4xl:text-2xl">{member.name}</p>
+            <p className="text-xs text-zinc-400 4xl:text-xl">{member.role}</p>
           </motion.div>
         )}
       </AnimatePresence>

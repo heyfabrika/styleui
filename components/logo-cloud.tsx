@@ -13,8 +13,8 @@ export default function LogoCloud() {
       image:
         "/logo/notion.svg",
       size: {
-        width: is4xl ? 250 : 100,
-        height: is4xl ? 250 : 100,
+        width: is4xl ? 180 : 100,
+        height: is4xl ? 180 : 100,
       },
     },
     {
@@ -22,8 +22,8 @@ export default function LogoCloud() {
       image:
         "/logo/framer.svg",
       size: {
-        width: is4xl ? 250 : 100,
-        height: is4xl ? 250 : 100,
+        width: is4xl ? 180 : 100,
+        height: is4xl ? 180 : 100,
       },
     },
     {
@@ -31,8 +31,8 @@ export default function LogoCloud() {
       image:
         "/logo/webflow.svg",
       size: {
-        width: is4xl ? 250 : 100,
-        height: is4xl ? 250 : 100,
+        width: is4xl ? 180 : 100,
+        height: is4xl ? 180 : 100,
       },
     },
     {
@@ -40,8 +40,8 @@ export default function LogoCloud() {
       image:
         "/logo/slack.svg",
       size: {
-        width: is4xl ? 250 : 100,
-        height: is4xl ? 250 : 100,
+        width: is4xl ? 180 : 100,
+        height: is4xl ? 180 : 100,
       },
     },
     {
@@ -49,8 +49,8 @@ export default function LogoCloud() {
       image:
         "/logo/coinbase.svg",
       size: {
-        width: is4xl ? 250 : 100,
-        height: is4xl ? 250 : 100,
+        width: is4xl ? 180 : 100,
+        height: is4xl ? 180 : 100,
       },
     },
     {
@@ -58,8 +58,8 @@ export default function LogoCloud() {
       image:
         "/logo/uber.svg",
       size: {
-        width: is4xl ? 150 : 100,
-        height: is4xl ? 150 : 100,
+        width: is4xl ? 100 : 70,
+        height: is4xl ? 100 : 70,
       },
     },
     {
@@ -67,8 +67,8 @@ export default function LogoCloud() {
       image:
         "/logo/loom.svg",
       size: {
-        width: is4xl ? 250 : 100,
-        height: is4xl ? 250 : 100,
+        width: is4xl ? 180 : 100,
+        height: is4xl ? 180 : 100,
       },
     },
   ];
@@ -107,7 +107,7 @@ export default function LogoCloud() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="lg:text-lg text-center font-light 4xl:text-3xl"
+        className="text-center font-light 4xl:text-3xl"
       >
         Your favorite companies are our partners
       </motion.p>

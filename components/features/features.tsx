@@ -35,7 +35,7 @@ export default function Features() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-3xl md:text-4xl 4xl:text-7xl font-aleo text-center"
+        className="text-3xl md:text-4xl 4xl:text-6xl font-aleo text-center"
       >
         One app for all your conversations
       </motion.h1>

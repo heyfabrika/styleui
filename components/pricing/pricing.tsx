@@ -42,7 +42,7 @@ export default function Pricing() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="space-y-4 4xl:space-y-8 text-center"
       >
-        <h2 className="text-3xl md:text-5xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
+        <h2 className="text-3xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
           Simple, Transparent pricing
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed 4xl:text-3xl">

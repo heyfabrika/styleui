@@ -61,14 +61,14 @@ export default function ToolFeature() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 lg:w-24 lg:h-24 -mr-4 4xl:w-40 4xl:h-40"
+              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 lg:w-20 lg:h-20 -mr-4 4xl:w-28 4xl:h-28"
             >
               <Image
                 src={tool.lightImage}
                 alt={tool.name}
                 width={100}
                 height={100}
-                className="w-full h-full object-contain:p-2 dark:hidden"
+                className="w-full h-full object-contain p-2 dark:hidden"
               />
               <Image
                 src={tool.darkImage}
@@ -77,7 +77,7 @@ export default function ToolFeature() {
                 height={100}
                 className="w-full h-full object-contain p-2 hidden dark:block"
               />
-              <BlurredOrb className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-xl lg:h-12 lg:w-12 w-8 h-8 4xl:h-18 4xl:w-18" />
+              <BlurredOrb className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-2xl lg:h-10 lg:w-10 w-8 h-8 4xl:h-14 4xl:w-14" />
             </motion.div>
           ))}
         </CardHeader>
@@ -104,7 +104,7 @@ export default function ToolFeature() {
               delay: 0.4,
               ease: "easeOut",
             }}
-            className="text-center text-muted-foreground text-lg md:text-base 4xl:text-3xl 4xl:max-w-4xl"
+            className="text-center text-muted-foreground text-lg md:text-base max-w-lg 4xl:text-3xl 4xl:max-w-4xl"
           >
             Connect seamlessly with popular platforms and services to enhance
             your workflow.

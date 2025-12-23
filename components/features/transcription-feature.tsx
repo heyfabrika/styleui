@@ -29,7 +29,7 @@ const transcriptions = [
 function TranscriptionItem({ time, text }: { time: string; text: string }) {
   return (
     <div className="flex items-start 4xl:gap-8">
-      <span className="text-muted-foreground/60 font-mono text-xs shrink-0 pt-1 w-10 text-right 4xl:text-2xl">
+      <span className="text-muted-foreground/60 font-mono text-xs shrink-0 pt-1 w-6 lg:w-6 xl:w-10 text-right 4xl:text-2xl">
         {time}
       </span>
       <div className="relative border-l border-border/40 pl-6 pb-6 last:pb-0">
@@ -48,9 +48,9 @@ export default function TranscriptionFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center lg:min-h-[60dvh] w-full mx-auto px-4 xl:px-16 2xl:px-20 4xl:px-40 pb-6 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background dark:via-secondary/5 max-lg:via-secondary/30 to-primary/70 lg:to-primary/30 dark:to-secondary/40 rounded-4xl mt-20 4xl:mt-0 4xl:min-h-[80dvh]"
+      className="flex flex-col items-center justify-center lg:min-h-[90dvh] w-full mx-auto px-4 lg:px-20 xl:px-16 2xl:px-20 4xl:px-40 pb-6 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background dark:via-secondary/30 lg:dark:via-secondary/5 max-lg:via-secondary/10 to-primary/40 lg:to-primary/30 dark:to-secondary/60 lg:dark:to-secondary/50 rounded-4xl mt-20 lg:mt-0 4xl:min-h-[80dvh]"
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 4xl:gap-12 max-w-7xl 4xl:min-w-[70dvw]">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 xl:gap-24 4xl:gap-12 max-w-7xl 4xl:min-w-[70dvw]">
         <motion.section
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export default function TranscriptionFeature() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="flex-1 space-y-6 text-center lg:text-left z-10"
         >
-          <h2 className="text-2xl lg:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
+          <h2 className="text-2xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
             Transcription captures words. <br />
             Notio captures context.
           </h2>
@@ -83,10 +83,10 @@ export default function TranscriptionFeature() {
                   Joanne sounds upset on the phone. Should ask her how things
                   are going.
                 </p>
-                <Separator className="mt-4 opacity-50" />
+                <Separator className="md:mt-4 opacity-50" />
               </div>
 
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-4 md:gap-8">
                 <AnimatedList
                   delay={1000}
                   reverse={false}
@@ -111,23 +111,23 @@ export default function TranscriptionFeature() {
             <div className="absolute bottom-12 lg:bottom-14 left-0 right-0 flex justify-center z-20">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
-                <div className="relative flex items-center gap-3 dark:bg-background bg-white px-5 py-2.5 rounded-full border border-primary shadow-[0_0_41.9px_0_rgba(199,104,41,0.4)] 4xl:px-10 4xl:py-5">
-                  <BlurredOrb className="absolute inset-0 blur-xl rounded-full w-full h-full opacity-20" />
+                <div className="relative flex items-center gap-3 dark:bg-background bg-white px-5 py-2.5 rounded-full border border-secondary/70 shadow-[0_0_41.9px_0_rgba(199,104,41,0.2)] dark:shadow-[0_0_41.9px_0_rgba(199,104,41,0.4)] 4xl:px-10 4xl:py-5">
+                  <BlurredOrb className="absolute inset-0 dark:blur-xl rounded-full w-full h-full opacity-20" />
                   <Image
                     src="logo/notio-icon-black.svg"
                     alt="Notio"
                     width={20}
                     height={20}
-                    className="4xl:size-10 dark:hidden"
+                    className="size-7 lg:size-8 4xl:size-10 dark:hidden"
                   />
                   <Image
                     src="logo/notio-icon-white.svg"
                     alt="Notio"
                     width={20}
                     height={20}
-                    className="4xl:size-10 hidden dark:block"
+                    className="size-7 lg:size-8 4xl:size-10 hidden dark:block"
                   />
-                  <span className="text-sm font-medium text-foreground/90 4xl:text-2xl">
+                  <span className="font-medium text-foreground/90 4xl:text-2xl">
                     Transcribing call audio
                   </span>
                 </div>

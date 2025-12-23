@@ -49,7 +49,7 @@ export default function Features() {
         Whether it&apos;s client meetings, interviews, or team calls—capture,
         organize, and review every conversation in one place.
       </motion.p>
-      <section className="flex flex-wrap gap-4 items-center justify-center">
+      <section className="flex flex-wrap gap-4 items-center justify-center max-md:pt-8">
         {features.map((feature, index) => (
           <motion.div
             key={feature.title}

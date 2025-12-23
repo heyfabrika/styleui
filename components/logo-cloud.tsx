@@ -58,8 +58,8 @@ export default function LogoCloud() {
       image:
         "/logo/uber.svg",
       size: {
-        width: is4xl ? 100 : 70,
-        height: is4xl ? 100 : 70,
+        width: is4xl ? 100 : 65,
+        height: is4xl ? 100 : 65,
       },
     },
     {
@@ -115,7 +115,7 @@ export default function LogoCloud() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-wrap items-center justify-center gap-4 md:gap-8 lg:gap-12"
+        className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-12"
       >
         {logos.map((logo) => (
           <motion.div

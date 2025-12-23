@@ -75,9 +75,9 @@
   --background-image-footer-radial-dark: radial-gradient(
     ellipse 150% 100% at 50% var(--bg-pos-footer, 0%),
     var(--gradient-start) 50%,
-    var(--gradient-mid-light) 70%,
-    var(--gradient-mid-dark) 85%,
-    var(--gradient-end-dark) 100%
+    var(--gradient-mid-dark) 70%,
+    var(--gradient-mid-light) 85%,
+    var(--gradient-end-light) 100%
   );
 }
 
@@ -135,7 +135,7 @@
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.713 0.1305 61.77);
   --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.4823 0.1365 35.3);
+  --secondary: oklch(0.618 0.1416 50.24);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
@@ -159,8 +159,8 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --gradient-start: #000000;
-  --gradient-mid-light: #9C3A21;
-  --gradient-mid-dark: #C76829;
+  --gradient-mid-light: #C76829;
+  --gradient-mid-dark: #9C3A21;
   --gradient-end-light: #DC8E43;
   --gradient-end-dark: #DC8E43;
   --orb-color-light: rgba(199, 104, 41, 0.35);

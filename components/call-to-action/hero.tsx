@@ -10,7 +10,7 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto md:px-12 md:pt-12 lg:pt-10 lg:pl-8 h-198 md:h-220 4xl:h-300 lg:min-h-full overflow-hidden rounded-4xl"
+      className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto pt-12 md:px-12 lg:pl-12 xl:pl-20 h-210 sm:h-195 md:h-215 lg:h-220 4xl:h-300 lg:min-h-full lg:mx-4 overflow-hidden rounded-4xl"
     >
       <motion.div
         initial={{ opacity: 0, scale: 1.1 }}
@@ -26,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-aleo"
+          className="text-3xl md:text-[2.7rem] xl:text-5xl font-aleo"
         >
           Never Forget Another Call
         </motion.h1>
@@ -53,7 +53,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        className="relative lg:mt-0 lg:absolute lg:right-6 lg:-bottom-6 z-10 mt-7"
+        className="relative lg:mt-0 lg:absolute lg:right-10 xl:right-12 xl:right-16 lg:-bottom-6 z-10 mt-7"
       >
         <Transcriber />
       </motion.section>

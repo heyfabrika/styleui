@@ -37,7 +37,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="max-md:relative flex flex-col max-md:px-4">
+    <footer className="max-md:relative flex flex-col max-md:px-4 lg:ml-3">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -128,7 +128,7 @@ export default function Footer() {
                 alt={link.label}
                 width={24}
                 height={24}
-                className="grayscale dark:invert 4xl:w-10 4xl:h-10"
+                className="grayscale dark:invert dark:opacity-50 4xl:w-10 4xl:h-10"
               />
             </Link>
           ))}

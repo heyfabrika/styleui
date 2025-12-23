@@ -27,7 +27,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-40 lg:mb-16">
+    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-40 lg:mb-14">
       <section className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -52,8 +52,8 @@ export default function Team() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-md:space-y-4"
         >
-          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 -rotate-45" />
-          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-orange-200 to-orange-100 -rotate-45" />
+          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 -rotate-45 opacity-70" />
+          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-orange-200 to-orange-100 -rotate-45 opacity-70" />
         </motion.div>
 
         <div className="relative h-44 w-70 4xl:h-80 4xl:w-120">

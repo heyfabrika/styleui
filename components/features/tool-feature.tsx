@@ -61,23 +61,23 @@ export default function ToolFeature() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 lg:w-20 lg:h-20 -mr-4 4xl:w-28 4xl:h-28"
+              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 md:w-20 lg:h-20 -mr-4 4xl:w-28 4xl:h-28"
             >
               <Image
                 src={tool.lightImage}
                 alt={tool.name}
                 width={100}
                 height={100}
-                className="w-full h-full object-contain p-2 dark:hidden"
+                className="h-full w-full object-contain p-2 max-[406px]:p-0 max-[416px]:p-1 dark:hidden"
               />
               <Image
                 src={tool.darkImage}
                 alt={tool.name}
                 width={100}
                 height={100}
-                className="w-full h-full object-contain p-2 hidden dark:block"
+                className="hidden h-full w-full object-contain p-2 max-[406px]:p-0 max-[416px]:p-1 dark:block"
               />
-              <BlurredOrb className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-2xl lg:h-10 lg:w-10 w-8 h-8 4xl:h-14 4xl:w-14" />
+              <BlurredOrb className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 dark:blur-xl blur-lg md:blur-xl dark:md:h-7 dark:md:w-7 w-7 h-7 md:h-10 md:w-10 4xl:h-14 4xl:w-14" />
             </motion.div>
           ))}
         </CardHeader>

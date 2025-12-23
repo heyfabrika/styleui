@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex flex-row justify-between items-center pb-4">
+      <div className="flex flex-row justify-between items-center pb-4 lg:mx-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}

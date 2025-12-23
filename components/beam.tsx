@@ -16,9 +16,9 @@ export default function Beam({
           className={cn(
             "absolute left-1/2 -top-[9.375rem] -z-10 -translate-x-1/2 blur-[6.25rem]",
             "h-0 w-0",
-            "border-l-[1000px] lg:border-l-[700px] border-l-transparent",
-            "border-r-[1000px] lg:border-r-[700px] border-r-transparent",
-            "border-t-[700px] lg:border-t-[500px] border-t-[rgba(199,104,41,0.15)] dark:border-t-[rgba(199,104,41,0.2)]"
+            "border-l-[600px] lg:border-l-[700px] border-l-transparent",
+            "border-r-[600px] lg:border-r-[700px] border-r-transparent",
+            "border-t-[600px] lg:border-t-[500px] border-t-[rgba(199,104,41,0.15)] dark:border-t-[rgba(199,104,41,0.2)]"
           )}
         />
 
@@ -33,7 +33,7 @@ export default function Beam({
           )}
         />
 
-        <div className="pt-20 lg:pt-60">{children}</div>
+        <div className="pt-20 md:pt-50 lg:pt-60">{children}</div>
       </div>
     </div>
   );

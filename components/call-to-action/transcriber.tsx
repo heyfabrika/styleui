@@ -74,7 +74,7 @@ export default function Transcriber() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-          className="h-3 lg:h-4 4xl:h-6 w-72 lg:w-100 mx-auto bg-muted-foreground/20 rounded-t-full origin-left"
+          className="h-3 lg:h-4 4xl:h-6 w-72 lg:w-80 xl:w-100 4xl:w-150 mx-auto bg-muted-foreground/20 rounded-t-full origin-left"
         />
 
         <div className="flex flex-col gap-4 pt-12 lg:pt-18 dark:bg-muted/50 px-6 md:px-8 rounded-t-4xl">
@@ -123,7 +123,7 @@ export default function Transcriber() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5, ease: "easeOut" }}
-            className="relative shadow-2xl rounded-2xl md:rounded-4xl bg-background flex flex-col gap-3 md:gap-4 4xl:gap-20 p-3 md:p-4 min-h-64 md:min-h-80 lg:min-h-85 xl:min-h-90 4xl:min-h-140 overflow-hidden"
+            className="relative shadow-2xl rounded-2xl md:rounded-4xl bg-background flex flex-col gap-3 md:gap-4 4xl:gap-20 p-3 md:p-4 min-h-64 md:min-h-72 lg:min-h-85 xl:min-h-90 4xl:min-h-140 overflow-hidden"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}

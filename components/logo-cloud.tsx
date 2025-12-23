@@ -58,8 +58,8 @@ export default function LogoCloud() {
       image:
         "/logo/uber.svg",
       size: {
-        width: is4xl ? 150 : 70,
-        height: is4xl ? 150 : 70,
+        width: is4xl ? 150 : 100,
+        height: is4xl ? 150 : 100,
       },
     },
     {

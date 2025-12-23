@@ -10,7 +10,7 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto md:p-12 lg:pt-10 lg:pl-8 xl:p-10 2xl:p-20 3xl:p-64 4xl:p-80 max-h-[85dvh] sm:max-h-[90dvh] md:max-h-[98dvh] lg:min-h-[83dvh] 2xl:min-h-[90dvh] 3xl:min-h-[90dvh] 4xl:min-h-[70dvh] overflow-hidden rounded-4xl"
+      className="relative flex flex-col gap-16 md:gap-4 lg:flex-row items-center lg:justify-between w-full mx-auto md:px-12 md:pt-12 lg:pt-10 lg:pl-8 xl:p-10 2xl:p-20 3xl:p-64 4xl:p-80 h-198 md:h-220 4xl:h-300 lg:min-h-full overflow-hidden rounded-4xl"
     >
       <motion.div
         initial={{ opacity: 0, scale: 1.1 }}
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="text-base xl:text-lg max-w-sm xl:max-w-2xl 4xl:text-4xl 4xl:max-w-6xl"
+          className="text-base xl:text-lg max-w-lg xl:max-w-2xl 4xl:text-4xl 4xl:max-w-6xl"
         >
           Record, transcribe, and take notes on your conversations— all in
           real-time. Turn every call into searchable, shareable insights.
@@ -53,7 +53,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        className="relative lg:mt-0 lg:absolute lg:right-6 xl:right-10 2xl:right-40 lg:-bottom-10 xl:-bottom-10 2xl:-bottom-2 z-10 mt-7"
+        className="relative lg:mt-0 lg:absolute lg:right-6 xl:right-10 2xl:right-40 lg:-bottom-6 xl:-bottom-6 z-10 mt-7"
       >
         <Transcriber />
       </motion.section>

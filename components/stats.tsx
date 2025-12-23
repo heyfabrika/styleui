@@ -43,7 +43,7 @@ export default function Stats() {
                 delay: 0.1 + index * 0.15,
                 ease: "easeOut",
               }}
-              className={`flex flex-col items-center justify-center px-0 md:px-4 py-6 md:py-0 w-full md:w-auto ${
+              className={`flex flex-col items-center justify-center px-0 md:px-4 py-4 md:py-6 md:py-0 w-full md:w-auto ${
                 index < stats.length - 1
                   ? "lg:border-r border-muted-foreground/20"
                   : ""
@@ -57,7 +57,7 @@ export default function Stats() {
               </p>
             </motion.div>
             {index < stats.length - 1 && (
-              <div className="block md:hidden w-14 mx-auto my-2 border-b border-muted-foreground/20" />
+              <div className="block md:hidden w-14 mx-auto my-2 border-b dark:border-muted-foreground/20 border-muted-foreground" />
             )}
           </div>
         ))}

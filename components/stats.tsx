@@ -11,7 +11,7 @@ export default function Stats() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 lg:gap-20 items-center justify-center py-6 lg:py-24 px-2">
+    <div className="flex flex-col gap-4 md:gap-20 items-center justify-center py-6 lg:py-24 px-2">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,11 +45,11 @@ export default function Stats() {
               }}
               className={`flex flex-col items-center justify-center px-0 md:px-4 py-4 md:py-6 md:py-0 w-full md:w-auto ${
                 index < stats.length - 1
-                  ? "lg:border-r border-muted-foreground/20"
+                  ? "md:border-r border-muted-foreground/20"
                   : ""
               }`}
             >
-              <p className="text-4xl md:text-5xl 4xl:text-6xl tracking-tight mb-2 min-w-xs text-center font-medium">
+              <p className="text-4xl md:text-5xl 4xl:text-6xl tracking-tight mb-2 min-w-xs md:min-w-64 lg:min-w-xs text-center font-medium">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </p>
               <p className="text-center 4xl:text-2xl">

@@ -22,7 +22,7 @@ export default function PricingCard({
   return (
     <Card
       className={cn(
-        "min-w-xs 4xl:min-w-md p-8",
+        "min-w-80 md:min-w-xs 4xl:min-w-md p-8",
         !isFree &&
           "bg-gradient-to-tl from-transparent via-transparent dark:via-secondary/5 to-primary/10 dark:to-secondary/50 border border-primary/20 min-h-96 4xl:min-h-120",
         className

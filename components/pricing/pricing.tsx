@@ -49,7 +49,7 @@ export default function Pricing() {
           Start free. Upgrade when you're ready. Cancel anytime.
         </p>
       </motion.section>
-      <section className="flex flex-wrap items-center justify-center max-lg:gap-4">
+      <section className="flex flex-wrap items-center justify-center max-md:gap-4">
         {pricings.map((pricing, index) => (
           <motion.div
             key={pricing.slug}

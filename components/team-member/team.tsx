@@ -27,7 +27,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 lg:mt-40 lg:mb-14">
+    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 md:mt-40 lg:mb-14">
       <section className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}

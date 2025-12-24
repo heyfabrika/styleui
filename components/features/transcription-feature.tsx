@@ -129,7 +129,7 @@ export default function TranscriptionFeature() {
                     height={20}
                     className="size-4 lg:size-6 4xl:size-10 hidden dark:block"
                   />
-                  <span className="text-xs font-medium text-foreground/90 4xl:text-2xl">
+                  <span className="text-xs md:text-sm font-medium text-foreground/90 4xl:text-2xl">
                     Transcribing call audio
                   </span>
                 </div>

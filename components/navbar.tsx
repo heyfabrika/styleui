@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="relative md:mx-4">
+    <div className="relative mx-2 md:mx-4 lg:mx-6">
       <div className="flex flex-row justify-between items-center pb-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

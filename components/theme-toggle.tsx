@@ -25,10 +25,10 @@ export function ThemeToggle() {
       }}
       className="border border-border"
     >
-      <ToggleGroupItem value="dark" aria-label="Dark theme">
+      <ToggleGroupItem value="dark" aria-label="Dark theme" className="opacity-20 dark:opacity-100">
         <Moon className="h-4 w-4 4xl:size-5" />
       </ToggleGroupItem>
-      <ToggleGroupItem value="light" aria-label="Light theme">
+      <ToggleGroupItem value="light" aria-label="Light theme" className="dark:opacity-20 !bg-zinc-200 dark:!bg-transparent">
         <Sun className="h-4 w-4 4xl:size-5" />
       </ToggleGroupItem>
     </ToggleGroup>

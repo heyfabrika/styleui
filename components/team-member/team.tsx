@@ -27,7 +27,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="relative flex flex-col gap-8 items-center justify-center p-4 mt-16 md:mt-40 lg:mb-14">
+    <div className="relative flex flex-col gap-8 lg:gap-0 items-center justify-center p-4 mt-16 md:mt-40 lg:mb-2">
       <section className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -36,12 +36,12 @@ export default function Team() {
           className="absolute inset-0 -top-32"
         >
           <GridPattern
-            width={45}
-            height={45}
+            width={60}
+            height={60}
             x={-1}
             y={-1}
             className={cn(
-              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] -z-10"
+              "dark:[mask-image:radial-gradient(270px_circle_at_center,white,transparent)] [mask-image:radial-gradient(350px_circle_at_center,white,transparent)] -z-10"
             )}
           />
         </motion.div>
@@ -56,7 +56,7 @@ export default function Team() {
           <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-orange-200 to-orange-100 -rotate-45 opacity-70" />
         </motion.div>
 
-        <div className="relative h-44 w-70 4xl:h-80 4xl:w-120">
+        <div className="relative h-44 w-70">
           <div className="absolute top-0 left-1/2 -translate-x-1/2">
             <TeamMemberAvatar member={{ ...team[0], index: 0 }} index={0} />
           </div>
@@ -81,14 +81,14 @@ export default function Team() {
           alt="Team"
           width={120}
           height={120}
-          className="4xl:w-64 4xl:h-40 dark:hidden"
+          className="md:w-40 lg:h-32 dark:hidden"
         />
         <Image
           src="/logo/notio-logo-white.svg"
           alt="Team"
           width={120}
           height={120}
-          className="4xl:w-64 4xl:h-40 hidden dark:block"
+          className="md:w-40 lg:h-32 hidden dark:block"
         />
       </motion.div>
 

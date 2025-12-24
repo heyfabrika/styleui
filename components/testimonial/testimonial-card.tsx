@@ -18,15 +18,15 @@ export default function TestimonialCard({
   className,
 }: TestimonialProps) {
   return (
-    <Card className={cn("flex flex-col h-full border border-border ring-0 shadow-none", className)}>
+    <Card className={cn("flex flex-col h-full border border-border ring-0 shadow-none gap-2", className)}>
       {logo && (
-        <CardHeader className="pb-4">
+        <CardHeader className="md:pb-2 xl:pb-4">
           <Image
             src={logo}
             alt={logo}
             width={100}
             height={100}
-            className="invert dark:invert-0 4xl:w-48"
+            className="invert dark:invert-0"
           />
         </CardHeader>
       )}

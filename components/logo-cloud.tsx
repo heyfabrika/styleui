@@ -13,8 +13,8 @@ export default function LogoCloud() {
       image:
         "/logo/notion.svg",
       size: {
-        width: is4xl ? 180 : 100,
-        height: is4xl ? 180 : 100,
+        width: is4xl ? 120 : 100,
+        height: is4xl ? 120 : 100,
       },
     },
     {
@@ -22,8 +22,8 @@ export default function LogoCloud() {
       image:
         "/logo/framer.svg",
       size: {
-        width: is4xl ? 180 : 100,
-        height: is4xl ? 180 : 100,
+        width: is4xl ? 120 : 100,
+        height: is4xl ? 120 : 100,
       },
     },
     {
@@ -31,8 +31,8 @@ export default function LogoCloud() {
       image:
         "/logo/webflow.svg",
       size: {
-        width: is4xl ? 180 : 100,
-        height: is4xl ? 180 : 100,
+        width: is4xl ? 120 : 100,
+        height: is4xl ? 120 : 100,
       },
     },
     {
@@ -40,8 +40,8 @@ export default function LogoCloud() {
       image:
         "/logo/slack.svg",
       size: {
-        width: is4xl ? 180 : 100,
-        height: is4xl ? 180 : 100,
+        width: is4xl ? 120 : 100,
+        height: is4xl ? 120 : 100,
       },
     },
     {
@@ -49,8 +49,8 @@ export default function LogoCloud() {
       image:
         "/logo/coinbase.svg",
       size: {
-        width: is4xl ? 180 : 100,
-        height: is4xl ? 180 : 100,
+        width: is4xl ? 120 : 100,
+        height: is4xl ? 120 : 100,
       },
     },
     {
@@ -58,8 +58,8 @@ export default function LogoCloud() {
       image:
         "/logo/uber.svg",
       size: {
-        width: is4xl ? 100 : 65,
-        height: is4xl ? 100 : 65,
+        width: is4xl ? 80 : 65,
+        height: is4xl ? 80 : 65,
       },
     },
     {
@@ -67,8 +67,8 @@ export default function LogoCloud() {
       image:
         "/logo/loom.svg",
       size: {
-        width: is4xl ? 180 : 100,
-        height: is4xl ? 180 : 100,
+        width: is4xl ? 120 : 100,
+        height: is4xl ? 120 : 100,
       },
     },
   ];

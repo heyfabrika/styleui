@@ -33,7 +33,7 @@ function TranscriptionItem({ time, text }: { time: string; text: string }) {
         {time}
       </span>
       <div className="relative border-l border-border/40 pl-6 pb-6 last:pb-0">
-        <p className="text-foreground/80 leading-relaxed text-xs lg:text-base 4xl:text-2xl">
+        <p className="text-foreground/80 leading-relaxed text-xs lg:text-sm 4xl:text-2xl">
           {text}
         </p>
       </div>
@@ -48,9 +48,10 @@ export default function TranscriptionFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center w-full mx-auto px-4 lg:px-20 xl:px-16 2xl:px-20 4xl:px-20 pb-6 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-br from-background via-background dark:via-secondary/30 lg:dark:via-secondary/5 max-lg:via-secondary/10 to-primary/40 lg:to-primary/30 dark:to-secondary/60 lg:dark:to-secondary/50 rounded-4xl mt-20 lg:mt-0"
+      className="relative flex flex-col items-center justify-center w-full mx-auto p-6 pb-12 md:px-4 lg:px-20 xl:px-16 md:pb-6 lg:py-8 rounded-4xl mt-20 lg:mt-0 overflow-hidden max-lg:bg-gradient-to-b max-lg:from-background max-lg:via-background max-lg:dark:via-secondary/30 max-lg:via-secondary/10 max-lg:to-primary/40 max-lg:dark:to-secondary/60"
     >
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 xl:gap-24 max-w-7xl">
+      <BlurredOrb className="max-lg:hidden absolute -right-120 -bottom-96 rounded-full w-full h-11/12 dark:opacity-40 opacity-10 rotate-45 from-secondary via-primary to-secondary blur-3xl" />
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 md:gap-8 xl:gap-24 max-w-7xl">
         <motion.section
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +63,7 @@ export default function TranscriptionFeature() {
             Transcription captures words. <br />
             Notio captures context.
           </h2>
-          <p className="text-muted-foreground 4xl:text-3xl font-light leading-relaxed max-w-2xl 4xl:max-w-full mx-auto lg:mx-0">
+          <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
             Transcription tells you what was said. Your notes tell you what it
             meant. Flag concerns, mark excitement, note hesitations—capture the
             full story of every call.
@@ -74,12 +75,13 @@ export default function TranscriptionFeature() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl max-lg:px-4 lg:mb-8"
+          className="relative flex-1 w-full flex justify-center lg:justify-end isolate rounded-3xl sm:px-4 lg:px-0 lg:mb-8"
         >
-          <Card className="w-full max-w-100 4xl:max-w-2xl min-h-64 lg:min-h-96 4xl:min-h-[60dvh] dark:bg-background backdrop-blur-sm overflow-hidden relative rounded-3xl border border-primary/10">
+          <div className="w-full max-w-sm 4xl:max-w-2xl p-[1px] rounded-3xl bg-gradient-to-r from-primary/40 via-primary/20 to-muted-foreground/10">
+            <Card className="w-full min-h-64 lg:min-h-96 4xl:min-h-[60dvh] dark:bg-background backdrop-blur-sm overflow-hidden relative rounded-3xl border-0 ring-0">
             <div className="p-4 lg:px-8 lg:py-6 pb-24 lg:pb-32">
               <div className="mb-8">
-                <p className="text-sm md:text-base text-foreground leading-relaxed 4xl:text-2xl">
+                <p className="text-smtext-foreground leading-relaxed 4xl:text-2xl">
                   Joanne sounds upset on the phone. Should ask her how things
                   are going.
                 </p>
@@ -136,6 +138,7 @@ export default function TranscriptionFeature() {
 
             <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-background via-background/80 to-transparent z-10 pointer-events-none" />
           </Card>
+          </div>
         </motion.section>
       </div>
     </motion.div>

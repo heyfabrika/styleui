@@ -72,10 +72,26 @@
     var(--gradient-end-light) 100%
   );
   --background-image-footer-radial-dark: radial-gradient(
+    ellipse 100% 100% at 50% var(--bg-pos-footer, 0%),
+    var(--gradient-start) 50%,
+    var(--gradient-mid-dark) 70%,
+    var(--gradient-mid-light) 90%,
+    var(--gradient-end-light) 100%
+  );
+
+  --background-image-footer-radial-dark-mobile: radial-gradient(
     ellipse 150% 100% at 50% var(--bg-pos-footer, 0%),
     var(--gradient-start) 50%,
     var(--gradient-mid-dark) 70%,
     var(--gradient-mid-light) 85%,
+    var(--gradient-end-light) 100%
+  );
+
+  --background-image-footer-radial-light-mobile: radial-gradient(
+    ellipse 150% 100% at 50% var(--bg-pos-footer, 0%),
+    var(--gradient-start) 50%,
+    var(--gradient-mid-light) 70%,
+    var(--gradient-mid-light) 5%,
     var(--gradient-end-light) 100%
   );
 }
@@ -96,7 +112,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.58 0.22 27);
-  --border: oklch(0.922 0 0);
+  --border: oklch(0 0 0 / 20%);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.809 0.105 251.813);
@@ -171,7 +187,7 @@
   * {
     @apply border-border outline-ring/50;
   }
-  @media (min-width: 2400px) {
+  @media (min-width: 1104px) {
     body {
       @apply bg-background text-foreground;
       max-width: 80rem;

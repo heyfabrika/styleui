@@ -19,7 +19,7 @@ export default function Testimonial() {
         </h2>
       </motion.section>
 
-      <section className="grid grid-cols-1 md:grid-cols-5 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-6 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,11 +33,11 @@ export default function Testimonial() {
             author="Mary Chen"
             role="VP of Product"
             avatarSrc="/illustrations/avatar-1.svg"
-            className="h-full justify-between"
+            className="h-full justify-between md:max-h-127"
           />
         </motion.div>
 
-        <div className="md:col-span-2 flex flex-col gap-6">
+        <div className="md:col-span-3 flex flex-col gap-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -11,13 +11,13 @@ export default function Stats() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 md:gap-20 items-center justify-center py-6 lg:py-24 px-2">
+    <div className="flex flex-col gap-4 md:gap-20 items-center justify-center py-6 lg:py-24 px-4 lg:px-2">
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="space-y-4 text-center max-w-2xl 4xl:max-w-4xl"
+        className="space-y-4 text-center max-w-3xl 4xl:max-w-4xl"
       >
         <h2 className="text-2xl md:text-5xl 4xl:text-6xl font-aleo tracking-tight">
           Words + Context = Better Notes
@@ -49,7 +49,7 @@ export default function Stats() {
                   : ""
               }`}
             >
-              <p className="text-4xl md:text-5xl 4xl:text-6xl tracking-tight mb-2 min-w-xs md:min-w-64 lg:min-w-xs text-center font-medium">
+              <p className="text-4xl md:text-5xl 4xl:text-6xl tracking-tight mb-2 min-w-xs md:min-w-64 lg:min-w-xs text-center font-semibold">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </p>
               <p className="text-center 4xl:text-2xl">

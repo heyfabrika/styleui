@@ -8,7 +8,7 @@ import {
   WifiIcon,
   XIcon,
 } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 
@@ -31,12 +31,13 @@ export default function Transcriber() {
   }, [isRunning]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex flex-col gap-2 md:gap-8 w-full max-w-xs md:max-w-sm xl:max-w-md 4xl:max-w-2xl bg-gradient-to-b from-background to-zinc-100 dark:to-muted rounded-4xl border border-primary/40 pb-6 md:pb-8"
-    >
+    <div className="w-full max-w-xs md:max-w-sm xl:max-w-md 4xl:max-w-2xl p-[1px] rounded-4xl bg-gradient-to-r from-primary/50 via-secondary/40 to-muted-foreground/20">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="flex flex-col gap-2 md:gap-8 w-full bg-gradient-to-b from-background to-zinc-100 dark:to-muted rounded-4xl border-0 pb-6 md:pb-8"
+      >
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -229,6 +230,7 @@ export default function Transcriber() {
           </motion.section>
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

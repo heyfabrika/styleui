@@ -40,9 +40,9 @@ export default function Pricing() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="space-y-4 4xl:space-y-8 text-center"
+        className="space-y-2 md:space-y-4 text-center"
       >
-        <h2 className="text-3xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
+        <h2 className="text-2xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
           Simple, Transparent pricing
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed 4xl:text-3xl">

@@ -43,9 +43,9 @@ export default function Stats() {
                 delay: 0.1 + index * 0.15,
                 ease: "easeOut",
               }}
-              className={`flex flex-col items-center justify-center px-0 md:px-4 py-4 md:py-6 md:py-0 w-full md:w-auto ${
+              className={`flex flex-col items-center justify-center px-0 md:px-4 py-4 md:py-6 md:py-0 w-full md:w-auto h-14 ${
                 index < stats.length - 1
-                  ? "md:border-r border-muted-foreground/20"
+                  ? "md:border-r border-muted-foreground/20 dark:border-muted-foreground/40"
                   : ""
               }`}
             >

@@ -36,7 +36,7 @@ export default function Transcriber() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex flex-col gap-2 md:gap-8 w-full bg-gradient-to-b from-background to-zinc-100 dark:to-muted rounded-4xl border-0 pb-6 md:pb-8"
+        className="flex flex-col gap-2 md:gap-8 w-full bg-gradient-to-b from-background to-zinc-100 dark:to-muted dark:lg:to-neutral-950 rounded-4xl border-0 pb-6 md:pb-8"
       >
       <motion.section
         initial={{ opacity: 0 }}
@@ -75,10 +75,10 @@ export default function Transcriber() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-          className="h-3 lg:h-4 4xl:h-6 w-72 lg:w-80 xl:w-100 4xl:w-150 mx-auto bg-muted-foreground/20 rounded-t-full origin-left"
+          className="h-3 lg:h-4 4xl:h-6 w-72 lg:w-80 xl:w-100 4xl:w-150 mx-auto bg-muted-foreground/20 lg:dark:bg-neutral-950 rounded-t-full origin-left"
         />
 
-        <div className="flex flex-col gap-4 pt-12 lg:pt-18 dark:bg-muted/50 px-6 md:px-8 rounded-t-4xl">
+        <div className="flex flex-col gap-4 pt-12 lg:pt-18 dark:bg-muted/50 lg:dark:bg-neutral-950 px-6 md:px-8 rounded-t-4xl">
           <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

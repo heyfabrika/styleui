@@ -11,7 +11,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 md:gap-4 min-[1070px]:flex-row items-center min-[1070px]:justify-between w-full mx-auto pt-12 md:px-12 lg:pl-12 xl:pl-20 max-[348px]:h-225 max-[397px]:h-220 h-210 sm:h-204 md:h-215 lg:h-220 lg:min-h-full overflow-hidden rounded-4xl"
+        className="relative flex flex-col gap-16 md:gap-4 min-[1070px]:flex-row items-center min-[1070px]:justify-between w-full mx-auto pt-12 md:px-12 lg:pl-12 xl:pl-20 max-[348px]:h-225 max-[397px]:h-220 h-210 sm:h-204 min-[516px]:h-205  md:h-215 lg:h-250 xl:220 lg:min-h-full overflow-hidden rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
@@ -19,8 +19,8 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="absolute inset-0 -z-10 bg-hero-radial-light dark:bg-hero-radial-dark 
              [--bg-pos:5%] lg:[--bg-pos:5%] 
-             [--bg-mid:45%] lg:[--bg-mid:45%] 
-             [--bg-mid-alt:70%] lg:[--bg-mid-alt:70%]"
+             [--bg-mid:55%] md:[--bg-mid:45%] 
+             [--bg-mid-alt:75%] lg:[--bg-mid-alt:70%]"
         />
         <section className="flex flex-col gap-4 z-10 text-center min-[1070px]:text-left items-center min-[1070px]:items-start">
           <motion.h1

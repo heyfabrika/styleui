@@ -48,7 +48,7 @@ export default function TranscriptionFeature() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative flex flex-col items-center justify-center w-full mx-auto p-6 pb-12 md:px-4 lg:px-20 xl:px-16 md:pb-6 lg:py-8 rounded-4xl mt-20 lg:mt-0 overflow-hidden max-lg:bg-gradient-to-b max-lg:from-background max-lg:via-background max-lg:dark:via-secondary/30 max-lg:via-secondary/10 max-lg:to-primary/40 max-lg:dark:to-secondary/60"
+      className="relative flex flex-col items-center justify-center w-full mx-auto p-6 pb-12 md:px-4 lg:px-20 xl:px-16 md:pb-6 lg:py-8 rounded-4xl mt-15 md:mt-20 lg:mt-0 overflow-hidden max-lg:bg-gradient-to-b max-lg:from-background max-lg:via-background max-lg:dark:via-secondary/30 max-lg:via-secondary/10 max-lg:to-primary/40 max-lg:dark:to-secondary/60"
     >
       <BlurredOrb className="max-lg:hidden absolute -right-120 -bottom-96 rounded-full w-full h-11/12 dark:opacity-40 opacity-10 rotate-45 from-secondary via-primary to-secondary blur-3xl" />
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 md:gap-8 xl:gap-24 max-w-7xl">

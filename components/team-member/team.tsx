@@ -6,6 +6,7 @@ import Image from "next/image";
 import BlurredOrb from "../blurred-orb";
 import { GridPattern } from "../ui/grid-pattern";
 import TeamMemberAvatar from "./team-member-avatar";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function Team() {
   const team: Omit<TeamMember, "index">[] = [
@@ -26,8 +27,10 @@ export default function Team() {
     },
   ];
 
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
-    <div className="relative flex flex-col gap-8 lg:gap-0 items-center justify-center p-4 mt-16 md:mt-40 lg:mb-2">
+    <div className="relative flex flex-col gap-8 lg:gap-0 items-center justify-center p-4 mt-28 mb-4 md:mt-40 lg:mb-2">
       <section className="flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -36,12 +39,12 @@ export default function Team() {
           className="absolute inset-0 -top-32"
         >
           <GridPattern
-            width={60}
-            height={60}
+            width={isMobile ? 40 : 60}
+            height={isMobile ? 40 : 60}
             x={-1}
             y={-1}
             className={cn(
-              "dark:[mask-image:radial-gradient(270px_circle_at_center,white,transparent)] [mask-image:radial-gradient(350px_circle_at_center,white,transparent)] -z-10"
+              "dark:[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] [mask-image:radial-gradient(200px_circle_at_center,white,transparent)] md:dark:[mask-image:radial-gradient(270px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(350px_circle_at_center,white,transparent)] -z-10"
             )}
           />
         </motion.div>

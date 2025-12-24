@@ -57,7 +57,7 @@ export default function Stats() {
               </p>
             </motion.div>
             {index < stats.length - 1 && (
-              <div className="block md:hidden w-14 mx-auto my-2 border-b dark:border-muted-foreground/20 border-muted-foreground" />
+              <div className="block md:hidden w-14 mx-auto my-4 mb-8 border-b dark:border-muted-foreground/20 border-muted-foreground/40" />
             )}
           </div>
         ))}

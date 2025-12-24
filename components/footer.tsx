@@ -41,7 +41,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 min-h-[90dvh] md:min-h-[70dvh] rounded-4xl"
+        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 min-h-[95dvh] md:min-h-[70dvh] rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
@@ -106,7 +106,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="flex gap-4 md:gap-8 text-muted-foreground 4xl:text-2xl"
+          className="flex gap-6 md:gap-8 text-muted-foreground 4xl:text-2xl"
         >
           <li>Product</li>
           <li>Company</li>
@@ -118,7 +118,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="flex gap-4 4xl:gap-8 items-center justify-center"
+          className="flex gap-3 md:ap-4 4xl:gap-8 items-center justify-center"
         >
           {socialLinks.map((link) => (
             <Link key={link.label} href={link.href}>
@@ -127,7 +127,7 @@ export default function Footer() {
                 alt={link.label}
                 width={24}
                 height={24}
-                className="invert dark:invert-0 4xl:w-10 4xl:h-10"
+                className="invert dark:invert-0 max-md:w-7 4xl:w-10 4xl:h-10"
               />
             </Link>
           ))}

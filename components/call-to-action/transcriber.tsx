@@ -75,7 +75,7 @@ export default function Transcriber() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-          className="h-3 lg:h-4 4xl:h-6 w-72 lg:w-80 xl:w-100 4xl:w-150 mx-auto bg-muted-foreground/20 lg:dark:bg-neutral-950 rounded-t-full origin-left"
+          className="h-3 lg:h-4 4xl:h-6 w-72 lg:w-80 xl:w-100 4xl:w-150 mx-auto bg-muted-foreground/20 dark:bg-neutral-950 rounded-t-full origin-left"
         />
 
         <div className="flex flex-col gap-4 pt-12 lg:pt-18 dark:bg-muted/50 lg:dark:bg-neutral-950 px-6 md:px-8 rounded-t-4xl">

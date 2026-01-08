@@ -49,7 +49,7 @@ export default function Pricing() {
           Start free. Upgrade when you're ready. Cancel anytime.
         </p>
       </motion.section>
-      <section className="flex flex-wrap items-center justify-center max-md:gap-4">
+      <section className="flex flex-wrap items-center justify-center max-sm:gap-4">
         {pricings.map((pricing, index) => (
           <motion.div
             key={pricing.slug}
@@ -61,6 +61,7 @@ export default function Pricing() {
               delay: 0.1 + index * 0.15,
               ease: "easeOut",
             }}
+            className={index !== 0 ? "md:-ml-3" : ""}
           >
             <PricingCard {...pricing} />
           </motion.div>

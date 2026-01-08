@@ -45,7 +45,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
           >
-            <Button className="w-fit 4xl:text-2xl 4xl:px-6 4xl:h-16" size="lg">
+            <Button className="w-fit 4xl:text-2xl 4xl:px-6 4xl:h-16 hover:bg-white hover:text-foreground dark:hover:bg-secondary/80 dark:hover:text-foreground" size="lg">
               Start for free
             </Button>
           </motion.div>

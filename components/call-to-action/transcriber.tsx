@@ -171,8 +171,7 @@ export default function Transcriber() {
                 </motion.p>
                 <motion.p
                   key={formatted}
-                  initial={{ scale: 1.1 }}
-                  animate={{ scale: 1 }}
+                  initial={{ scale: 1 }}
                   transition={{ duration: 0.2 }}
                   className="text-lg md:text-2xl 4xl:text-4xl"
                 >

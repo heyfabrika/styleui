@@ -28,11 +28,12 @@ const transcriptions = [
 
 function TranscriptionItem({ time, text }: { time: string; text: string }) {
   return (
-    <div className="flex items-start 4xl:gap-8">
+    <div className="flex items-start 4xl:gap-8 relative">
       <span className="text-muted-foreground/60 font-mono text-xs shrink-0 pt-1 w-6 lg:w-6 xl:w-10 text-right 4xl:text-2xl">
         {time}
       </span>
-      <div className="relative border-l border-border/40 pl-6 pb-6 last:pb-0">
+      <Separator orientation="vertical" className="absolute h-[90%] top-6 left-5 lg:left-6 opacity-50 dark:bg-white/60"/>
+      <div className="relative pl-6 pb-6 last:pb-0">
         <p className="text-foreground/80 leading-relaxed text-xs lg:text-sm 4xl:text-2xl">
           {text}
         </p>
@@ -104,8 +105,8 @@ export default function TranscriptionFeature() {
                 </AnimatedList>
 
                 <div className="border-l border-border/40 pl-6 w-full space-y-2">
-                  <Skeleton className="h-2.5 rounded-full w-3/4 4xl:h-6 4xl:w-full" />
-                  <Skeleton className="h-2.5 rounded-full w-1/2 4xl:h-6 4xl:w-full" />
+                  <Skeleton className="h-2.5 rounded-full w-3/4 4xl:h-6 4xl:w-full dark:bg-white/40" />
+                  <Skeleton className="h-2.5 rounded-full w-1/2 4xl:h-6 4xl:w-full dark:bg-white/40" />
                 </div>
               </div>
             </div>

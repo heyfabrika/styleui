@@ -6,7 +6,7 @@ import Transcriber from "./transcriber";
 
 export default function Hero() {
   return (
-    <div className="mx-2 md:mx-4 lg:mx-6">
+    <div className="mx-2 md:mx-4 lg:mx-6 mt-24 md:mt-36">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

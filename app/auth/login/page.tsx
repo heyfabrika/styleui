@@ -10,7 +10,7 @@ export default function AuthPage() {
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center p-4">
       <OrbBackground />
-      <div className="relative z-10 w-full max-w-sm bg-card border border-primary/70 rounded-2xl p-8 shadow-xl">
+      <div className="relative z-10 w-full max-w-sm bg-background border border-secondary/30 rounded-2xl p-8 shadow-xl">
         <div className="flex flex-col gap-6">
           <Image
             src="/logo/notio-icon-black.svg"

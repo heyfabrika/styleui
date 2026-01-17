@@ -140,7 +140,7 @@ export default function Transcriber() {
               style={{
                 borderRadius: 232,
                 background:
-                  "radial-gradient(circle,rgb(233,184,138) 0%, #DC8E43 30%, #C76829 60%, #9C3A21 100%)",
+                  "radial-gradient(circle, var(--gradient-orb-base) 0%, var(--gradient-mid-light) 30%, var(--gradient-mid-dark) 60%, var(--gradient-end-light) 100%)",
                 filter: "blur(40px)",
               }}
             />

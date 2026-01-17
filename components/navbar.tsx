@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeToggle } from "./theme/theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,0 +1,30 @@
+"use client";
+
+import { useEffect } from "react";
+import { useTheme } from "next-themes";
+import { themesConfig } from "@/utils/config/themes.config";
+import { useColorTheme } from "@/utils/context/color-theme-context";
+
+export function ThemeVariables() {
+  const { resolvedTheme } = useTheme();
+  const { colorTheme } = useColorTheme();
+
+  useEffect(() => {
+    const colorThemeConfig = themesConfig.find((theme) => theme.name === colorTheme);
+
+    if (!colorThemeConfig) {
+      console.warn(`Theme "${colorTheme}" not found`);
+      return;
+    }
+
+    const isDark = resolvedTheme === "dark";
+    const colors = isDark ? colorThemeConfig.dark : colorThemeConfig.light;
+
+    const root = document.documentElement;
+    Object.entries(colors).forEach(([key, value]) => {
+      root.style.setProperty(`--${key}`, value);
+    });
+  }, [resolvedTheme, colorTheme]);
+
+  return null;
+}

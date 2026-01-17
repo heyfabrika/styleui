@@ -114,7 +114,7 @@ export default function TranscriptionFeature() {
             <div className="absolute bottom-12 lg:bottom-14 left-0 right-0 flex justify-center z-20">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
-                <div className="relative flex items-center gap-3 dark:bg-background bg-white px-3 md:px-5 py-2.5 rounded-full border border-secondary/70 shadow-[0_0_41.9px_0_rgba(199,104,41,0.2)] dark:shadow-[0_0_41.9px_0_rgba(199,104,41,0.4)] 4xl:px-10 4xl:py-5">
+                <div className="relative flex items-center gap-3 dark:bg-background bg-white px-3 md:px-5 py-2.5 rounded-full border border-primary/70 shadow-[0_0_41.9px_0_var(--orb-color-dark-fade)] dark:shadow-[0_0_41.9px_0_var(--orb-color-dark)] 4xl:px-10 4xl:py-5">
                   <BlurredOrb className="absolute inset-0 dark:blur-xl rounded-full w-full h-full opacity-20" />
                   <Image
                     src="logo/notio-icon-black.svg"

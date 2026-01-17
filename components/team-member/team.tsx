@@ -56,7 +56,7 @@ export default function Team() {
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-md:space-y-4"
         >
           <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 -rotate-45 opacity-70" />
-          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-orange-200 to-orange-100 -rotate-45 opacity-70" />
+          <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-gradient-mid-light to-gradient-end-light -rotate-45 opacity-70" />
         </motion.div>
 
         <div className="relative h-44 w-70">

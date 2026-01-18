@@ -11,6 +11,7 @@ export default function Layout({ children }: LayoutProps<'/components'>) {
             nav={{
                 component: <Navbar />
             }}
+            githubUrl='https://github.com/heyfabrika/styleui'
         >
             {children}
         </DocsLayout>

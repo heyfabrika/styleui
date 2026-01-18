@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animated-list",
+  "title": "AnimatedList",
+  "description": "An animated list component to showcase your content.",
+  "files": [
+    {
+      "path": "components/animated-list.tsx",
+      "content": "\"use client\";\r\n\r\nimport React, {\r\n  ComponentPropsWithoutRef,\r\n  useEffect,\r\n  useMemo,\r\n  useState,\r\n} from \"react\";\r\nimport { AnimatePresence, motion, MotionProps } from \"motion/react\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport function AnimatedListItem({ children }: { children: React.ReactNode }) {\r\n  const animations: MotionProps = {\r\n    initial: { scale: 0, opacity: 0 },\r\n    animate: { scale: 1, opacity: 1, originY: 0 },\r\n    exit: { scale: 0, opacity: 0 },\r\n    transition: { type: \"spring\", stiffness: 350, damping: 40 },\r\n  };\r\n\r\n  return (\r\n    <motion.div {...animations} layout className=\"mx-auto w-full\">\r\n      {children}\r\n    </motion.div>\r\n  );\r\n}\r\n\r\nexport interface AnimatedListProps extends ComponentPropsWithoutRef<\"div\"> {\r\n  children: React.ReactNode;\r\n  delay?: number;\r\n  reverse?: boolean;\r\n  loop?: boolean;\r\n}\r\n\r\nexport const AnimatedList = React.memo(\r\n  ({\r\n    children,\r\n    className,\r\n    delay = 1000,\r\n    reverse = true,\r\n    loop = false,\r\n    ...props\r\n  }: AnimatedListProps) => {\r\n    const [index, setIndex] = useState(0);\r\n    const childrenArray = useMemo(\r\n      () => React.Children.toArray(children),\r\n      [children]\r\n    );\r\n\r\n    useEffect(() => {\r\n      if (index < childrenArray.length - 1) {\r\n        const timeout = setTimeout(() => {\r\n          setIndex((prevIndex) => prevIndex + 1);\r\n        }, delay);\r\n\r\n        return () => clearTimeout(timeout);\r\n      } else if (loop) {\r\n        const timeout = setTimeout(() => {\r\n          setIndex(0);\r\n        }, 1000);\r\n\r\n        return () => clearTimeout(timeout);\r\n      }\r\n    }, [index, delay, childrenArray.length, loop]);\r\n\r\n    const itemsToShow = useMemo(() => {\r\n      const result = childrenArray.slice(0, index + 1);\r\n      return reverse ? result.reverse() : result;\r\n    }, [index, childrenArray, reverse]);\r\n\r\n    return (\r\n      <div\r\n        className={cn(`flex flex-col items-center gap-4`, className)}\r\n        {...props}\r\n      >\r\n        <AnimatePresence>\r\n          {itemsToShow.map((item) => (\r\n            <AnimatedListItem key={(item as React.ReactElement).key}>\r\n              {item}\r\n            </AnimatedListItem>\r\n          ))}\r\n        </AnimatePresence>\r\n      </div>\r\n    );\r\n  }\r\n);\r\n\r\nAnimatedList.displayName = \"AnimatedList\";\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

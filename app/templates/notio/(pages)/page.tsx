@@ -2,12 +2,12 @@ import Beam from "@/app/templates/notio/_components/beam";
 import Hero from "@/app/templates/notio/_components/call-to-action/hero";
 import Features from "@/app/templates/notio/_components/features/features";
 import Footer from "@/app/templates/notio/_components/footer";
-import LogoCloud from "@/components/logo-cloud";
+import LogoCloud from "@/blocks/logo-cloud";
 import Navbar from "@/app/templates/notio/_components/navbar";
-import Pricing from "@/components/pricing/pricing";
+import Pricing from "@/blocks/pricing/pricing";
 import Stats from "@/app/templates/notio/_components/stats";
-import Team from "@/components/team-member/team";
-import Testimonial from "@/components/testimonial/testimonial";
+import Team from "@/blocks/team-member/team";
+import Testimonial from "@/blocks/testimonial/testimonial";
 
 export default function Page() {
     return (

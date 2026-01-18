@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { TeamMember } from "@/types/components/team-member";
 import { motion } from "motion/react";
 import Image from "next/image";
-import BlurredOrb from "../blurred-orb";
-import { GridPattern } from "../ui/grid-pattern";
+import BlurredOrb from "../../components/blurred-orb";
+import { GridPattern } from "../../components/ui/grid-pattern";
 import TeamMemberAvatar from "./team-member-avatar";
 import { useMediaQuery } from "@/hooks/use-media-query";
 

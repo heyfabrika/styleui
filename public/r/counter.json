@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "counter",
+  "title": "Counter",
+  "description": "Animated counter that increases from 0 to a given value in a smooth animation.",
+  "files": [
+    {
+      "path": "components/counter.tsx",
+      "content": "import { useEffect, useRef } from \"react\";\r\nimport { useInView, useMotionValue, useSpring } from \"motion/react\";\r\n\r\nexport default function Counter({ value, suffix = \"\" }: { value: number; suffix?: string }) {\r\n  const ref = useRef<HTMLSpanElement>(null);\r\n  const motionValue = useMotionValue(0);\r\n  const springValue = useSpring(motionValue, {\r\n    damping: 100,\r\n    stiffness: 100,\r\n  });\r\n  const isInView = useInView(ref, { once: true, margin: \"-100px\" });\r\n\r\n  useEffect(() => {\r\n    if (isInView) {\r\n      motionValue.set(value);\r\n    }\r\n  }, [motionValue, isInView, value]);\r\n\r\n  useEffect(() => {\r\n    return springValue.on(\"change\", (latest) => {\r\n      if (ref.current) {\r\n        ref.current.textContent = Math.floor(latest).toString() + suffix;\r\n      }\r\n    });\r\n  }, [springValue, suffix]);\r\n\r\n  return <span ref={ref}>0{suffix}</span>;\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

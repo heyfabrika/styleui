@@ -1,0 +1,31 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "StyleUI",
+    "homepage": "https://styleui.com",
+    "items": [
+        {
+            "name": "animated-list",
+            "title": "AnimatedList",
+            "type": "registry:component",
+            "description": "An animated list component to showcase your content.",
+            "files": [
+                {
+                    "type": "registry:component",
+                    "path": "components/animated-list.tsx"
+                }
+            ]
+        },
+        {
+            "name": "counter",
+            "title": "Counter",
+            "type": "registry:component",
+            "description": "Animated counter that increases from 0 to a given value in a smooth animation.",
+            "files": [
+                {
+                    "type": "registry:component",
+                    "path": "components/counter.tsx"
+                }
+            ]
+        }
+    ]
+}

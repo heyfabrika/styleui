@@ -1,7 +1,8 @@
+"use client";
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "motion/react";
 
-export default function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
+function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
@@ -26,3 +27,7 @@ export default function Counter({ value, suffix = "" }: { value: number; suffix?
 
   return <span ref={ref}>0{suffix}</span>;
 }
+
+Counter.displayName = "Counter";
+
+export default Counter;

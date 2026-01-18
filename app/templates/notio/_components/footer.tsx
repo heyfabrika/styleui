@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { useMediaQuery } from "@/hooks/use-media-query";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   const socialLinks: { label: string; href: string; icon: string }[] = [

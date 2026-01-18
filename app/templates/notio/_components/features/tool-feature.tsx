@@ -1,9 +1,9 @@
 "use client";
 
-import { Card, CardContent, CardHeader } from "../ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { motion } from "motion/react";
 import Image from "next/image";
-import BlurredOrb from "../blurred-orb";
+import BlurredOrb from "@/components/blurred-orb";
 
 type Tool = {
   name: string;

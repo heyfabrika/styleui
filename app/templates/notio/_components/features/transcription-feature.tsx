@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { AnimatedList } from "../animated-list";
-import BlurredOrb from "../blurred-orb";
-import { Card } from "../ui/card";
-import { Separator } from "../ui/separator";
-import { Skeleton } from "../ui/skeleton";
+import { AnimatedList } from "@/components/animated-list";
+import BlurredOrb from "@/components/blurred-orb";
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const transcriptions = [
   {
@@ -51,7 +51,7 @@ export default function TranscriptionFeature() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="relative flex flex-col items-center justify-center w-full mx-auto p-6 pb-12 md:px-4 lg:px-20 xl:px-16 md:pb-12 lg:py-8 rounded-4xl mt-15 md:mt-20 lg:mt-0 overflow-hidden max-lg:bg-gradient-to-b max-lg:from-background max-lg:via-background max-lg:dark:via-secondary/30 max-lg:via-secondary/10 max-lg:to-primary/40 max-lg:dark:to-secondary/60"
     >
-      <BlurredOrb className="max-lg:hidden absolute -right-120 -bottom-96 rounded-full w-full h-11/12 dark:opacity-40 opacity-10 rotate-45 from-secondary via-primary to-secondary blur-3xl" />
+      <BlurredOrb className="max-lg:hidden absolute left-180 top-120 rounded-full w-full h-280 dark:opacity-40 opacity-10 rotate-45 from-secondary via-primary to-secondary blur-3xl" />
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 md:gap-8 xl:gap-24 max-w-7xl">
         <motion.section
           initial={{ opacity: 0, x: -30 }}
@@ -117,14 +117,14 @@ export default function TranscriptionFeature() {
                 <div className="relative flex items-center gap-3 dark:bg-background bg-white px-3 md:px-5 py-2.5 rounded-full border border-primary/70 shadow-[0_0_41.9px_0_var(--orb-color-dark-fade)] dark:shadow-[0_0_41.9px_0_var(--orb-color-dark)] 4xl:px-10 4xl:py-5">
                   <BlurredOrb className="absolute inset-0 dark:blur-xl rounded-full w-full h-full opacity-20" />
                   <Image
-                    src="logo/notio-icon-black.svg"
+                    src="/logo/notio-icon-black.svg"
                     alt="Notio"
                     width={20}
                     height={20}
                     className="size-4 lg:size-6 4xl:size-10 dark:hidden"
                   />
                   <Image
-                    src="logo/notio-icon-white.svg"
+                    src="/logo/notio-icon-white.svg"
                     alt="Notio"
                     width={20}
                     height={20}

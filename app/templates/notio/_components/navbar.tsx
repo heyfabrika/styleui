@@ -4,8 +4,8 @@ import { ChevronDownIcon, MenuIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "./ui/button";
-import { ThemeToggle } from "./theme/theme-toggle";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +70,7 @@ export default function Navbar() {
             }}
           >
             <Button variant="ghost" className="4xl:text-2xl" size={"sm"}>
-              <Link href="/auth/login">Log In</Link>
+              <Link href="notio/auth/login">Log In</Link>
             </Button>
           </motion.div>
           <ThemeToggle />
@@ -87,7 +87,7 @@ export default function Navbar() {
               variant="default"
               className="4xl:text-2xl 4xl:h-16 4xl:px-8"
             >
-              <Link href="/auth/login">Start for free</Link>
+              <Link href="notio/auth/login">Start for free</Link>
             </Button>
           </motion.div>
         </div>
@@ -181,10 +181,10 @@ export default function Navbar() {
               >
                 <ThemeToggle />
                 <Button variant="ghost" className="w-full">
-                  <Link href="/auth/login">Log In</Link>
+                  <Link href="notio/auth/login">Log In</Link>
                 </Button>
                 <Button variant="default" className="w-full">
-                  <Link href="/auth/login">Start for free</Link>
+                  <Link href="notio/auth/login">Start for free</Link>
                 </Button>
               </motion.div>
             </motion.div>

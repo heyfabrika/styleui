@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import BlurredOrb from "../blurred-orb";
+} from "@/components/ui/card";
+import BlurredOrb from "@/components/blurred-orb";
 
 export default function FeatureCard({
   feature,

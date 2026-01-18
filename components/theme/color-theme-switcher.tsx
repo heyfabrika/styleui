@@ -2,25 +2,17 @@
 
 import { Button } from "@/components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { useColorTheme } from "@/utils/context/color-theme-context";
 import { Check, Palette } from "lucide-react";
 import { motion } from "motion/react";
 
-const themeNames = ["basil", "forest", "sunny"] as const;
-
-const themeSwatches: Record<string, string> = {
-  basil: "oklch(0.6292 0.0458 300.3136)", 
-  forest: "oklch(0.8348 0.1302 160.9080)", 
-  sunny: "oklch(0.713 0.1305 61.77)",
-};
-
-export function ColorThemeSwitcher() {
+export function ColorThemeSwitcher({ themeNames, themeSwatches }: { themeNames: string[], themeSwatches: Record<string, string> }) {
   const { colorTheme, setColorTheme } = useColorTheme();
 
   const handleThemeChange = (theme: string) => {

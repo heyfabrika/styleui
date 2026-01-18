@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import Counter from "./counter";
+import Counter from "@/components/counter";
 
 export default function Stats() {
   const stats: { value: number; suffix?: string; description: string }[] = [

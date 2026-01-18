@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
+    "@types/mdx": "^2.0.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fumadocs-core": "^16.4.7",
+    "fumadocs-mdx": "^14.2.5",
+    "fumadocs-ui": "^16.4.7",
     "lucide-react": "^0.561.0",
     "motion": "^12.23.26",
     "next": "16.0.10",
@@ -31,5 +35,8 @@
     "eslint-config-next": "16.0.10",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "dependency": {
+    "fumadocs-ui": "^npm:@fumadocs/base-ui@latest"
   }
 }

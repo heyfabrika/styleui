@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
-import { themesConfig } from "@/utils/config/themes.config";
 import { useColorTheme } from "@/utils/context/color-theme-context";
+import { ThemeConfigProps } from "@/types/utils/configs/theme";
 
-export function ThemeVariables() {
+export function ThemeVariables({ themesConfig }: { themesConfig: ThemeConfigProps }) {
   const { resolvedTheme } = useTheme();
   const { colorTheme } = useColorTheme();
 

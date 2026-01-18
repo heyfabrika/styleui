@@ -3,9 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
+import { Button } from "../ui/button";
+import { GithubInfo } from "fumadocs-ui/components/github-info";
 
-const Navbar = () => {
+const Navbar = ({ showGithubInfo = false }: { showGithubInfo?: boolean }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
@@ -60,6 +62,14 @@ const Navbar = () => {
                         ))}
                     </div>
 
+
+                    {showGithubInfo && (
+                        <div className="flex items-center gap-2 max-md:hidden">
+                            <GithubInfo owner="shadcn-ui" repo="ui" className="lg:-mx-2" />
+                        </div>
+                    )}
+
+
                     <button
                         className="block md:hidden"
                         onClick={() => setIsOpen(!isOpen)}
@@ -99,6 +109,11 @@ const Navbar = () => {
                                         </Link>
                                     </motion.div>
                                 ))}
+                            </div>
+                            <div className="flex justify-end gap-2">
+                                {showGithubInfo && (
+                                    <GithubInfo owner="shadcn-ui" repo="ui" className="lg:-mx-2" />
+                                )}
                             </div>
                         </motion.div>
                     )}

@@ -24,7 +24,7 @@ const Page = () => {
   return (
     <div className="py-16">
       <div className="mb-10 max-w-xl">
-        <h1 className="text-2xl font-semibold tracking-tight mb-2">
+        <h1 className="text-2xl font-medium tracking-tight mb-2">
           Templates
         </h1>
         <p className="text-muted-foreground">

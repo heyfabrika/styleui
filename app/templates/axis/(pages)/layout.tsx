@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/utils/providers/theme-provider";
 import { Inter } from "next/font/google";
 import "./index.css";
 
@@ -9,8 +10,16 @@ const inter = Inter({
 
 export default function AxisTemplateLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div className={`${inter.variable} bg-background font-light w-full`}>
-            {children}
-        </div>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            storageKey="axis-theme"
+            enableSystem={false}
+            disableTransitionOnChange
+        >
+            <div className={`${inter.variable} bg-background font-light w-full`}>
+                {children}
+            </div>
+        </ThemeProvider>
     );
 }

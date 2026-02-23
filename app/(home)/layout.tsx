@@ -19,12 +19,21 @@ export default function Layout({ children }: { children: ReactNode }) {
             </div>
             <footer className="py-6 text-center text-sm text-muted-foreground">
                 <p>
-                    Made with Style by{" "}
+                    Made with love ❤️ by{" "}
                     <Link
                         href="https://x.com/rasmic"
+                        target="_blank"
                         className="underline hover:text-foreground transition-colors"
                     >
-                        RasMic
+                        Ras Mic
+                    </Link>
+                    {" & "}
+                    <Link
+                        href="https://x.com/heyfabrika"
+                        target="_blank"
+                        className="underline hover:text-foreground transition-colors"
+                    >
+                        Fabrika team
                     </Link>
                 </p>
             </footer>

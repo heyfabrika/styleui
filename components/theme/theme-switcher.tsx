@@ -17,22 +17,22 @@ const ThemeSwitcher = ({ className }: { className?: string }) => {
     if (!mounted) {
         return (
             <div className={cn("flex items-center gap-2", className)}>
-                <Sun className="h-4 w-4 text-muted-foreground" />
-                <Switch checked={false} disabled />
                 <Moon className="h-4 w-4 text-muted-foreground" />
+                <Switch checked={false} disabled />
+                <Sun className="h-4 w-4 text-muted-foreground" />
             </div>
         );
     }
 
     return (
         <div className={cn("flex items-center gap-2", className)}>
-            <Sun className={cn("h-4 w-4 transition-colors", isDark ? "text-muted-foreground" : "text-amber-500")} />
+            <Moon className={cn("h-4 w-4 transition-colors", isDark ? "text-blue-400" : "text-muted-foreground")} />
             <Switch
-                checked={isDark}
-                onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+                checked={!isDark}
+                onCheckedChange={(checked) => setTheme(checked ? 'light' : 'dark')}
                 aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
             />
-            <Moon className={cn("h-4 w-4 transition-colors", isDark ? "text-blue-400" : "text-muted-foreground")} />
+            <Sun className={cn("h-4 w-4 transition-colors", isDark ? "text-muted-foreground" : "text-amber-500")} />
         </div>
     );
 };

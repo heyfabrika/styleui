@@ -1,0 +1,81 @@
+---
+title: Components
+description: Learn about StyleUI components - individual, reusable UI elements
+---
+
+# Components
+
+Components are the fundamental building blocks of StyleUI. They are individual, reusable UI elements that you can install and use throughout your application.
+
+## What are Components?
+
+Components in StyleUI are standalone UI elements that serve a specific purpose. Think of them as the atoms of your design system—small, focused pieces that can be combined to build larger interfaces.
+
+### Examples
+
+- **AnimatedList** - An animated list component that showcases content with smooth transitions
+- **Counter** - An animated counter that smoothly increases from 0 to a target value
+- **Button** - Versatile button component with multiple variants
+- **Card** - Container component for grouping content
+
+## How Components Work
+
+### Installation
+
+Components are installed using the shadcn CLI. When you install a component, it's copied directly into your project:
+
+```bash
+npx shadcn@latest add https://styleui.dev/r/animated-list.json
+```
+
+This copies the component files into your `components` directory, giving you full ownership and control.
+
+### Usage
+
+Once installed, import and use components like any other React component:
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export default function Page() {
+  return (
+    <AnimatedList delay={1000}>
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+## Component Philosophy
+
+### Copy, Don't Import
+
+Unlike traditional component libraries, StyleUI components are copied into your codebase. This approach provides:
+
+- **Full Ownership** - Components live in your project, not in node_modules
+- **Easy Customization** - Modify components directly to fit your needs
+- **No Version Conflicts** - No external dependencies to manage
+- **Better Performance** - Only include what you use
+
+### Built on shadcn/ui
+
+StyleUI components follow the [shadcn/ui](https://ui.shadcn.com) architecture, leveraging:
+
+- **Radix UI Primitives** - Accessible, unstyled components
+- **Tailwind CSS** - Utility-first styling
+- **Class Variance Authority** - Type-safe component variants
+
+## Customization
+
+Since components are in your codebase, you can customize them however you need:
+
+- Modify Tailwind classes directly
+- Adjust component variants
+- Change component behavior
+- Add new features
+
+## Browse Components
+
+Check out all available components in the [Components section](/components).

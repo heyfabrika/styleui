@@ -1,0 +1,395 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "StyleUI",
+    "homepage": "https://styleui.com",
+    "items": [
+        {
+            "name": "animated-list",
+            "title": "AnimatedList",
+            "type": "registry:component",
+            "description": "An animated list component to showcase your content.",
+            "files": [
+                {
+                    "type": "registry:component",
+                    "path": "components/animated-list.tsx"
+                }
+            ]
+        },
+        {
+            "name": "counter",
+            "title": "Counter",
+            "type": "registry:component",
+            "description": "Animated counter that increases from 0 to a given value in a smooth animation.",
+            "files": [
+                {
+                    "type": "registry:component",
+                    "path": "components/counter.tsx"
+                }
+            ]
+        },
+        {
+            "name": "notio",
+            "title": "notio",
+            "type": "registry:block",
+            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section.",
+            "registryDependencies": [
+                "button",
+                "badge",
+                "card",
+                "avatar",
+                "separator",
+                "skeleton",
+                "toggle-group",
+                "input",
+                "dropdown-menu"
+            ],
+            "dependencies": [
+                "motion",
+                "lucide-react",
+                "next-themes"
+            ],
+            "files": [
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/beam.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/call-to-action/hero.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/call-to-action/transcriber.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/features/feature-card.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/features/features.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/features/tool-feature.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/features/transcription-feature.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/footer.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/navbar.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/stats.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/notio/_components/theme-toggle.tsx"
+                },
+                {
+                    "type": "registry:lib",
+                    "path": "app/templates/notio/_configs/themes.config.ts"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/theme/color-theme-switcher.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/theme/theme-variables.tsx"
+                },
+                {
+                    "type": "registry:hook",
+                    "path": "utils/context/color-theme-context.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/logo-cloud.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/pricing/pricing.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/pricing/pricing-card.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/team-member/team.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/team-member/team-member-avatar.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/testimonial/testimonial.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/testimonial/testimonial-card.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/blurred-orb.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/animated-list.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/counter.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/ui/grid-pattern.tsx"
+                },
+                {
+                    "type": "registry:hook",
+                    "path": "hooks/use-countdown.tsx"
+                },
+                {
+                    "type": "registry:hook",
+                    "path": "hooks/use-media-query.tsx"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/utils/configs/theme.ts",
+                    "target": "types/utils/configs/theme.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/image.ts",
+                    "target": "types/components/image.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/team-member.ts",
+                    "target": "types/components/team-member.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/pricing.ts",
+                    "target": "types/components/pricing.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/testimonial.ts",
+                    "target": "types/components/testimonial.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/feature.ts",
+                    "target": "types/components/feature.ts"
+                },
+                {
+                    "type": "registry:page",
+                    "path": "app/templates/notio/(pages)/page.tsx",
+                    "target": "app/page.tsx"
+                },
+                {
+                    "type": "registry:page",
+                    "path": "app/templates/notio/(pages)/layout.tsx",
+                    "target": "app/layout.tsx"
+                },
+                {
+                    "type": "registry:page",
+                    "path": "app/templates/notio/(pages)/auth/login/page.tsx",
+                    "target": "app/auth/login/page.tsx"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "app/templates/notio/(pages)/index.css",
+                    "target": "app/index.css"
+                }
+            ]
+        },
+        {
+            "name": "axis",
+            "title": "axis",
+            "type": "registry:block",
+            "description": "A template block that includes a hero section, feature highlights, tools, pricing, testimonials, and a footer section.",
+            "registryDependencies": [
+                "button",
+                "badge",
+                "card",
+                "avatar",
+                "separator",
+                "skeleton",
+                "toggle-group",
+                "input",
+                "dropdown-menu"
+            ],
+            "dependencies": [
+                "motion",
+                "lucide-react",
+                "next-themes"
+            ],
+            "files": [
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/companies.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/feature.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/footer.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/hero.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/navbar.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/pricing.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/stats.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/testimonials.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/theme-switch.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "app/templates/axis/_components/tools.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/theme/color-theme-switcher.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/theme/theme-variables.tsx"
+                },
+                {
+                    "type": "registry:hook",
+                    "path": "utils/context/color-theme-context.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/logo-cloud.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/pricing/pricing.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/pricing/pricing-card.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/team-member/team.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/team-member/team-member-avatar.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/testimonial/testimonial.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "blocks/testimonial/testimonial-card.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/blurred-orb.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/animated-list.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/counter.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/ui/grid-pattern.tsx"
+                },
+                {
+                    "type": "registry:hook",
+                    "path": "hooks/use-countdown.tsx"
+                },
+                {
+                    "type": "registry:hook",
+                    "path": "hooks/use-media-query.tsx"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/utils/configs/theme.ts",
+                    "target": "types/utils/configs/theme.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/image.ts",
+                    "target": "types/components/image.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/team-member.ts",
+                    "target": "types/components/team-member.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/pricing.ts",
+                    "target": "types/components/pricing.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/testimonial.ts",
+                    "target": "types/components/testimonial.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "types/components/feature.ts",
+                    "target": "types/components/feature.ts"
+                },
+                {
+                    "type": "registry:page",
+                    "path": "app/templates/axis/(pages)/page.tsx",
+                    "target": "app/page.tsx"
+                },
+                {
+                    "type": "registry:page",
+                    "path": "app/templates/axis/(pages)/layout.tsx",
+                    "target": "app/layout.tsx"
+                },
+                {
+                    "type": "registry:page",
+                    "path": "app/templates/axis/(pages)/auth/page.tsx",
+                    "target": "app/auth/page.tsx"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "app/templates/axis/(pages)/index.css",
+                    "target": "app/index.css"
+                }
+            ]
+        }
+    ]
+}

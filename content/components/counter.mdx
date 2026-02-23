@@ -1,0 +1,97 @@
+---
+title: Counter
+description: Animated counter that increases from 0 to a given value in a smooth animation.
+---
+
+## Preview
+
+<PreviewComponent>
+    <div className="text-4xl font-bold">
+        <Counter value={1000} suffix="+" />
+    </div>
+</PreviewComponent>
+
+## Installation
+
+Install the component using shadcn CLI:
+
+<Tabs items={['bun', 'npm', 'pnpm', 'yarn']}>
+  <Tab value="bun">
+```bash
+bunx shadcn@latest add https://styleui.dev/r/counter.json
+```
+  </Tab>
+  <Tab value="npm">
+```bash
+npx shadcn@latest add https://styleui.dev/r/counter.json
+```
+  </Tab>
+  <Tab value="pnpm">
+```bash
+pnpm dlx shadcn@latest add https://styleui.dev/r/counter.json
+```
+  </Tab>
+  <Tab value="yarn">
+```bash
+yarn dlx shadcn@latest add https://styleui.dev/r/counter.json
+```
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Basic Example
+
+A simple counter that animates from 0 to the target value:
+
+```tsx
+import Counter from "@/components/counter";
+
+export function Example() {
+  return (
+    <div>
+      <Counter value={100} />
+    </div>
+  );
+}
+```
+
+### With Suffix
+
+Add a suffix to the counter value (e.g., %, +, etc.):
+
+```tsx
+import Counter from "@/components/counter";
+
+export function Example() {
+  return (
+    <div className="space-y-4">
+      <Counter value={95} suffix="%" />
+      <Counter value={1000} suffix="+" />
+      <Counter value={42} suffix="k" />
+    </div>
+  );
+}
+```
+
+## API Reference
+
+### Counter
+
+An animated counter component that smoothly animates from 0 to a target value when it comes into view.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `number` | - | **Required.** The target value to count up to. |
+| `suffix` | `string` | `""` | Optional suffix to append to the counter value (e.g., "%", "+", "k"). |
+
+## Notes
+
+- The counter uses `motion/react` (Framer Motion) for smooth spring animations.
+- Animation starts when the component comes into view (using `useInView` hook).
+- The animation uses a spring with damping: 100 and stiffness: 100.
+- The counter only animates once by default (`once: true` in `useInView`).
+- The viewport margin is set to "-100px" to trigger the animation slightly before the element is fully visible.
+- The displayed value is rounded down using `Math.floor()`.

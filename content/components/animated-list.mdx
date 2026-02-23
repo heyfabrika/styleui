@@ -1,0 +1,182 @@
+---
+title: AnimatedList
+description: An animated list component to showcase your content.
+---
+
+## Preview
+<PreviewComponent>
+    <AnimatedList delay={1000} reverse={false}>
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+</PreviewComponent>
+
+## Installation
+
+Install the component using shadcn CLI:
+
+<Tabs items={['bun', 'npm', 'pnpm', 'yarn']}>
+  <Tab value="bun">
+```bash
+bunx shadcn@latest add https://styleui.dev/r/animated-list.json
+```
+  </Tab>
+  <Tab value="npm">
+```bash
+npx shadcn@latest add https://styleui.dev/r/animated-list.json
+```
+  </Tab>
+  <Tab value="pnpm">
+```bash
+pnpm dlx shadcn@latest add https://styleui.dev/r/animated-list.json
+```
+  </Tab>
+  <Tab value="yarn">
+```bash
+yarn dlx shadcn@latest add https://styleui.dev/r/animated-list.json
+```
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Basic Example
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export function Example() {
+  return (
+    <AnimatedList>
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+### Custom Delay
+
+Control the delay between each item animation:
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export function Example() {
+  return (
+    <AnimatedList delay={500}>
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+### With Loop
+
+Enable looping to continuously animate the list:
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export function Example() {
+  return (
+    <AnimatedList loop={true}>
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+### Reverse Order
+
+Display items in reverse order (default behavior):
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export function Example() {
+  return (
+    <AnimatedList reverse={true}>
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+### Forward Order
+
+Display items in forward order:
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export function Example() {
+  return (
+    <AnimatedList reverse={false}>
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+### Custom Styling
+
+Apply custom className to the container:
+
+```tsx
+import { AnimatedList } from "@/components/animated-list";
+
+export function Example() {
+  return (
+    <AnimatedList className="gap-6">
+      <div className="p-4 border rounded-lg">Item 1</div>
+      <div className="p-4 border rounded-lg">Item 2</div>
+      <div className="p-4 border rounded-lg">Item 3</div>
+    </AnimatedList>
+  );
+}
+```
+
+## API Reference
+
+### AnimatedList
+
+The main component that animates a list of items.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | The list items to animate. Each child will be wrapped in an `AnimatedListItem`. |
+| `delay` | `number` | `1000` | Delay in milliseconds between each item animation. |
+| `reverse` | `boolean` | `true` | Whether to display items in reverse order. |
+| `loop` | `boolean` | `false` | Whether to continuously loop the animation. |
+| `className` | `string` | - | Additional CSS classes to apply to the container. |
+| `...props` | `ComponentPropsWithoutRef<"div">` | - | All other standard div props are supported. |
+
+### AnimatedListItem
+
+A wrapper component for individual list items. This component is exported but typically used internally by `AnimatedList`.
+
+#### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `React.ReactNode` | - | The content to animate. |
+
+## Notes
+
+- The component uses `motion/react` (Framer Motion) for animations.
+- Each item animates with a spring transition (stiffness: 350, damping: 40).
+- Items scale from 0 to 1 and fade in/out during animation.
+- When `loop` is enabled, the animation restarts after a 1 second delay once all items are shown.

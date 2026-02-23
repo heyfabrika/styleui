@@ -1,0 +1,83 @@
+---
+title: Blocks
+description: Learn about StyleUI blocks - pre-built sections and layouts
+---
+
+# Blocks
+
+Blocks are pre-built sections and layouts that provide complete, ready-to-use UI patterns. They're larger than components and represent full sections of a page.
+
+## What are Blocks?
+
+Blocks are complete sections that solve common UI patterns. While components are individual elements, blocks are composed sections that include multiple components working together to create a cohesive UI pattern.
+
+### Examples
+
+- **Pricing** - Complete pricing section with cards, features, and animations
+- **Testimonial** - Testimonial section with cards and layouts
+- **Team** - Team member showcase with avatars and descriptions
+- **LogoCloud** - Logo cloud section for displaying partner/client logos
+
+## Blocks vs Components
+
+### Components
+- Individual UI elements (buttons, inputs, cards)
+- Small, focused pieces
+- Highly reusable across different contexts
+- Building blocks for larger patterns
+
+### Blocks
+- Complete sections (pricing tables, testimonials)
+- Larger, composed patterns
+- Ready-to-use page sections
+- Combine multiple components together
+
+## How Blocks Work
+
+### Structure
+
+Blocks are typically composed of:
+- Multiple components working together
+- Custom styling and layouts
+- Animations and interactions
+- Responsive design patterns
+
+### Usage
+
+Blocks are React components that you can import and use directly:
+
+```tsx
+import Pricing from "@/blocks/pricing/pricing";
+import Testimonial from "@/blocks/testimonial/testimonial";
+
+export default function Page() {
+  return (
+    <div>
+      <Pricing />
+      <Testimonial />
+    </div>
+  );
+}
+```
+
+## Customization
+
+Like components, blocks are fully customizable:
+
+- Modify the layout and structure
+- Adjust styling and colors
+- Add or remove features
+- Combine with other blocks and components
+
+## When to Use Blocks
+
+Use blocks when you need:
+
+- **Quick Implementation** - Get a complete section working fast
+- **Proven Patterns** - Use battle-tested UI patterns
+- **Consistent Design** - Maintain design consistency across pages
+- **Time Savings** - Skip building common sections from scratch
+
+## Browse Blocks
+
+Explore all available blocks in the [Blocks section](/blocks).

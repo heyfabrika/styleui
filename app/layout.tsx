@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "StyleUI",
-  description: "UI component library to help you build your next project with style",
+  title: "StyleUI – Handmade UI Templates",
+  description: "Handmade UI templates crafted with care. Choose a template, customize the details, and ship a world-class site today.",
 };
 
 export default function RootLayout({

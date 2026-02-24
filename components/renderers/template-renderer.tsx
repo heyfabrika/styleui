@@ -117,9 +117,9 @@ const TemplateRenderer = ({
                             iframeLoaded ? "opacity-100" : "opacity-0"
                         )}
                         style={{
-                            width: "200%",
-                            height: "200%",
-                            transform: "scale(0.5)",
+                            width: "300%",
+                            height: "300%",
+                            transform: "scale(0.333)",
                             transformOrigin: "top left",
                         }}
                         title={`${name} Preview`}
@@ -156,7 +156,7 @@ const TemplateRenderer = ({
                 <div className="flex items-center gap-2">
                     <div className="flex items-center gap-2">
                         <Select value={packageManager} onValueChange={(value) => setPackageManager(value as typeof packageManager)}>
-                            <SelectTrigger className="border-0 shadow-none h-auto p-0 w-auto">
+                            <SelectTrigger className="border-0 shadow-none h-auto px-2.5 w-auto">
                                 <SelectValue>
                                     <div className="flex items-center gap-2">
                                         <AnimatePresence mode="wait">
@@ -273,10 +273,10 @@ const TemplateRenderer = ({
                                 src={src}
                                 className={cn("border-0", className)}
                                 style={{
-                                    width: "calc(100% + 20px)",
-                                    height: "100%",
-                                    paddingRight: "20px",
-                                    boxSizing: "content-box",
+                                    width: "200%",
+                                    height: "200%",
+                                    transform: "scale(0.5)",
+                                    transformOrigin: "top left",
                                 }}
                                 title={`${src} Preview`}
                                 loading={loadingMode}

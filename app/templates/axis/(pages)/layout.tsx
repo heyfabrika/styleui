@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/utils/providers/theme-provider";
 import { Inter } from "next/font/google";
 import "./index.css";
 
@@ -8,18 +7,10 @@ const inter = Inter({
     weight: ["300", "400", "500", "600", "700"],
 });
 
-export default function AxisTemplateLayout({ children }: { children: React.ReactNode }) {
+export default function NotioTemplateLayout({ children }: { children: React.ReactNode }) {
     return (
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            storageKey="axis-theme"
-            enableSystem={false}
-            disableTransitionOnChange
-        >
-            <div className={`${inter.variable} bg-background font-light w-full`}>
-                {children}
-            </div>
-        </ThemeProvider>
+        <body className={`${inter.variable} bg-background font-light w-full`}>
+            {children}
+        </body>
     );
 }

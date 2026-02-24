@@ -2,7 +2,6 @@ import { themesConfig } from "@/app/templates/notio/_configs/themes.config";
 import { ColorThemeSwitcher } from "@/components/theme/color-theme-switcher";
 import { ThemeVariables } from "@/components/theme/theme-variables";
 import { ColorThemeProvider } from "@/utils/context/color-theme-context";
-import { ThemeProvider } from "@/utils/providers/theme-provider";
 import { Aleo } from "next/font/google";
 import "./index.css";
 
@@ -16,20 +15,13 @@ const themeSwatches: Record<string, string> = {
 };
 export default function NotioTemplateLayout({ children }: { children: React.ReactNode }) {
     return (
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            storageKey="notio-theme"
-            enableSystem={false}
-            disableTransitionOnChange
-        >
-            <div className={`${aleo.variable} bg-background`}>
-                <ColorThemeProvider>
-                    <ThemeVariables themesConfig={themesConfig} />
-                    {children}
-                    <ColorThemeSwitcher themeNames={themeNames} themeSwatches={themeSwatches} />
-                </ColorThemeProvider>
-            </div>
-        </ThemeProvider>
+        <body className={`${aleo.variable} bg-background`}>
+            <ColorThemeProvider>
+                <ThemeVariables themesConfig={themesConfig} />
+                {children}
+                <ColorThemeSwitcher themeNames={themeNames} themeSwatches={themeSwatches} />
+            </ColorThemeProvider>
+        </body>
     );
 }
+

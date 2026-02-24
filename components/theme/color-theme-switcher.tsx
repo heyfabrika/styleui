@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,21 +27,17 @@ export function ColorThemeSwitcher({ themeNames, themeSwatches }: { themeNames: 
       className="fixed bottom-4 right-4 z-50"
     >
       <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Button
-            variant="outline"
-            size="icon"
-            className={cn(
-              "h-12 w-12 rounded-full shadow-lg hover:shadow-xl transition-all",
-              "bg-background/80 backdrop-blur-sm border-border",
-              "hover:scale-110 active:scale-95"
-            )}
-            aria-label="Change color theme"
-          >
-            <Palette className="h-5 w-5" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
+        <DropdownMenuTrigger
+          className={cn(
+            buttonVariants({ variant: "outline", size: "icon" }),
+            "h-12 w-12 rounded-full shadow-lg hover:shadow-xl transition-all",
+            "bg-background/80 backdrop-blur-sm border-border",
+            "hover:scale-110 active:scale-95"
+          )}
+          aria-label="Change color theme"
+        >
+          <Palette className="h-5 w-5" />
+        </DropdownMenuTrigger>        <DropdownMenuContent
           align="end"
           side="top"
           sideOffset={8}

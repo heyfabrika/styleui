@@ -9,19 +9,27 @@ const aleo = Aleo({ subsets: ["latin"], variable: "--font-aleo" });
 const themeNames = ["basil", "forest", "sunny"];
 
 const themeSwatches: Record<string, string> = {
-    basil: "oklch(0.6292 0.0458 300.3136)",
-    forest: "oklch(0.8348 0.1302 160.9080)",
-    sunny: "oklch(0.713 0.1305 61.77)",
+  basil: "oklch(0.6292 0.0458 300.3136)",
+  forest: "oklch(0.8348 0.1302 160.9080)",
+  sunny: "oklch(0.713 0.1305 61.77)",
 };
-export default function NotioTemplateLayout({ children }: { children: React.ReactNode }) {
-    return (
-        <body className={`${aleo.variable} bg-background`}>
-            <ColorThemeProvider>
-                <ThemeVariables themesConfig={themesConfig} />
-                {children}
-                <ColorThemeSwitcher themeNames={themeNames} themeSwatches={themeSwatches} />
-            </ColorThemeProvider>
-        </body>
-    );
+export default function NotioTemplateLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html>
+      <body className={`${aleo.variable} bg-background`}>
+        <ColorThemeProvider>
+          <ThemeVariables themesConfig={themesConfig} />
+          {children}
+          <ColorThemeSwitcher
+            themeNames={themeNames}
+            themeSwatches={themeSwatches}
+          />
+        </ColorThemeProvider>
+      </body>
+    </html>
+  );
 }
-

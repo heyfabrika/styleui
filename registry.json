@@ -192,6 +192,151 @@
                     "target": "types/components/feature.ts"
                 },
                 {
+                    "type": "registry:file",
+                    "path": "public/icons/facebook.svg",
+                    "target": "public/icons/facebook.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/instagram.svg",
+                    "target": "public/icons/instagram.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/linkedin.svg",
+                    "target": "public/icons/linkedin.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/tiktok.svg",
+                    "target": "public/icons/tiktok.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/x.svg",
+                    "target": "public/icons/x.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/illustrations/avatar-1.svg",
+                    "target": "public/illustrations/avatar-1.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/illustrations/avatar-2.svg",
+                    "target": "public/illustrations/avatar-2.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/illustrations/avatar-3.svg",
+                    "target": "public/illustrations/avatar-3.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/calendly-light.svg",
+                    "target": "public/logo/calendly-light.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/calendly.svg",
+                    "target": "public/logo/calendly.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/coinbase.svg",
+                    "target": "public/logo/coinbase.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/framer.svg",
+                    "target": "public/logo/framer.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/loom-mini-light.svg",
+                    "target": "public/logo/loom-mini-light.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/loom-mini.svg",
+                    "target": "public/logo/loom-mini.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/loom.svg",
+                    "target": "public/logo/loom.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/mailchip-light.svg",
+                    "target": "public/logo/mailchip-light.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/mailchip.svg",
+                    "target": "public/logo/mailchip.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/medium-light.svg",
+                    "target": "public/logo/medium-light.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/medium.svg",
+                    "target": "public/logo/medium.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notio-icon-black.svg",
+                    "target": "public/logo/notio-icon-black.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notio-icon-white.svg",
+                    "target": "public/logo/notio-icon-white.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notio-logo-black.svg",
+                    "target": "public/logo/notio-logo-black.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notio-logo-white.svg",
+                    "target": "public/logo/notio-logo-white.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notion-mini-light.svg",
+                    "target": "public/logo/notion-mini-light.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notion-mini.svg",
+                    "target": "public/logo/notion-mini.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notion.svg",
+                    "target": "public/logo/notion.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/slack.svg",
+                    "target": "public/logo/slack.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/uber.svg",
+                    "target": "public/logo/uber.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/webflow.svg",
+                    "target": "public/logo/webflow.svg"
+                },
+                {
                     "type": "registry:page",
                     "path": "app/templates/notio/(pages)/page.tsx",
                     "target": "app/page.tsx"

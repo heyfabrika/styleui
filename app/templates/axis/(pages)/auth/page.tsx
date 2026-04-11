@@ -12,7 +12,7 @@ const Page = () => {
     return (
         <div className="relative flex min-h-screen h-full w-full flex-col items-center justify-center gap-6 p-4">
             <Image
-                src="/images/templates/axis/auth-background.webp"
+                src="/images/templates/axis/auth-background.svg"
                 alt="Background"
                 fill
                 className="object-cover"

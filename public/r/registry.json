@@ -438,15 +438,11 @@
                 },
                 {
                     "type": "registry:component",
+                    "path": "utils/providers/theme-provider.tsx"
+                },
+                {
+                    "type": "registry:component",
                     "path": "blocks/logo-cloud.tsx"
-                },
-                {
-                    "type": "registry:component",
-                    "path": "blocks/pricing/pricing.tsx"
-                },
-                {
-                    "type": "registry:component",
-                    "path": "blocks/pricing/pricing-card.tsx"
                 },
                 {
                     "type": "registry:component",
@@ -505,11 +501,6 @@
                 },
                 {
                     "type": "registry:file",
-                    "path": "types/components/pricing.ts",
-                    "target": "types/components/pricing.ts"
-                },
-                {
-                    "type": "registry:file",
                     "path": "types/components/testimonial.ts",
                     "target": "types/components/testimonial.ts"
                 },
@@ -517,6 +508,231 @@
                     "type": "registry:file",
                     "path": "types/components/feature.ts",
                     "target": "types/components/feature.ts"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/facebook.svg",
+                    "target": "public/icons/facebook.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/instagram.svg",
+                    "target": "public/icons/instagram.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/linkedin.svg",
+                    "target": "public/icons/linkedin.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/tiktok.svg",
+                    "target": "public/icons/tiktok.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/icons/x.svg",
+                    "target": "public/icons/x.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/illustrations/avatar-1.svg",
+                    "target": "public/illustrations/avatar-1.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/illustrations/avatar-2.svg",
+                    "target": "public/illustrations/avatar-2.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/illustrations/avatar-3.svg",
+                    "target": "public/illustrations/avatar-3.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/auth-background.svg",
+                    "target": "public/images/templates/axis/auth-background.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature-dark-mobile.svg",
+                    "target": "public/images/templates/axis/feature-dark-mobile.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature-dark-mobile.webp",
+                    "target": "public/images/templates/axis/feature-dark-mobile.webp"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature-dark.svg",
+                    "target": "public/images/templates/axis/feature-dark.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature-dark.webp",
+                    "target": "public/images/templates/axis/feature-dark.webp"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature-mobile.svg",
+                    "target": "public/images/templates/axis/feature-mobile.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature-mobile.webp",
+                    "target": "public/images/templates/axis/feature-mobile.webp"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature.svg",
+                    "target": "public/images/templates/axis/feature.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/feature.webp",
+                    "target": "public/images/templates/axis/feature.webp"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/hero.svg",
+                    "target": "public/images/templates/axis/hero.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/pricing-mobile.svg",
+                    "target": "public/images/templates/axis/pricing-mobile.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/images/templates/axis/pricing.svg",
+                    "target": "public/images/templates/axis/pricing.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/coinbase.svg",
+                    "target": "public/logo/coinbase.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/framer.svg",
+                    "target": "public/logo/framer.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/loom.svg",
+                    "target": "public/logo/loom.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/notion.svg",
+                    "target": "public/logo/notion.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/slack.svg",
+                    "target": "public/logo/slack.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/uber.svg",
+                    "target": "public/logo/uber.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/webflow.svg",
+                    "target": "public/logo/webflow.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/adobe.svg",
+                    "target": "public/logo/templates/axis/adobe.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/airbnb.svg",
+                    "target": "public/logo/templates/axis/airbnb.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/amazon.svg",
+                    "target": "public/logo/templates/axis/amazon.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/calendly.svg",
+                    "target": "public/logo/templates/axis/calendly.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/discord.svg",
+                    "target": "public/logo/templates/axis/discord.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/light-logo.svg",
+                    "target": "public/logo/templates/axis/light-logo.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/logoipsum-1.svg",
+                    "target": "public/logo/templates/axis/logoipsum-1.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/logoipsum-2.svg",
+                    "target": "public/logo/templates/axis/logoipsum-2.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/loom.svg",
+                    "target": "public/logo/templates/axis/loom.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/mailchip.svg",
+                    "target": "public/logo/templates/axis/mailchip.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/medium.svg",
+                    "target": "public/logo/templates/axis/medium.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/notion.svg",
+                    "target": "public/logo/templates/axis/notion.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/openai.svg",
+                    "target": "public/logo/templates/axis/openai.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/salesforce.svg",
+                    "target": "public/logo/templates/axis/salesforce.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/shopify-2.svg",
+                    "target": "public/logo/templates/axis/shopify-2.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/shopify.svg",
+                    "target": "public/logo/templates/axis/shopify.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/stripe.svg",
+                    "target": "public/logo/templates/axis/stripe.svg"
+                },
+                {
+                    "type": "registry:file",
+                    "path": "public/logo/templates/axis/zoom.svg",
+                    "target": "public/logo/templates/axis/zoom.svg"
                 },
                 {
                     "type": "registry:page",

@@ -22,7 +22,9 @@ const Pricing = () => {
     return (
         <motion.div
             style={{
-                backgroundImage: isMobile ? "url('/images/templates/axis/pricing-mobile.webp')" : "url('/images/templates/axis/pricing.webp')" ,
+                backgroundImage: isMobile
+                    ? "url('/images/templates/axis/pricing-mobile.svg')"
+                    : "url('/images/templates/axis/pricing.svg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}

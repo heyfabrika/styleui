@@ -32,7 +32,7 @@ const Hero = () => {
                 </section>
             </section>
             <Image
-                src="/images/templates/axis/hero.webp"
+                src="/images/templates/axis/hero.svg"
                 alt="Hero"
                 width={1200}
                 height={800}

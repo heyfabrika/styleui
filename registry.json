@@ -111,6 +111,10 @@
                 },
                 {
                     "type": "registry:component",
+                    "path": "utils/providers/theme-provider.tsx"
+                },
+                {
+                    "type": "registry:component",
                     "path": "blocks/logo-cloud.tsx"
                 },
                 {

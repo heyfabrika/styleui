@@ -63,7 +63,7 @@ export function WaitlistDialog() {
             <DialogTrigger
                 render={
                     <Button variant="ghost" size="sm">
-                        Pro Access
+                        Join the Waitlist
                     </Button>
                 }
             />

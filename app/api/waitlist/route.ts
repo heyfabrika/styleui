@@ -30,6 +30,7 @@ export async function POST(req: NextRequest) {
             { status: 201 }
         );
     } catch (err) {
+        console.error(err);
         if (
             err instanceof Prisma.PrismaClientKnownRequestError &&
             err.code === "P2002"

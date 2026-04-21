@@ -13,11 +13,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+const WAITLIST_KEY = "waitlisted";
+
 export function WaitlistDialog() {
     const [open, setOpen] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
+        () => (typeof window !== "undefined" && localStorage.getItem(WAITLIST_KEY) ? "success" : "idle")
+    );
     const [message, setMessage] = useState("");
 
     async function handleSubmit(e: React.FormEvent) {
@@ -33,6 +37,7 @@ export function WaitlistDialog() {
         const data = await res.json();
 
         if (res.ok) {
+            localStorage.setItem(WAITLIST_KEY, "true");
             setStatus("success");
             setMessage(data.message);
         } else {
@@ -43,7 +48,7 @@ export function WaitlistDialog() {
 
     function handleOpenChange(next: boolean) {
         setOpen(next);
-        if (!next) {
+        if (!next && status !== "success") {
             setTimeout(() => {
                 setName("");
                 setEmail("");

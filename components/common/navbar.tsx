@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ThemeSwitcher from "../theme/theme-switcher";
+import { WaitlistDialog } from "./waitlist-dialog";
 
 const Navbar = ({ showThemeSwitcher = false }: { showThemeSwitcher?: boolean }) => {
     return (
@@ -12,6 +13,7 @@ const Navbar = ({ showThemeSwitcher = false }: { showThemeSwitcher?: boolean }) 
                 </Link>
 
                 <div className="flex items-center gap-2">
+                    <WaitlistDialog />
                     {showThemeSwitcher && <ThemeSwitcher />}
                 </div>
             </div>

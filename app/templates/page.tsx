@@ -19,7 +19,7 @@ const Page = () => {
   const bgColor = resolvedTheme === "dark" ? "#000" : resolvedTheme === "light" ? "#FFF" : undefined;
 
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto w-full max-w-7xl">
       <Navbar showThemeSwitcher />
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-210px)] py-12 px-4">
         {bgColor && <FallingPattern className="absolute h-full min-w-[calc(100vw-15px)] -z-1 dark:opacity-15" backgroundColor={bgColor} />}

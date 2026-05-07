@@ -1,11 +1,11 @@
-import Beam from "@/app/templates/notio/_components/beam";
-import Hero from "@/app/templates/notio/_components/call-to-action/hero";
-import Features from "@/app/templates/notio/_components/features/features";
-import Footer from "@/app/templates/notio/_components/footer";
+import Beam from "@/components/templates/notio/beam";
+import Hero from "@/components/templates/notio/call-to-action/hero";
+import Features from "@/components/templates/notio/features/features";
+import Footer from "@/components/templates/notio/footer";
 import LogoCloud from "@/blocks/logo-cloud";
-import Navbar from "@/app/templates/notio/_components/navbar";
+import Navbar from "@/components/templates/notio/navbar";
 import Pricing from "@/blocks/pricing/pricing";
-import Stats from "@/app/templates/notio/_components/stats";
+import Stats from "@/components/templates/notio/stats";
 import Team from "@/blocks/team-member/team";
 import Testimonial from "@/blocks/testimonial/testimonial";
 

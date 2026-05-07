@@ -31,9 +31,8 @@
             "name": "notio",
             "title": "notio",
             "type": "registry:block",
-            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section.",
+            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section. Ships StyleUI's Button (Base UI) at components/ui/button so the install matches the preview.",
             "registryDependencies": [
-                "button",
                 "badge",
                 "card",
                 "avatar",
@@ -44,58 +43,61 @@
                 "dropdown-menu"
             ],
             "dependencies": [
+                "@base-ui/react",
+                "class-variance-authority",
                 "motion",
                 "lucide-react",
-                "next-themes"
+                "next-themes",
+                "usehooks-ts"
             ],
             "files": [
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/beam.tsx"
+                    "path": "components/templates/notio/beam.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/call-to-action/hero.tsx"
+                    "path": "components/templates/notio/call-to-action/hero.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/call-to-action/transcriber.tsx"
+                    "path": "components/templates/notio/call-to-action/transcriber.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/feature-card.tsx"
+                    "path": "components/templates/notio/features/feature-card.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/features.tsx"
+                    "path": "components/templates/notio/features/features.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/tool-feature.tsx"
+                    "path": "components/templates/notio/features/tool-feature.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/transcription-feature.tsx"
+                    "path": "components/templates/notio/features/transcription-feature.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/footer.tsx"
+                    "path": "components/templates/notio/footer.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/navbar.tsx"
+                    "path": "components/templates/notio/navbar.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/stats.tsx"
+                    "path": "components/templates/notio/stats.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/theme-toggle.tsx"
+                    "path": "components/templates/notio/theme-toggle.tsx"
                 },
                 {
-                    "type": "registry:lib",
-                    "path": "app/templates/notio/_configs/themes.config.ts"
+                    "type": "registry:component",
+                    "path": "components/templates/notio/notio-themes.tsx"
                 },
                 {
                     "type": "registry:component",
@@ -152,6 +154,10 @@
                 {
                     "type": "registry:component",
                     "path": "components/counter.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/ui/button.tsx"
                 },
                 {
                     "type": "registry:component",
@@ -366,9 +372,8 @@
             "name": "axis",
             "title": "axis",
             "type": "registry:block",
-            "description": "A template block that includes a hero section, feature highlights, tools, pricing, testimonials, and a footer section.",
+            "description": "A template block that includes a hero section, feature highlights, tools, pricing, testimonials, and a footer section. Ships StyleUI's Button (Base UI) at components/ui/button so the install matches the preview.",
             "registryDependencies": [
-                "button",
                 "badge",
                 "card",
                 "avatar",
@@ -379,6 +384,8 @@
                 "dropdown-menu"
             ],
             "dependencies": [
+                "@base-ui/react",
+                "class-variance-authority",
                 "motion",
                 "lucide-react",
                 "next-themes"
@@ -386,43 +393,43 @@
             "files": [
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/companies.tsx"
+                    "path": "components/templates/axis/companies.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/feature.tsx"
+                    "path": "components/templates/axis/feature.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/footer.tsx"
+                    "path": "components/templates/axis/footer.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/hero.tsx"
+                    "path": "components/templates/axis/hero.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/navbar.tsx"
+                    "path": "components/templates/axis/navbar.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/pricing.tsx"
+                    "path": "components/templates/axis/pricing.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/stats.tsx"
+                    "path": "components/templates/axis/stats.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/testimonials.tsx"
+                    "path": "components/templates/axis/testimonials.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/theme-switch.tsx"
+                    "path": "components/templates/axis/theme-switch.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/tools.tsx"
+                    "path": "components/templates/axis/tools.tsx"
                 },
                 {
                     "type": "registry:component",
@@ -471,6 +478,10 @@
                 {
                     "type": "registry:component",
                     "path": "components/counter.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/ui/button.tsx"
                 },
                 {
                     "type": "registry:component",

@@ -47,7 +47,8 @@
                 "class-variance-authority",
                 "motion",
                 "lucide-react",
-                "next-themes"
+                "next-themes",
+                "usehooks-ts"
             ],
             "files": [
                 {

@@ -1,4 +1,4 @@
-import { themesConfig } from "@/app/templates/notio/_configs/themes.config";
+import { themesConfig } from "../_configs/themes.config";
 import { ColorThemeSwitcher } from "@/components/theme/color-theme-switcher";
 import { ThemeVariables } from "@/components/theme/theme-variables";
 import { ColorThemeProvider } from "@/utils/context/color-theme-context";

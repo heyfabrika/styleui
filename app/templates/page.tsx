@@ -13,6 +13,13 @@ const Page = () => {
       preview: "/templates/notio",
       command: "https://styleui.dev/r/notio.json",
     },
+    {
+      name: "Axis",
+      description: "A modern CRM template for consultants and small teams.",
+      href: "/templates/axis",
+      preview: "/templates/axis",
+      command: "https://styleui.dev/r/axis.json",
+    },
   ];
 
   const { resolvedTheme } = useTheme();

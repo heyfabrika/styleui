@@ -386,43 +386,43 @@
             "files": [
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/companies.tsx"
+                    "path": "components/templates/axis/companies.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/feature.tsx"
+                    "path": "components/templates/axis/feature.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/footer.tsx"
+                    "path": "components/templates/axis/footer.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/hero.tsx"
+                    "path": "components/templates/axis/hero.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/navbar.tsx"
+                    "path": "components/templates/axis/navbar.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/pricing.tsx"
+                    "path": "components/templates/axis/pricing.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/stats.tsx"
+                    "path": "components/templates/axis/stats.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/testimonials.tsx"
+                    "path": "components/templates/axis/testimonials.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/theme-switch.tsx"
+                    "path": "components/templates/axis/theme-switch.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/axis/_components/tools.tsx"
+                    "path": "components/templates/axis/tools.tsx"
                 },
                 {
                     "type": "registry:component",

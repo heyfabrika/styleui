@@ -1,17 +1,17 @@
 "use client";
 
 import BlurredOrb from "@/components/blurred-orb";
-import Navbar from "../_components/navbar";
-import Hero from "../_components/hero";
-import Companies from "../_components/companies";
-import Feature from "../_components/feature";
-import ToolFeature from "../_components/tools";
-import Stats from "../_components/stats";
-import Testimonials from "../_components/testimonials";
-import Pricing from "../_components/pricing";
-import Footer from "../_components/footer";
+import Navbar from "@/components/templates/axis/navbar";
+import Hero from "@/components/templates/axis/hero";
+import Companies from "@/components/templates/axis/companies";
+import Feature from "@/components/templates/axis/feature";
+import ToolFeature from "@/components/templates/axis/tools";
+import Stats from "@/components/templates/axis/stats";
+import Testimonials from "@/components/templates/axis/testimonials";
+import Pricing from "@/components/templates/axis/pricing";
+import Footer from "@/components/templates/axis/footer";
 import Image from "next/image";
-import { ThemeToggle } from "../_components/theme-switch";
+import { ThemeToggle } from "@/components/templates/axis/theme-switch";
 
 const Page = () => {
     return (

@@ -52,51 +52,51 @@
             "files": [
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/beam.tsx"
+                    "path": "components/templates/notio/beam.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/call-to-action/hero.tsx"
+                    "path": "components/templates/notio/call-to-action/hero.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/call-to-action/transcriber.tsx"
+                    "path": "components/templates/notio/call-to-action/transcriber.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/feature-card.tsx"
+                    "path": "components/templates/notio/features/feature-card.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/features.tsx"
+                    "path": "components/templates/notio/features/features.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/tool-feature.tsx"
+                    "path": "components/templates/notio/features/tool-feature.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/features/transcription-feature.tsx"
+                    "path": "components/templates/notio/features/transcription-feature.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/footer.tsx"
+                    "path": "components/templates/notio/footer.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/navbar.tsx"
+                    "path": "components/templates/notio/navbar.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/stats.tsx"
+                    "path": "components/templates/notio/stats.tsx"
                 },
                 {
                     "type": "registry:component",
-                    "path": "app/templates/notio/_components/theme-toggle.tsx"
+                    "path": "components/templates/notio/theme-toggle.tsx"
                 },
                 {
-                    "type": "registry:lib",
-                    "path": "app/templates/notio/_configs/themes.config.ts"
+                    "type": "registry:component",
+                    "path": "components/templates/notio/notio-themes.tsx"
                 },
                 {
                     "type": "registry:component",

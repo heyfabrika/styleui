@@ -31,9 +31,8 @@
             "name": "notio",
             "title": "notio",
             "type": "registry:block",
-            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section.",
+            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section. Ships StyleUI's Button (Base UI) at components/ui/button so the install matches the preview.",
             "registryDependencies": [
-                "button",
                 "badge",
                 "card",
                 "avatar",
@@ -44,6 +43,8 @@
                 "dropdown-menu"
             ],
             "dependencies": [
+                "@base-ui/react",
+                "class-variance-authority",
                 "motion",
                 "lucide-react",
                 "next-themes"
@@ -152,6 +153,10 @@
                 {
                     "type": "registry:component",
                     "path": "components/counter.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/ui/button.tsx"
                 },
                 {
                     "type": "registry:component",
@@ -366,9 +371,8 @@
             "name": "axis",
             "title": "axis",
             "type": "registry:block",
-            "description": "A template block that includes a hero section, feature highlights, tools, pricing, testimonials, and a footer section.",
+            "description": "A template block that includes a hero section, feature highlights, tools, pricing, testimonials, and a footer section. Ships StyleUI's Button (Base UI) at components/ui/button so the install matches the preview.",
             "registryDependencies": [
-                "button",
                 "badge",
                 "card",
                 "avatar",
@@ -379,6 +383,8 @@
                 "dropdown-menu"
             ],
             "dependencies": [
+                "@base-ui/react",
+                "class-variance-authority",
                 "motion",
                 "lucide-react",
                 "next-themes"
@@ -471,6 +477,10 @@
                 {
                     "type": "registry:component",
                     "path": "components/counter.tsx"
+                },
+                {
+                    "type": "registry:component",
+                    "path": "components/ui/button.tsx"
                 },
                 {
                     "type": "registry:component",

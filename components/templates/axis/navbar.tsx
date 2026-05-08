@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./theme-switch";
 
@@ -16,6 +16,8 @@ const Navbar = () => {
     const { scrollY } = useScroll();
 
     const router = useRouter();
+    const pathname = usePathname();
+    const authPath = `${pathname.replace(/\/$/, "")}/auth`;
 
     const links = [
         { name: "Features", hasChildren: true },
@@ -103,7 +105,7 @@ const Navbar = () => {
                             ))}
                         </div>
                         <Button variant="ghost" className="font-medium hover:!bg-transparent cursor-pointer transition-colors hover:text-muted-foreground"
-                            onClick={() => router.push("axis/auth")}>
+                            onClick={() => router.push(authPath)}>
                             Log In
                         </Button>
                         <ThemeToggle />
@@ -190,7 +192,7 @@ const Navbar = () => {
                                     className="flex flex-row items-center justify-between gap-2"
                                 >
                                     <Button variant="ghost" className="font-medium hover:bg-transparent hover:text-muted-foreground hover:!bg-transparent"
-                                        onClick={() => router.push("axis/auth")}>
+                                        onClick={() => router.push(authPath)}>
                                         Log In
                                     </Button>
                                     <ThemeToggle />

@@ -198,6 +198,10 @@
                 },
                 {
                     "type": "registry:ui",
+                    "path": "components/ui/label.tsx"
+                },
+                {
+                    "type": "registry:ui",
                     "path": "components/ui/dropdown-menu.tsx"
                 },
                 {
@@ -552,6 +556,10 @@
                 {
                     "type": "registry:ui",
                     "path": "components/ui/input.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/label.tsx"
                 },
                 {
                     "type": "registry:ui",

@@ -47,7 +47,7 @@ const Pricing = () => {
                 <Card className="overflow-hidden rounded-2xl border-0 bg-background/85 p-0 shadow-xl">
                     <div className="flex flex-col md:flex-row">
                         <div className="flex flex-col border-b border-border/30 p-8 md:basis-2/5 md:border-b-0 md:border-r md:p-10">
-                            <h3 className="text-center text-5xl text-foreground">
+                            <h3 className="text-center text-4xl font-medium text-foreground">
                                 Axis
                             </h3>
                             <p className="mt-1 text-center text-lg text-muted-foreground">
@@ -56,7 +56,7 @@ const Pricing = () => {
                                 and small teams
                             </p>
 
-                            <p className="mt-8 text-center text-xl font-semibold text-foreground">
+                            <p className="mt-8 text-center text-xl font-medium text-foreground">
                                 $39 per user / month
                             </p>
 

@@ -6,7 +6,7 @@
   </a>
 </p>
 
-**Ship faster, stay in style.** StyleUI is a copy-in component library for modern Next.js apps: curated components, blocks, and templates distributed through a [shadcn/ui](https://ui.shadcn.com/)–compatible registry.
+**Ship faster, stay in style.** StyleUI offers copy-in page templates for modern Next.js apps, distributed through a [shadcn/ui](https://ui.shadcn.com/)–compatible registry.
 
 Built with React 19, Next.js 16, Tailwind CSS 4, Motion, and [Base UI](https://base-ui.com/) primitives.
 
@@ -26,7 +26,7 @@ Examples:
 
 ```bash
 npx shadcn@latest add https://styleui.dev/r/notio.json
-npx shadcn@latest add https://styleui.dev/r/animated-list.json
+npx shadcn@latest add https://styleui.dev/r/axis.json
 ```
 
 Discover available items in the registry index:

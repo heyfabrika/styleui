@@ -49,10 +49,11 @@ export default function Features() {
         Whether it&apos;s client meetings, interviews, or team calls—capture,
         organize, and review every conversation in one place.
       </motion.p>
-      <section className="flex flex-wrap gap-4 md:gap-8 items-center justify-center max-md:pt-8">
+      <section className="flex flex-wrap items-stretch justify-center gap-4 max-md:pt-8 md:gap-8">
         {features.map((feature, index) => (
           <motion.div
             key={feature.title}
+            className="flex"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}

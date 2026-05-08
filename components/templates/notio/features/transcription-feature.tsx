@@ -4,7 +4,6 @@ import Image from "next/image";
 import { AnimatedList } from "@/components/animated-list";
 import BlurredOrb from "@/components/blurred-orb";
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const transcriptions = [
@@ -32,7 +31,14 @@ function TranscriptionItem({ time, text }: { time: string; text: string }) {
       <span className="text-muted-foreground/60 font-mono text-xs shrink-0 pt-1 w-6 lg:w-6 xl:w-10 text-right 4xl:text-2xl">
         {time}
       </span>
-      <Separator orientation="vertical" className="absolute h-[90%] top-6 left-5 lg:left-6 opacity-50 dark:bg-white/60"/>
+      <div
+        aria-hidden="true"
+        className="absolute top-6 left-5 h-[90%] w-px lg:left-6"
+        style={{
+          backgroundColor:
+            "color-mix(in oklab, var(--foreground) 22%, transparent)",
+        }}
+      />
       <div className="relative pl-6 pb-6 last:pb-0">
         <p className="text-foreground/80 leading-relaxed text-xs lg:text-sm 4xl:text-2xl">
           {text}
@@ -86,7 +92,14 @@ export default function TranscriptionFeature() {
                   Joanne sounds upset on the phone. Should ask her how things
                   are going.
                 </p>
-                <Separator className="md:mt-4 h-px w-full shrink-0 bg-foreground/12 dark:bg-foreground/18" />
+                <div
+                  aria-hidden="true"
+                  className="md:mt-4 h-px w-full shrink-0"
+                  style={{
+                    backgroundColor:
+                      "color-mix(in oklab, var(--foreground) 14%, transparent)",
+                  }}
+                />
               </div>
 
               <div className="flex flex-col gap-4 md:gap-8">

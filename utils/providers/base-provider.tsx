@@ -6,6 +6,7 @@ import { TreeContextProvider } from "fumadocs-ui/contexts/tree";
 import { componentsSource, docsSource } from "@/lib/source";
 import { NextProvider } from "fumadocs-core/framework/next";
 import ComingSoonProvider from "./coming-soon-provider";
+import { Analytics } from "@vercel/analytics/next"
 export default function BaseProvider({
   children,
 }: {
@@ -25,6 +26,7 @@ export default function BaseProvider({
       enableSystem
       disableTransitionOnChange
     >
+      <Analytics />
       <NextProvider>
         <TreeContextProvider tree={tree}>
           <RootProvider search={{ SearchDialog: CustomSearchDialog }}>

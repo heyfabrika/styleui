@@ -6,7 +6,9 @@ import { ThemeProvider } from "@/utils/providers/theme-provider";
 import { Aleo } from "next/font/google";
 import "./index.css";
 
-const aleo = Aleo({ subsets: ["latin"], variable: "--font-aleo" });
+const aleo = Aleo({ subsets: ["latin"], variable: "--font-notio-aleo" });
+const notioSansFont =
+  '-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, ui-sans-serif, sans-serif';
 const themeNames = ["basil", "forest", "sunny"];
 
 const themeSwatches: Record<string, string> = {
@@ -22,23 +24,29 @@ export default function NotioTemplateLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${aleo.variable} min-h-screen bg-background font-sans text-foreground`}
+        className={`${aleo.variable} min-h-screen bg-background text-foreground`}
+        style={{ fontFamily: notioSansFont }}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+        <div
+          className={`${aleo.variable} min-h-screen bg-background text-foreground`}
+          style={{ fontFamily: notioSansFont }}
         >
-          <ColorThemeProvider>
-            <ThemeVariables themesConfig={themesConfig} />
-            {children}
-            <ColorThemeSwitcher
-              themeNames={themeNames}
-              themeSwatches={themeSwatches}
-            />
-          </ColorThemeProvider>
-        </ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <ColorThemeProvider>
+              <ThemeVariables themesConfig={themesConfig} />
+              {children}
+              <ColorThemeSwitcher
+                themeNames={themeNames}
+                themeSwatches={themeSwatches}
+              />
+            </ColorThemeProvider>
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );

@@ -49,7 +49,7 @@ export default function ToolFeature() {
       className="w-full lg:py-20 4xl:py-32"
     >
       <Card className="w-full min-h-96 lg:gap-16 flex flex-col items-center justify-center dark:bg-background max-md:ring-0 dark:ring-1 shadow-none lg:py-18 4xl:gap-24">
-        <CardHeader className="relative flex md:flex-wrap md:gap-12 items-center justify-center w-full justify-center">
+        <CardHeader className="relative flex md:flex-wrap md:gap-12 items-center justify-center w-full">
           {tools.map((tool, index) => (
             <motion.div
               key={tool.name}
@@ -61,7 +61,7 @@ export default function ToolFeature() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="relative flex items-center justify-center border p-4 bg-background rounded-xl w-40 h-20 md:w-20 lg:h-20 -mr-4 4xl:w-28 4xl:h-28"
+              className="relative flex items-center justify-center border border-border p-4 bg-background rounded-xl w-40 h-20 md:w-20 lg:h-20 -mr-4 4xl:w-28 4xl:h-28"
             >
               <Image
                 src={tool.lightImage}

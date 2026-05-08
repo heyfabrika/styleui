@@ -40,7 +40,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 min-h-[95dvh] md:min-h-[70dvh] rounded-4xl"
+        className="relative isolate flex flex-col gap-16 lg:flex-row items-center justify-center w-full mx-auto px-6 py-12 md:p-16 xl:p-20 min-h-[95dvh] md:min-h-[70dvh] rounded-4xl"
       >
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}

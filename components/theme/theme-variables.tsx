@@ -17,7 +17,13 @@ export function ThemeVariables({ themesConfig }: { themesConfig: ThemeConfigProp
       return;
     }
 
-    const isDark = resolvedTheme === "dark";
+    const isDark =
+      resolvedTheme === "dark"
+        ? true
+        : resolvedTheme === "light"
+          ? false
+          : document.documentElement.classList.contains("dark");
+
     const colors = isDark ? colorThemeConfig.dark : colorThemeConfig.light;
 
     const root = document.documentElement;

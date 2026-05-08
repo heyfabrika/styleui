@@ -10,7 +10,7 @@ export default function Beam({
   className?: string;
 }) {
   return (
-    <div className={cn("relative w-full", className)}>
+    <div className={cn("relative isolate w-full", className)}>
       <div className="relative min-h-[31.25rem] w-full bg-transparent">
         <div
           className={cn(

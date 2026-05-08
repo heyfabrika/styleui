@@ -32,7 +32,10 @@ export default function PricingCard({
         <div className="flex flex-col gap-6 w-full 4xl:gap-8">
           <Badge
             variant="outline"
-            className={cn("w-fit bg-background 4xl:text-lg 4xl:px-6 4xl:py-4 dark:border-foreground font-semibold", !isFree && "border-none dark:bg-foreground dark:text-background")}
+            className={cn(
+              "h-5 w-fit rounded-sm bg-background px-2.5 py-0.5 text-xs font-semibold leading-none 4xl:px-6 4xl:py-4 4xl:text-lg dark:border-foreground",
+              !isFree && "border-none dark:bg-foreground dark:text-background"
+            )}
           >
             {slug.charAt(0).toUpperCase() + slug.slice(1)}
           </Badge>

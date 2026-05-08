@@ -95,6 +95,8 @@
 
 :root {
   --radius: 0.625rem;
+  --spacing: 0.25rem;
+  --tracking-normal: 0em;
   --gradient-start: #ffffff;
   --gradient-mid-light: #dc8e43;
   --gradient-mid-dark: #c76829;

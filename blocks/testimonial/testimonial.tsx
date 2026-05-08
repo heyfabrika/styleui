@@ -12,7 +12,7 @@ export default function Testimonial() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="space-y-4 text-center"
       >
-        <h2 className="text-2xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
+        <h2 className="text-2xl font-normal font-aleo tracking-tight text-foreground md:text-4xl 4xl:text-6xl">
           Loved by thousands who work smarter,{" "}
           <br className="hidden md:block" />
           connect better, and never miss a beat

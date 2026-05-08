@@ -49,7 +49,7 @@ export const themesConfig: ThemeConfigProps = [
         dark: {
             background: "oklch(0 0 0)",
             foreground: "oklch(0.9134 0.0135 290.7338)",
-            card: "oklch(0.2627 0.0187 294.2463)",
+            card: "oklch(0 0 0)",
             "card-foreground": "oklch(0.9134 0.0135 290.7338)",
             popover: "oklch(0.2627 0.0187 294.2463)",
             "popover-foreground": "oklch(0.9134 0.0135 290.7338)",
@@ -138,7 +138,7 @@ export const themesConfig: ThemeConfigProps = [
         dark: {
             background: "oklch(0 0 0)",
             foreground: "oklch(0.9288 0.0126 255.5078)",
-            card: "oklch(0.2046 0 0)",
+            card: "oklch(0 0 0)",
             "card-foreground": "oklch(0.9288 0.0126 255.5078)",
             popover: "oklch(0.2603 0 0)",
             "popover-foreground": "oklch(0.7348 0 0)",
@@ -227,7 +227,7 @@ export const themesConfig: ThemeConfigProps = [
         dark: {
             background: "oklch(0 0 0)",
             foreground: "oklch(1 0 0)",
-            card: "oklch(0.205 0 0)",
+            card: "oklch(0 0 0)",
             "card-foreground": "oklch(0.985 0 0)",
             popover: "oklch(0.205 0 0)",
             "popover-foreground": "oklch(0.985 0 0)",

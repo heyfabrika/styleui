@@ -42,31 +42,29 @@ export default function Pricing() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="space-y-2 md:space-y-4 text-center"
       >
-        <h2 className="text-2xl md:text-4xl 4xl:text-6xl font-aleo tracking-tight text-foreground">
+        <h2 className="text-2xl font-normal font-aleo tracking-tight text-foreground md:text-4xl 4xl:text-6xl">
           Simple, Transparent pricing
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed 4xl:text-3xl">
           Start free. Upgrade when you're ready. Cancel anytime.
         </p>
       </motion.section>
-      <section className="flex flex-wrap items-center justify-center max-sm:gap-4">
+      <motion.section
+        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+        className="flex flex-wrap items-center justify-center max-sm:gap-4"
+      >
         {pricings.map((pricing, index) => (
-          <motion.div
+          <div
             key={pricing.slug}
-            initial={{ opacity: 0, y: 40, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{
-              duration: 0.5,
-              delay: 0.1 + index * 0.15,
-              ease: "easeOut",
-            }}
             className={index !== 0 ? "md:-ml-3" : ""}
           >
             <PricingCard {...pricing} />
-          </motion.div>
+          </div>
         ))}
-      </section>
+      </motion.section>
     </div>
   );
 }

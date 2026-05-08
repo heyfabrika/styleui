@@ -2,7 +2,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -18,7 +17,13 @@ export default function TestimonialCard({
   className,
 }: TestimonialProps) {
   return (
-    <Card className={cn("flex flex-col h-full border border-border ring-0 shadow-none gap-2", className)}>
+    <Card
+      style={{ backgroundColor: "var(--background)" }}
+      className={cn(
+        "flex h-full flex-col gap-2 border border-border bg-background text-card-foreground ring-0 shadow-none",
+        className,
+      )}
+    >
       {logo && (
         <CardHeader className="md:pb-2 xl:pb-4">
           <Image
@@ -33,7 +38,10 @@ export default function TestimonialCard({
       <CardContent className="flex-1">
         <p className="text-lg leading-relaxed 4xl:text-2xl">{quote}</p>
       </CardContent>
-      <CardFooter className="pt-4 border-t-0">
+      <div
+        style={{ backgroundColor: "var(--background)" }}
+        className="flex items-center rounded-b-xl border-t-0 bg-background px-6 pt-4"
+      >
         <div className="flex items-center gap-3">
           <Avatar className="size-10 md:size-12 4xl:size-20">
             <AvatarImage src={avatarSrc} alt={author} className="4xl:w-20 4xl:h-20" />
@@ -44,7 +52,7 @@ export default function TestimonialCard({
             <p className="text-sm text-muted-foreground 4xl:text-2xl">{role}</p>
           </div>
         </div>
-      </CardFooter>
+      </div>
     </Card>
   );
 }

@@ -3,10 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-* {
-  font-family: "Inter";
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

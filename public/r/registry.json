@@ -762,8 +762,8 @@
                 },
                 {
                     "type": "registry:file",
-                    "path": "app/templates/axis/(pages)/index.css",
-                    "target": "app/index.css"
+                    "path": "app/templates/axis/(pages)/globals.css",
+                    "target": "app/globals.css"
                 }
             ]
         }

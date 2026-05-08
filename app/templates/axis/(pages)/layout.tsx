@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/utils/providers/theme-provider";
 import { Inter } from "next/font/google";
-import "./index.css";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,7 +16,7 @@ export default function AxisTemplateLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} bg-background font-light w-full text-foreground`}
+        className={`${inter.variable} bg-background font-sans font-light w-full text-foreground`}
       >
         <ThemeProvider
           attribute="class"

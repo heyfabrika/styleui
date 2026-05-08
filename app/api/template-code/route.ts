@@ -15,6 +15,7 @@ function shouldSkipFile(entryName: string): boolean {
     entryName.startsWith('.') ||
     entryName === 'node_modules' ||
     entryName === 'index.css' ||
+    entryName === 'globals.css' ||
     entryName === '_configs' ||
     entryName === 'layouts' ||
     entryName === 'layout.tsx' ||

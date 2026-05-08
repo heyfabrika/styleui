@@ -3,12 +3,15 @@ import { AnimatePresence, motion } from "motion/react";
 import { ChevronDownIcon, MenuIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const authPath = `${pathname.replace(/\/$/, "")}/auth/login`;
 
   const navItems: { label: string; href: string }[] = [
     { label: "Product", href: "#" },
@@ -70,7 +73,7 @@ export default function Navbar() {
             }}
           >
             <Button variant="ghost" className="4xl:text-2xl" size={"sm"}>
-              <Link href="notio/auth/login">Log In</Link>
+              <Link href={authPath}>Log In</Link>
             </Button>
           </motion.div>
           <ThemeToggle />
@@ -87,7 +90,7 @@ export default function Navbar() {
               variant="default"
               className="4xl:text-2xl 4xl:h-16 4xl:px-8"
             >
-              <Link href="notio/auth/login">Start for free</Link>
+              <Link href={authPath}>Start for free</Link>
             </Button>
           </motion.div>
         </div>
@@ -181,10 +184,10 @@ export default function Navbar() {
               >
                 <ThemeToggle />
                 <Button variant="ghost" className="w-full">
-                  <Link href="notio/auth/login">Log In</Link>
+                  <Link href={authPath}>Log In</Link>
                 </Button>
                 <Button variant="default" className="w-full">
-                  <Link href="notio/auth/login">Start for free</Link>
+                  <Link href={authPath}>Start for free</Link>
                 </Button>
               </motion.div>
             </motion.div>

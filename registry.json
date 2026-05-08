@@ -142,6 +142,10 @@
                 },
                 {
                     "type": "registry:component",
+                    "path": "components/orb-background.tsx"
+                },
+                {
+                    "type": "registry:component",
                     "path": "components/animated-list.tsx"
                 },
                 {

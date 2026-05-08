@@ -10,11 +10,9 @@
 
 Built with React 19, Next.js 16, Tailwind CSS 4, Motion, and [Base UI](https://base-ui.com/) primitives.
 
-## Documentation
+## Templates
 
-Browse guides and examples at **[styleui.dev/docs](https://styleui.dev/docs)**.
-
-Component pages live under **[styleui.dev/components](https://styleui.dev/components)**.
+Browse available templates on the site: **[styleui.dev/templates](https://styleui.dev/templates)**.
 
 ## Install from the registry
 
@@ -37,15 +35,12 @@ Discover available items in the registry index:
 
 ## Local development
 
-Prerequisites: [Bun](https://bun.sh/), PostgreSQL (for local Prisma migrations).
+Prerequisites: [Bun](https://bun.sh/).
 
 ```bash
 git clone https://github.com/<your-org>/styleui.git
 cd styleui
 bun install
-cp .env.example .env
-# Set DATABASE_URL in .env, then:
-bunx prisma migrate dev
 bun dev
 ```
 

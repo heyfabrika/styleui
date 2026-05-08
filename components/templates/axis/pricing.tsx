@@ -66,7 +66,7 @@ const Pricing = () => {
                                 </Button>
                                 <Button
                                     variant="outline"
-                                    className="w-full rounded-full border-border"
+                                    className="w-full rounded-full border-foreground/20 bg-transparent"
                                 >
                                     Book a demo
                                 </Button>

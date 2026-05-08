@@ -221,6 +221,14 @@ async function readDirectory(dirPath: string, basePath: string): Promise<FileNod
   });
 }
 
+function prefixFileTreePaths(nodes: FileNode[], prefix: string): FileNode[] {
+  return nodes.map((node) => ({
+    ...node,
+    path: `${prefix}/${node.path}`,
+    children: node.children ? prefixFileTreePaths(node.children, prefix) : undefined,
+  }));
+}
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
@@ -263,8 +271,44 @@ export async function GET(request: NextRequest) {
 
     const structure = await readDirectory(normalizedPath, normalizedPath);
 
-    const blockImports = await findAllBlockImports(structure);
-    
+    const templateSlug = path.basename(normalizedPath);
+    const templateComponentsDir = path.join(
+      process.cwd(),
+      'components',
+      'templates',
+      templateSlug,
+    );
+
+    let componentsNode: FileNode | null = null;
+    try {
+      const stats = await fs.stat(templateComponentsDir);
+      if (stats.isDirectory()) {
+        const componentChildren = await readDirectory(
+          templateComponentsDir,
+          templateComponentsDir,
+        );
+        const prefixed = prefixFileTreePaths(
+          componentChildren,
+          `components/templates/${templateSlug}`,
+        );
+        componentsNode = {
+          name: 'components',
+          type: 'directory',
+          path: `components/templates/${templateSlug}`,
+          children: prefixed,
+        };
+      }
+    } catch {
+      // No components/templates/<slug> folder for this template
+    }
+
+    const scanForBlocks = [...structure];
+    if (componentsNode) {
+      scanForBlocks.push(componentsNode);
+    }
+
+    const blockImports = await findAllBlockImports(scanForBlocks);
+
     let blocksNode: FileNode | null = null;
     if (blockImports.length > 0) {
       const blocksDir = path.join(process.cwd(), 'blocks');
@@ -292,9 +336,19 @@ export async function GET(request: NextRequest) {
     }
 
     const finalStructure = [...structure];
+    if (componentsNode) {
+      finalStructure.push(componentsNode);
+    }
     if (blocksNode) {
       finalStructure.push(blocksNode);
     }
+
+    finalStructure.sort((a, b) => {
+      if (a.type !== b.type) {
+        return a.type === 'directory' ? -1 : 1;
+      }
+      return a.name.localeCompare(b.name);
+    });
 
     return NextResponse.json({
       path: templatePath,

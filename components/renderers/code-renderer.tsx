@@ -43,11 +43,24 @@ const CodeRenderer = ({ path }: CodeRendererProps) => {
         const firstPageTsx = findFirstPageTsx(structureData);
         if (firstPageTsx) {
           setSelectedFile(firstPageTsx);
-          const expanded = expandPathToFile(structureData, firstPageTsx.path, new Set([path]));
+          const expanded = expandPathToFile(structureData, firstPageTsx.path, new Set());
+          const componentsFolder = structureData.find(
+            (n: FileNode) => n.name === "components" && n.type === "directory",
+          );
+          if (componentsFolder) {
+            expanded.add(componentsFolder.path);
+          }
           setExpandedFolders(expanded);
         } else {
           if (structureData.length > 0) {
-            setExpandedFolders(new Set([path]));
+            const expanded = new Set<string>();
+            const componentsFolder = structureData.find(
+              (n: FileNode) => n.name === "components" && n.type === "directory",
+            );
+            if (componentsFolder) {
+              expanded.add(componentsFolder.path);
+            }
+            setExpandedFolders(expanded);
           }
         }
       } catch (err) {

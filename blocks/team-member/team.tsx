@@ -44,7 +44,7 @@ export default function Team() {
             x={-1}
             y={-1}
             className={cn(
-              "dark:[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] [mask-image:radial-gradient(200px_circle_at_center,white,transparent)] md:dark:[mask-image:radial-gradient(270px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(350px_circle_at_center,white,transparent)] -z-10"
+              "dark:[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] [mask-image:radial-gradient(200px_circle_at_center,white,transparent)] md:dark:[mask-image:radial-gradient(270px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(350px_circle_at_center,white,transparent)]"
             )}
           />
         </motion.div>
@@ -53,13 +53,13 @@ export default function Team() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.4, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-md:space-y-4"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-md:space-y-4 z-10"
         >
           <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 -rotate-45 opacity-70" />
           <BlurredOrb className="w-64 h-44 md:w-64 md:h-64 from-primary via-gradient-mid-light to-gradient-end-light -rotate-45 opacity-70" />
         </motion.div>
 
-        <div className="relative h-44 w-70">
+        <div className="relative h-44 w-70 z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2">
             <TeamMemberAvatar member={{ ...team[0], index: 0 }} index={0} />
           </div>

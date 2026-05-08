@@ -41,7 +41,7 @@ const Hero = () => {
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
         />
-        <div className="max-md:hidden absolute bottom-0 left-0 h-12 lg:h-24 w-full bg-gradient-to-b from-transparent to-background" />
+        <div className="max-md:hidden absolute bottom-0 left-0 h-12 lg:h-24 w-full dark:bg-gradient-to-b from-transparent to-background" />
       </div>
     </motion.div>
   );

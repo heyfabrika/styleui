@@ -1,7 +1,7 @@
 {
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "name": "StyleUI",
-    "homepage": "https://styleui.com",
+    "homepage": "https://styleui.dev",
     "items": [
         {
             "name": "animated-list",

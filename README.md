@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StyleUI
 
-## Getting Started
+<p align="center">
+  <a href="https://styleui.dev">
+    <img src="public/preview.png" alt="StyleUI templates: Notio and Axis landing page previews" width="100%" />
+  </a>
+</p>
 
-First, run the development server:
+**Ship faster, stay in style.** StyleUI is a copy-in component library for modern Next.js apps: curated components, blocks, and templates distributed through a [shadcn/ui](https://ui.shadcn.com/)–compatible registry.
+
+Built with React 19, Next.js 16, Tailwind CSS 4, Motion, and [Base UI](https://base-ui.com/) primitives.
+
+## Documentation
+
+Browse guides and examples at **[styleui.dev/docs](https://styleui.dev/docs)**.
+
+Component pages live under **[styleui.dev/components](https://styleui.dev/components)**.
+
+## Install from the registry
+
+Use the [shadcn CLI](https://ui.shadcn.com/docs/cli) to add items into your own project (paths follow your `components.json` aliases).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+npx shadcn@latest add https://styleui.dev/r/<name>.json
+```
+
+Examples:
+
+```bash
+npx shadcn@latest add https://styleui.dev/r/notio.json
+npx shadcn@latest add https://styleui.dev/r/animated-list.json
+```
+
+Discover available items in the registry index:
+
+**[https://styleui.dev/r/registry.json](https://styleui.dev/r/registry.json)**
+
+## Local development
+
+Prerequisites: [Bun](https://bun.sh/), PostgreSQL (for local Prisma migrations).
+
+```bash
+git clone https://github.com/<your-org>/styleui.git
+cd styleui
+bun install
+cp .env.example .env
+# Set DATABASE_URL in .env, then:
+bunx prisma migrate dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+When you change [registry.json](registry.json) or registry-backed files, rebuild static registry JSON:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run registry:build
+```
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Read **[CONTRIBUTING.md](CONTRIBUTING.md)** for repository layout, how to add or update registry items, and pull request guidelines.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Licensed under the [MIT License](LICENSE).
 
-## Deploy on Vercel
+## Star History
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<a href="https://www.star-history.com/?repos=heyfabrika%2Fstyleui&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=heyfabrika/styleui&type=date&theme=dark&logscale&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=heyfabrika/styleui&type=date&logscale&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=heyfabrika/styleui&type=date&logscale&legend=top-left" />
+ </picture>
+</a>

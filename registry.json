@@ -31,20 +31,13 @@
             "name": "notio",
             "title": "notio",
             "type": "registry:block",
-            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section. Ships StyleUI's Button (Base UI) at components/ui/button so the install matches the preview.",
-            "registryDependencies": [
-                "badge",
-                "card",
-                "avatar",
-                "separator",
-                "skeleton",
-                "toggle-group",
-                "input",
-                "dropdown-menu"
-            ],
+            "description": "A template block that includes a hero section, a features section, a pricing section, and a footer section. Ships StyleUI's Base UI primitives so the install matches the preview.",
+            "registryDependencies": [],
             "dependencies": [
                 "@base-ui/react",
                 "class-variance-authority",
+                "clsx",
+                "tailwind-merge",
                 "motion",
                 "lucide-react",
                 "next-themes",
@@ -156,20 +149,60 @@
                     "path": "components/counter.tsx"
                 },
                 {
-                    "type": "registry:component",
-                    "path": "components/ui/button.tsx"
-                },
-                {
-                    "type": "registry:component",
-                    "path": "components/ui/grid-pattern.tsx"
-                },
-                {
                     "type": "registry:hook",
                     "path": "hooks/use-countdown.tsx"
                 },
                 {
                     "type": "registry:hook",
                     "path": "hooks/use-media-query.tsx"
+                },
+                {
+                    "type": "registry:lib",
+                    "path": "lib/utils.ts"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/button.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/badge.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/card.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/avatar.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/separator.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/skeleton.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/toggle.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/toggle-group.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/input.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/dropdown-menu.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/grid-pattern.tsx"
                 },
                 {
                     "type": "registry:file",
@@ -373,22 +406,15 @@
             "title": "axis",
             "type": "registry:block",
             "description": "A template block that includes a hero section, feature highlights, tools, pricing, testimonials, and a footer section. Ships StyleUI's Button (Base UI) at components/ui/button so the install matches the preview.",
-            "registryDependencies": [
-                "badge",
-                "card",
-                "avatar",
-                "separator",
-                "skeleton",
-                "toggle-group",
-                "input",
-                "dropdown-menu"
-            ],
+            "registryDependencies": [],
             "dependencies": [
                 "@base-ui/react",
                 "class-variance-authority",
                 "motion",
                 "lucide-react",
-                "next-themes"
+                "next-themes",
+                "clsx",
+                "tailwind-merge"
             ],
             "files": [
                 {
@@ -480,20 +506,60 @@
                     "path": "components/counter.tsx"
                 },
                 {
-                    "type": "registry:component",
-                    "path": "components/ui/button.tsx"
-                },
-                {
-                    "type": "registry:component",
-                    "path": "components/ui/grid-pattern.tsx"
-                },
-                {
                     "type": "registry:hook",
                     "path": "hooks/use-countdown.tsx"
                 },
                 {
                     "type": "registry:hook",
                     "path": "hooks/use-media-query.tsx"
+                },
+                {
+                    "type": "registry:lib",
+                    "path": "lib/utils.ts"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/button.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/badge.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/card.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/avatar.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/separator.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/skeleton.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/toggle.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/toggle-group.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/input.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/dropdown-menu.tsx"
+                },
+                {
+                    "type": "registry:ui",
+                    "path": "components/ui/grid-pattern.tsx"
                 },
                 {
                     "type": "registry:file",

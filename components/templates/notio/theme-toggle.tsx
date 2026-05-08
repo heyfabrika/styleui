@@ -23,7 +23,7 @@ export function ThemeToggle() {
       onValueChange={(value) => {
         if (value[0]) setTheme(value[0]);
       }}
-      className="border border-border"
+      className="border border-border overflow-hidden"
     >
       <ToggleGroupItem value="dark" aria-label="Dark theme" className="opacity-20 dark:opacity-100">
         <Moon className="h-4 w-4 4xl:size-5" />

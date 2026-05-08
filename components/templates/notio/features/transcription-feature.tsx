@@ -82,11 +82,11 @@ export default function TranscriptionFeature() {
             <Card className="w-full min-h-64 lg:min-h-96 4xl:min-h-[60dvh] dark:bg-background backdrop-blur-sm overflow-hidden relative rounded-3xl border-0 ring-0">
             <div className="p-4 lg:px-8 lg:py-6 pb-24 lg:pb-32">
               <div className="mb-8">
-                <p className="text-smtext-foreground leading-relaxed 4xl:text-2xl">
+                <p className="text-sm text-foreground leading-relaxed 4xl:text-2xl">
                   Joanne sounds upset on the phone. Should ask her how things
                   are going.
                 </p>
-                <Separator className="md:mt-4 opacity-50" />
+                <Separator className="md:mt-4 h-px w-full shrink-0 bg-foreground/12 dark:bg-foreground/18" />
               </div>
 
               <div className="flex flex-col gap-4 md:gap-8">

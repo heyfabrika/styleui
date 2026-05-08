@@ -6,9 +6,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-aleo: var(--font-aleo);
+  --font-sans: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica,
+    ui-sans-serif, sans-serif;
+  --font-aleo: "Aleo", "Aleo Fallback", Georgia, serif;
+  --font-mono: "SF Mono", Menlo, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -97,4 +98,13 @@
 
 :root {
   --radius: 0.625rem;
+  --gradient-start: #ffffff;
+  --gradient-mid-light: #dc8e43;
+  --gradient-mid-dark: #c76829;
+  --gradient-end-light: #9c3a21;
+  --gradient-end-dark: #dc8e43;
+  --gradient-orb-base: #e9b88a;
+  --orb-color-light: rgba(233, 184, 138, 0.35);
+  --orb-color-dark: rgba(199, 104, 41, 0.35);
+  --orb-color-dark-fade: rgba(199, 104, 41, 0.15);
 }

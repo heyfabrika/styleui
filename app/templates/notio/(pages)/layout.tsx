@@ -21,7 +21,9 @@ export default function NotioTemplateLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${aleo.variable} bg-background`}>
+      <body
+        className={`${aleo.variable} min-h-screen bg-background font-sans text-foreground`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -63,13 +63,13 @@ export function WaitlistDialog() {
             <DialogTrigger
                 render={
                     <Button variant="ghost" size="sm">
-                        Join the Waitlist
+                        Want StyleUI Pro?
                     </Button>
                 }
             />
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Waitlist for Pro</DialogTitle>
+                    <DialogTitle>Join the Waitlist</DialogTitle>
                     <DialogDescription>
                         Be the first to know when we release Pro blocks.
                     </DialogDescription>

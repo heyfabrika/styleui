@@ -162,7 +162,7 @@ const TemplateRenderer = ({
             <Code /> Code
           </ToggleGroupItem>
         </ToggleGroup>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-2">
           <div className="flex items-start md:items-center gap-2">
             <Select
               value={packageManager}
@@ -227,68 +227,70 @@ const TemplateRenderer = ({
               </motion.code>
             </AnimatePresence>
           </div>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleCopy}
-              className={cn(
-                "flex items-center gap-2 text-sm transition-all duration-300",
-                isCopied
-                  ? "text-green-600 dark:text-green-400 border-green-600 dark:border-green-400"
-                  : "text-muted-foreground hover:text-foreground",
-              )}
-            >
-              <AnimatePresence mode="wait">
-                {isCopied ? (
-                  <motion.div
-                    key="check"
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Check className="size-4" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="copy"
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Copy className="size-4" />
-                  </motion.div>
+          <div className="flex items-center gap-2 justify-between max-md:w-full">
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleCopy}
+                className={cn(
+                  "flex items-center gap-2 text-sm transition-all duration-300",
+                  isCopied
+                    ? "text-green-600 dark:text-green-400 border-green-600 dark:border-green-400"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
-              </AnimatePresence>
-            </Button>
-            <Link
-              href={src}
-              target="_blank"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
+              >
+                <AnimatePresence mode="wait">
+                  {isCopied ? (
+                    <motion.div
+                      key="check"
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Check className="size-4" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="copy"
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Copy className="size-4" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </Button>
+              <Link
+                href={src}
+                target="_blank"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
+              >
+                Open <ArrowUpRight className="size-4" />
+              </Link>
+            </div>
+            <ToggleGroup
+              value={[toggleType]}
+              onValueChange={(value) => {
+                if (value[0]) {
+                  setToggleType(value[0] as "preview" | "code");
+                }
+              }}
+              className="block md:hidden"
             >
-              Open <ArrowUpRight className="size-4" />
-            </Link>
+              <ToggleGroupItem value="preview">
+                <Eye /> Preview
+              </ToggleGroupItem>
+              <ToggleGroupItem value="code">
+                <Code /> Code
+              </ToggleGroupItem>
+            </ToggleGroup>
           </div>
         </div>
       </section>
-      <ToggleGroup
-        value={[toggleType]}
-        onValueChange={(value) => {
-          if (value[0]) {
-            setToggleType(value[0] as "preview" | "code");
-          }
-        }}
-        className="block md:hidden"
-      >
-        <ToggleGroupItem value="preview">
-          <Eye /> Preview
-        </ToggleGroupItem>
-        <ToggleGroupItem value="code">
-          <Code /> Code
-        </ToggleGroupItem>
-      </ToggleGroup>
       <section
         key={name}
         className="w-full h-fit bg-muted/20 dark:bg-muted/40 border border-gray-100 dark:border-border relative overflow-hidden rounded-2xl p-2"

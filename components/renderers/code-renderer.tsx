@@ -211,10 +211,10 @@ const CodeRenderer = ({ path }: CodeRendererProps) => {
   }
 
   return (
-    <div className="flex h-full gap-4 p-4 bg-white dark:bg-muted/10">
-      <div className="w-64 border-r border-border/60 overflow-auto flex-shrink-0">
+    <div className="flex h-full min-h-0 flex-col gap-2 bg-white p-2 dark:bg-muted/10 md:flex-row md:gap-4 md:p-4">
+      <div className="flex w-full shrink-0 flex-col overflow-auto border-border/60 max-h-[min(40vh,280px)] border-b md:max-h-none md:w-64 md:border-b-0 md:border-r">
         <div className="p-2">
-          <div className="text-xs font-semibold text-muted-foreground uppercase mb-2 px-2">
+          <div className="mb-2 px-2 text-xs font-semibold uppercase text-muted-foreground">
             Files
           </div>
           <div className="space-y-0.5">
@@ -223,16 +223,21 @@ const CodeRenderer = ({ path }: CodeRendererProps) => {
         </div>
       </div>
 
-      <div className="flex-1 overflow-auto">
+      <div className="min-h-0 min-w-0 flex-1 overflow-auto">
         {selectedFile ? (
-          <div className="h-fit">
-            <div className="sticky top-0 bg-white dark:bg-muted/40 border-b border-border px-4 py-2 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <File className="size-4 text-muted-foreground" />
-                <span className="text-sm font-medium">{selectedFile.path}</span>
+          <div className="flex min-h-0 min-w-0 flex-col">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-white px-3 py-2 dark:bg-muted/40 md:px-4">
+              <div className="flex min-w-0 flex-1 items-center gap-2">
+                <File className="size-4 shrink-0 text-muted-foreground" />
+                <span
+                  className="truncate text-sm font-medium"
+                  title={selectedFile.path}
+                >
+                  {selectedFile.path}
+                </span>
               </div>
             </div>
-            <div className="p-4 h-full">
+            <div className="min-h-0 min-w-0 flex-1 overflow-x-auto p-2 md:p-4">
               {selectedFile.content !== undefined ? (
                 <DynamicCodeBlock
                   lang={getFileExtension(selectedFile.name)}
@@ -242,14 +247,14 @@ const CodeRenderer = ({ path }: CodeRendererProps) => {
                   }}
                 />
               ) : (
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm text-muted-foreground">
                   File content is not available (binary or unsupported file type)
                 </div>
               )}
             </div>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-full text-muted-foreground">
+          <div className="flex h-full items-center justify-center text-muted-foreground">
             Select a file to view its contents
           </div>
         )}
